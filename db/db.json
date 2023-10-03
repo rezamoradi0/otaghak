@@ -1,0 +1,17 @@
+{
+  "mainInfo": {
+    "header": {
+      "login": { "text": "ورود / ثبت نام" },
+      "application": { "url": "/test", "text": "دانلود برنامه" },
+      "support": { "text": "پشتیبانی", "tel": "+982128111045" },
+      "host": { "text": "میزبان شوید" }
+    },
+    "footer": {}
+  },
+  "cities": [
+    { "id": 0, "name": "tehran" },
+    { "id": 1, "name": "rasht" },
+    { "id": 2, "name": "anzali" },
+    { "id": 3, "name": "rey" }
+  ]
+}
