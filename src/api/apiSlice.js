@@ -1,8 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { API_ADDRESS } from "../constant/address";
 
 export const apiSlice = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001" }),
+
+  baseQuery: fetchBaseQuery({ baseUrl: API_ADDRESS }),
   endpoints: (builder) => ({
     getCities: builder.query({
       query: () => "cities",

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import Header from "../../components/Header";
-import MainSlice, { fetchMain } from "../../redux/mainSlice";
+import  { fetchMain } from "../../redux/mainSlice";
 import { useSelector, useDispatch } from "react-redux";
 import MainLoading from "../loading/MainLoading";
 import HomeError from "./HomeError";
@@ -8,6 +7,11 @@ import SearchBoxMain from "../../components/searchBox/SearchBoxMain";
 import QuickAccess from "../../components/QuickAccess";
 import Banners from "../../components/Banners";
 import MainSlider from "../../components/slider/MainSlider";
+import PopularCities from "../../components/PopularCities";
+import StaticSlider from "../../components/slider/StaticSlider";
+import BannerSlide from "../../components/slider/BannerSlide";
+import CustomSlider from "../../components/slider/CustomSlider";
+import TextAccordion from "../../components/TextAccordion";
 const HomePage = () => {
   const mainState = useSelector((state) => {
     return state.main;
@@ -16,7 +20,6 @@ const HomePage = () => {
   useEffect(() => {
     mainDispatch(fetchMain());
   }, []);
-  console.log(mainState);
   if (mainState.loading) {
     return <MainLoading />;
   } else if (mainState.errorMessage !== null) {
@@ -25,8 +28,7 @@ const HomePage = () => {
     return (
       <div className="bg-gray-50">
         <div className="py relative">
-          <Header HeaderObj={mainState.mainData.header} />
-          <section className="w-full pt-36 flex flex-col items-center bg-blend-difference justify-center h-[100vb] bg-center bg-no-repeat bg-cover bg-[url('http://localhost:3000/images/main-page/1280.jpg')]">
+          <section style={{backgroundImage:`url(${mainState.mainData.header.bgImage})`||{}}} className={`w-full pt-36 flex flex-col items-center bg-blend-difference justify-center h-[100vb] bg-center bg-no-repeat bg-cover ]`}>
             <h1 className="w-full text-center mb-12 text-3xl font-bold text-gray-50">
               اجاره ویلا و سوییت در سراسر ایران
             </h1>
@@ -36,18 +38,32 @@ const HomePage = () => {
         <main className="px-28 ">
           <QuickAccess data={mainState.mainData.quickAccess} />
           <Banners data={mainState.mainData.banners} />
-          {mainState.mainData.mainSections.map((mainSliderData) => {
-            if (mainSliderData.type === "slider") {
+          {mainState.mainData.mainSections.map((sliderData) => {
+            if (sliderData.type === "slider") {
               return (
                 <MainSlider
-                  text={mainSliderData.text}
-                  description={mainSliderData.description}
-                  url={mainSliderData.url}
-                  dataArray={mainSliderData.items}
+                  text={sliderData.text}
+                  description={sliderData.description}
+                  url={sliderData.url}
+                  dataArray={sliderData.items}
+                  bg_color={sliderData.bg_color}
                 />
               );
-            } else {
-              <></>;
+            } else if (sliderData.type==="popularCites"){
+             return <PopularCities data={sliderData} />
+            }
+            else if(sliderData.type==="staticSlider"){
+              return <StaticSlider data={sliderData}/>;
+            }
+            else if(sliderData.type==="banner"){
+              return <BannerSlide data={sliderData}/>;
+            }else if (sliderData.type==="customSlider"){
+              return <CustomSlider data={sliderData}/>;
+            }else if(sliderData.type==="text"){
+              return  <TextAccordion data={sliderData}/>;
+            }
+            else {
+              <></>
             }
           })}
         </main>

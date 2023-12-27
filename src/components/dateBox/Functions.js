@@ -22,6 +22,7 @@ export function GetFarsiPrice(price) {
 //Get Date in Shams
 export function GetDate(dateString) {
   const myTime = Date.parse(dateString);
+  // console.log(myTime);
   const todayFa = {
     day: getDateFormat(myTime, { day: "2-digit" }),
     month: getDateFormat(myTime, { month: "numeric" }),
@@ -34,7 +35,7 @@ export function GetDate(dateString) {
     let date = new Intl.DateTimeFormat("fa-IR", option).format(uDate);
     return date;
   }
-  console.log(todayFa);
+  // console.log(todayFa);
   return todayFa;
 
   /*

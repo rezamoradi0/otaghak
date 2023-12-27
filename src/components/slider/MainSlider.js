@@ -1,44 +1,58 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import SliderItem from "./SliderItem";
-
+import UseSliderMovement from "./UseSliderMovement";
+import {Swiper,SwiperSlide} from "swiper/react"
+import "swiper/css"
 /**
  *
  * @param {"text"} param0
  * @returns
  */
-const MainSlider = ({ text, description, url, dataArray }) => {
-  const [, setState] = useState(false);
+const MainSlider = ({ text, description, url, dataArray, bg_color }) => {
+  // const [, setState] = useState(false);
   const usedWidth = 315; //px
   const sliderBodyRef = useRef();
   const sliderScrollDivRef = useRef();
-  const selectedWidthIndex = 0;
-  const selectedImgHeightIndex = 0;
+  const [scrollValue, setMouseIsDown, setMousePosition, mouseIsDown] =
+    UseSliderMovement(usedWidth);
 
-  useLayoutEffect(() => {
-    sliderBodyRef.current.style.width = dataArray.length * usedWidth + "px";
-  }, []);
-  function onClickSliderButtons(direction) {
-    if (direction > 0) {
-      sliderScrollDivRef.current.scrollBy(usedWidth, 0);
-      setState((p) => {
-        return !p;
-      });
-    } else if (direction < 0) {
-      sliderScrollDivRef.current.scrollBy(-usedWidth, 0);
-      setState((p) => {
-        return !p;
-      });
-    }
-  }
+  // useLayoutEffect(() => {
+  //   sliderBodyRef.current.style.width = dataArray.length * usedWidth + "px";
+  // }, []);
+
+  // useEffect(() => {
+  //   ScrollSlider(scrollValue);
+  // }, [scrollValue]);
+  // function onClickSliderButtons(direction) {
+  //   direction > 0 ? ScrollSlider(usedWidth) : ScrollSlider(-usedWidth);
+  // }
+  // function ScrollSlider(xValue, yValue = 0) {
+  //   sliderScrollDivRef.current.scrollBy(xValue, yValue);
+  //   console.log(xValue);
+  // }
+
   return (
-    <div className="text-right my-16 relative">
-      {console.log("Scrolling")}
+    <div
+      className="text-right my-4 relative"
+      style={
+        bg_color && {
+          backgroundColor: "#" + bg_color,
+          boxShadow: `0 0 0 100vmax #` + bg_color,
+          clipPath: "inset(0 -100vmax)",
+        }
+      }
+    >
       {/* {header} */}
-      <div className="flex justify-between items-center flex-row-reverse mt-16 mb-4">
+      <div
+        dir="ltr"
+        className="flex justify-between items-center flex-row-reverse my-0 pt-6"
+      >
         <div>
           <h4 className="text-xl font-semibold text-gray-700 my-2">{text}</h4>
 
-          <p className="text-gray-500 text-sm"> {description}</p>
+          {description && (
+            <p className="text-gray-500 text-sm"> {description}</p>
+          )}
         </div>
         <a
           href={url}
@@ -49,19 +63,45 @@ const MainSlider = ({ text, description, url, dataArray }) => {
       </div>
 
       {/*slider body h-[327px]*/}
-      <div
-        ref={sliderScrollDivRef}
-        className=" overflow-x-scroll scroll-smooth scrollbar-hide  snap-x snap-mandatory w-full"
+      <Swiper
+        spaceBetween={10}
+        slidesPerView={"auto"}
+        onSlideChange={()=>{console.log("Changed");}}
+        onSwiper={(swiper)=>{console.log(swiper);}}
+        dir="rtl"
+        >
+              {dataArray.map((itemData) => {
+            return <SwiperSlide style={{width:"fit-content"}}>
+              <SliderItem data={itemData} />
+            </SwiperSlide>;
+          }).reverse()}
+          </Swiper>
+
+
+      {/* <div
+        dir="rtl"
+    
+        // scroll-smooth   snap-x snap-mandatory
+        className={`${
+          mouseIsDown ? "" : "scroll-smooth "
+        } snap-mandatory   overflow-x-scroll scrollbar-hide w-full`}
       >
-        <div ref={sliderBodyRef} className="h-full  p-2 flex flex-row-reverse">
+        <div
+          dir="ltr"
+          ref={sliderBodyRef}
+          className="h-full  p-2 flex flex-row"
+        >
           {dataArray.map((itemData) => {
             return <SliderItem data={itemData} />;
           })}
         </div>
-      </div>
+      </div> */}
       <span
         onClick={() => {
-          onClickSliderButtons(-1);
+          // onClickSliderButtons(-1);
+        }}
+        onTouchEnd={() => {
+          // onClickSliderButtons(-1);
         }}
         className="flex items-center p-2 h-4/5 w-8 absolute px-8 left-0 -translate-x-full bottom-0 cursor-pointer "
       >
@@ -70,7 +110,10 @@ const MainSlider = ({ text, description, url, dataArray }) => {
       </span>
       <span
         onClick={() => {
-          onClickSliderButtons(+1);
+          // onClickSliderButtons(+1);
+        }}
+        onTouchEnd={() => {
+          // onClickSliderButtons(+1);
         }}
         className="flex items-center p-2 h-4/5 w-8 absolute px-8 right-0 translate-x-full bottom-0 cursor-pointer   "
       >

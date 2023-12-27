@@ -16,7 +16,7 @@ const Banners = ({ data }) => {
    
     return (
       <a href={url} className={` ${Col_Spans[col]} ${Row_Spans[row]} w-full h-full rounded-3xl overflow-hidden`}>
-        <img className="w-full h-full object-cover  " src={imgPath} alt={text} />
+        <img className="w-full h-full object-cover object-right-bottom " src={imgPath} alt={text} />
       </a>
     );
   }

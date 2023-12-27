@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+  .bg-clip-path{
+   
+    background-color:  rgb(230, 230, 230);
+    box-shadow: 0 0 0 100vmax rgb(230, 230, 230);;
+    clip-path:inset(0 -100vmax);
+  }
+}
 @font-face {
   font-family: iranSans;
   src: url("./assets/fonts/farsi/iransans-light/IRANSansWeb_Light.ttf") format("truetype");

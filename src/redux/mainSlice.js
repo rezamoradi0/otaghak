@@ -1,16 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { API_ADDRESS } from "../constant/address";
 
 export const fetchMain = createAsyncThunk("main/fetchMain", async () => {
   const response = await axios
-    .get("http://localhost:3001/mainInfo")
+    .get(API_ADDRESS + "/mainInfo")
     .then((response) => {
-      return response.data ;
+      return response.data;
     })
     .catch((error) => {
       return { error: true, text: error.message };
     });
-    return response;
+  return response;
 });
 
 const myInitialState = {
@@ -36,7 +37,6 @@ const mainSlice = createSlice({
         state.errorMessage = action.payload.text;
         console.log("rejected");
       } else {
-      
         state.loading = false;
         state.mainData = action.payload;
         state.errorMessage = null;

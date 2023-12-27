@@ -1,20 +1,23 @@
 import { e2p } from "../dateBox/Functions";
 import { GetFarsiPrice } from "../dateBox/Functions";
+import { GetPath } from "../../constant/address";
+import { Link } from "react-router-dom";
+
 const SliderItem = ({ widthIndex, imgHeightIndex, data }) => {
-  //   const sliderWidths = { 0: "315px" };
-  //   ${sliderWidths[widthIndex]}
-  //   const sliderHeight={0:"236px"}
+
+  const linkPath= GetPath(data.type)+data.id;
+
   return (
-    <div
-      className={`w-[315px] ml-2 p-1 relative snap-end rounded-xl overflow-hidden  border-blue-500`}
+    <>
+    <Link  to={linkPath}
+     draggable={false} className={`w-[300px] block  p-1 relative snap-end rounded-xl overflow-hidden  border-blue-500`}
     >
-      <button
-        type="button"
-        className="absolute left-2 top-2 text-white text-xl p-2 cursor-pointer"
-      >
-        <i className="fa-sharp fa-regular fa-heart"></i>
-      </button>
+
+      <span className="absolute right-2 top-2 text-white text-xs p-2 flex gap-x-2">
+        {data.tags.length>0&&data.tags.map(tag=>{return   <span key={crypto.randomUUID()} className="bg-gray-50 bg-opacity-70 rounded-md text-black p-1">{tag}</span>})}
+      </span>
       <img
+      draggable={false} 
         className="h-[236px] w-full rounded-xl object-cover object-center"
         src={data.img}
         alt={data.text}
@@ -55,7 +58,15 @@ const SliderItem = ({ widthIndex, imgHeightIndex, data }) => {
             <span className="line-through decoration-red-500 text-gray-400 font-medium mx-2">{GetFarsiPrice(data.price)}</span>
         </span> : <></>}</span>
       </div>
-    </div>
+    </Link>
+          <button
+          type="button"
+          className="absolute left-2 top-2 text-white text-xl p-2 cursor-pointer"
+          onClick={()=>{console.log("Heart");}}
+        >
+          <i className="fa-sharp fa-regular fa-heart"></i>
+        </button>
+       </>
   );
 };
 
