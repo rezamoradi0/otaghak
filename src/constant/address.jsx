@@ -8,3 +8,6 @@ export const GetPath=(typeOfPost)=>{
            return  "/";
     }
 }
+
+export const LINK_SHARE_TELEGRAM="tg://msg?text=";
+export const LINK_SHARE_WHATSAPP="whatsapp://send?"

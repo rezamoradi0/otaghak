@@ -25,6 +25,7 @@ const Footer = ({ FooterObj,HeaderObj }) => {
                     className="w-5/12 block text-right px-2 py-3 text-[17px]  font-normal text-gray-800 bg-white rounded-lg"
                     href={link.link}
                     target="_blank"
+                    key={crypto.randomUUID()}
                   >
                     {link.text}{" "}
                   </a>
@@ -59,6 +60,7 @@ const Footer = ({ FooterObj,HeaderObj }) => {
                       className="block  w-1/6"
                       href={item.link}
                       target="_blank"
+                      key={crypto.randomUUID()}
                     >
                       <img className="w-full h-full" src={item.img} alt="" />
                     </a>
@@ -84,6 +86,7 @@ const Footer = ({ FooterObj,HeaderObj }) => {
                       <Link
                         className="w-5/12 font-semibold text-gray-600"
                         to={linkInfo.link}
+                        key={crypto.randomUUID()}
                       >
                         {" "}
                         {linkInfo.text}{" "}
@@ -102,6 +105,7 @@ const Footer = ({ FooterObj,HeaderObj }) => {
                       <Link
                         className="w-5/12  text-gray-600"
                         to={linkInfo.link}
+                        key={crypto.randomUUID()}
                       >
                         {" "}
                         {linkInfo.text}{" "}

@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import logo from "./../assets/img/otaghakLogoComplete.svg";
 import SearchBox from "./searchBox/SearchBox";
 import { useLocation } from "react-router-dom";
 import RoomHeader from "../pages/room/components/header/RoomHeader";
 import { ROOM_PATH } from "../constant/address";
+import { useDispatch } from "react-redux";
+import { addObject } from "../features/domPublicSlice";
 const Header = (props) => {
   const theLocation =useLocation();
-
+  const theDispatch=useDispatch();
+  const headerRef=useRef();
 
   const headerNav = () => {
     return (      <div className="flex  bg-white justify-between h-[80px] w-full items-stretch  py-3 px-12">
@@ -29,8 +32,11 @@ const Header = (props) => {
     return <RoomHeader/>
    }
   }
+  useEffect(()=>{
+    theDispatch(addObject({key:"header",value:headerRef.current.offsetHeight}))
+  },[])
   return (
-    <header className="w-full z-10 border fixed top-0  flex flex-col justify-start items-center" >
+    <header ref={headerRef} className="w-full z-10 border fixed top-0  flex flex-col justify-start items-center" >
       {/* <div className="h-16 w-full bg-red-500">
       </div> */}
       {headerNav()}
