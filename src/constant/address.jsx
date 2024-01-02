@@ -9,5 +9,7 @@ export const GetPath=(typeOfPost)=>{
     }
 }
 
+
+export const API_ADDRESS_ROOMS="rooms";
 export const LINK_SHARE_TELEGRAM="tg://msg?text=";
 export const LINK_SHARE_WHATSAPP="whatsapp://send?"

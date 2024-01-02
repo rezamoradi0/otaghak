@@ -1,5 +1,5 @@
 {
-  "userLayout":{
+  "userLayout": {
     "header": {
       "login": { "text": "ورود / ثبت نام" },
       "application": {
@@ -1081,17 +1081,38 @@
   "rooms": [
     {
       "id": 2399131,
-      "userId":20,
       "text": "کلبه سوئیسی فرشاد",
       "cityId": 2,
       "free": true,
       "metres": 70,
       "maxGuests": 6,
       "bedRooms": 2,
-      "images":["images/rooms/1.webp","images/rooms/1.webp"]
+      "images": [
+        "/images/rooms/2429555-1.webp",
+        "/images/rooms/2429555-2.webp",
+        "/images/rooms/2429555-3.webp",
+        "/images/rooms/2429555-4.webp",
+        "/images/rooms/2429555-5.webp",
+        "/images/rooms/2429555-6.webp",
+        "/images/rooms/2429555-7.webp",
+        "/images/rooms/2429555-8.webp",
+        "/images/rooms/2429555-9.webp",
+        "/images/rooms/2429555-10.webp",
+        "/images/rooms/2429555-11.webp",
+        "/images/rooms/2429555-12.webp",
+        "/images/rooms/2429555-13.webp",
+        "/images/rooms/2429555-14.webp",
+        "/images/rooms/2429555-15.webp",
+        "/images/rooms/2429555-16.webp",
+        "/images/rooms/2429555-17.webp",
+        "/images/rooms/2429555-18.webp",
+        "/images/rooms/2429555-19.webp",
+        "/images/rooms/2429555-20.webp"
+      ],
+      "mainImage": ""
     },
     {
-      "id": "2399131",
+      "id": 2399132,
       "type": "room",
       "text": "عمارت استخردار آبگرم مدرن گلستان",
       "img": "images/rooms/1.webp",
@@ -1105,7 +1126,17 @@
       "discountPercent": 10,
       "stars": 4.2,
       "userVotes": 4,
-      "favorite": true
+      "favorite": true,
+      "managerId": 1
     }
+  ],
+  "comments": [
+    {
+      "roomId": 2399131,
+      "text": "test comment"
+    }
+  ],
+  "managers": [
+    { "managerId": 1, "firstNama": "فرشاد", "lastName": "عبدی", "rooms": [] }
   ]
 }

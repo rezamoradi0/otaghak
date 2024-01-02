@@ -3,3 +3,4 @@ export const ICON_HEART=(props)=><i className={`fa-regular fa-heart ${props.clas
 export const ICON_WHATSAPP =(props)=><i className={`fa-brands fa-square-whatsapp ${props.className}`}></i>;
 export const ICON_TELEGRAM =(props)=><i className={`fa-brands fa-telegram ${props.className}`}></i>;
 export const ICON_LINK =(props)=><i className={`fa-regular fa-link-horizontal ${props.className}`}></i>;
+export const ICON_LEFT =(props)=><i className={`fa-solid fa-chevron-left ${props.className}`}></i>;

@@ -1,3 +1,4 @@
+
 export const ROOM_PAGE_TEXT={
  header:{
     id:"شناسه",
@@ -14,10 +15,17 @@ export const ROOM_PAGE_TEXT={
     moreGuaranty:"بیشتر بدانید",
     moreDescription:"نمایش جزئیات بیشتر",
     moreProperty:"مشاهده همه امکانات",
-    userProfile:"مشاهده پروفایل میزبان"
+    userProfile:"مشاهده پروفایل میزبان",
+    shareWithTelegram:"ارسال با تلگرام",
+    shareWithWhatsapp:"ارسال با واتساپ",
+    copyLink:"کپی کردن لینک"
 
  },
  popups:{
    share:{header:"اشتراک گذاری اقامتگاه",bodyHeader:"اقامتگاه را با دوستان خود به اشتراک بگذارید"}
+ },
+ body:{
+   moreGallery:"مشاهده تصاویر بیشتر",
+   imagesGallery:"تصاویر گالری"
  }
 }
