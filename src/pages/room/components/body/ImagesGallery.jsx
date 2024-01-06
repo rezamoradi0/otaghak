@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import ImagesSwiper from "./ImagesSwiper";
 import Popup from "../../../../components/popup/Popup";
-import ShareRoom from "../header/ShareRoom";
 import ImagesGalleryHeader from "./ImagesGalleryHeader";
 export default function ImagesGallery({ isExpand, imageLinks }) {
   const [showSwiper, setShowSwiper] = useState(false);
@@ -82,7 +81,7 @@ export default function ImagesGallery({ isExpand, imageLinks }) {
         theDispatch(selectGallery());
       }}
       dir="rtl"
-      className=" grid grid-cols-4 h-[480px] grid-rows-2 gap-2 [&_img]:h-full  [&_img]:w-full [&_img]:duration-500 [&_img]:transition-all [&_img:hover]:opacity-70 [&_img]:object-cover [&_img]:object-center [&>div]:bg-gray-800 overflow-hidden rounded-lg "
+      className=" grid grid-cols-4 mb-6 h-[480px] grid-rows-2 gap-2 [&_img]:h-full  [&_img]:w-full [&_img]:duration-500 [&_img]:transition-all [&_img:hover]:opacity-70 [&_img]:object-cover [&_img]:object-center [&>div]:bg-gray-800 overflow-hidden rounded-lg "
     >
       <div className="col-span-2  row-span-2 h-[480px] [&>div]:h-full">
         <img src={imageLinks[0]} alt="" />

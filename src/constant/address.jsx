@@ -9,7 +9,8 @@ export const GetPath=(typeOfPost)=>{
     }
 }
 
-
+export const PROVINCE_PATH="province";
+export const CITY_PATH="city";
 export const API_ADDRESS_ROOMS="rooms";
 export const LINK_SHARE_TELEGRAM="tg://msg?text=";
 export const LINK_SHARE_WHATSAPP="whatsapp://send?"

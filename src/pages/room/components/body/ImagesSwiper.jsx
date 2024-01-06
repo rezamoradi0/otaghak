@@ -32,9 +32,9 @@ export default function ImagesSwiper({images,setSwiperRealIndex}) {
         modules={[FreeMode, Navigation, Thumbs,Pagination]}
         className="mySwiper2"
       >
-         { images.map((image)=>{
+         { images.map((image,i)=>{
           
-        return <SwiperSlide> <img src={image} alt="" /></SwiperSlide>
+        return <SwiperSlide key={i}> <img src={image} alt="" /></SwiperSlide>
        })}
       </Swiper>
       <Swiper
@@ -46,8 +46,8 @@ export default function ImagesSwiper({images,setSwiperRealIndex}) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
       >
-       { images.map((image)=>{
-        return <SwiperSlide> <img src={image} alt="" /></SwiperSlide>
+       { images.map((image,i)=>{
+        return <SwiperSlide key={i}> <img src={image} alt="" /></SwiperSlide>
        })}
       </Swiper>
     </>

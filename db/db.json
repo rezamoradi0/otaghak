@@ -885,12 +885,38 @@
     },
     "time": "2023-12-21T00:00:00"
   },
+
+  "residenceTypes": [
+    { "id": 1, "name": "hostel", "text": "هاستل" },
+    { "id": 2, "name": "home", "text": "خانه" },
+    { "id": 3, "name": "hostel", "text": "مهمانسرا" },
+    { "id": 4, "name": "hostel", "text": "کلبه" },
+    { "id": 5, "name": "hostel", "text": "هتل سنتی" },
+    { "id": 6, "name": "hostel", "text": "پانسیون" },
+    { "id": 7, "name": "hostel", "text": "اقامتگاه بوم‌گردی" },
+    { "id": 8, "name": "hostel", "text": "هتل آپارتمان" },
+    { "id": 9, "name": "hostel", "text": "روستایی و عشایری" },
+    { "id": 10, "name": "hostel", "text": "سوییت" },
+    { "id": 11, "name": "hostel", "text": "ویلا" },
+    { "id": 12, "name": "hostel", "text": "آپارتمان" }
+  ],
+  "provinces": [
+    { "id": 1, "name": "mazandaran" },
+    { "id": 2, "name": "gilan" },
+    { "id": 3, "name": "tehran" },
+    { "id": 4, "name": "esfahan" },
+    { "id": 5, "name": "alborz" },
+    { "id": 6, "name": "golestan" },
+    { "id": 7, "name": "fars" },
+    { "id": 8, "name": "khorasan-razavi" }
+  ],
   "cities": [
-    { "id": 1, "name": "rasht" },
-    { "id": 2, "name": "anzali" },
+    { "id": 1, "name": "rasht", "provinceId": 2 },
+    { "id": 2, "name": "anzali", "provinceId": 2 },
     { "id": 3, "name": "rey" },
     {
       "id": 4,
+      "provinceId": 1,
       "name": "ramsar",
       "text": "رامسر در استان مازندران",
       "residence": 700,
@@ -1082,11 +1108,20 @@
     {
       "id": 2399131,
       "text": "کلبه سوئیسی فرشاد",
+      "residenceId": 1,
+      "residenceName": "گیلان",
+      "residence": "gilan",
       "cityId": 2,
-      "free": true,
+      "cityName": "رشت",
+      "city": "rasht",
+      "residenceType": 1,
+      "residenceTypesName": "ویلا",
+      "tags": [1, 2],
+      "shutter": true,
       "metres": 70,
       "maxGuests": 6,
       "bedRooms": 2,
+      "roomRate": "4.9",
       "images": [
         "/images/rooms/2429555-1.webp",
         "/images/rooms/2429555-2.webp",
@@ -1109,7 +1144,91 @@
         "/images/rooms/2429555-19.webp",
         "/images/rooms/2429555-20.webp"
       ],
-      "mainImage": ""
+      "mainImage": "/images/rooms/2429555-1.webp",
+      "managerInfo": {
+        "managerId": 1,
+        "firstNama": "فرشاد",
+        "lastName": "عبدی",
+        "rooms": [],
+        "experience": "بیش از 2 سال میزبان اتاقک",
+        "successRent": 56,
+        "image": "/images/users/manager-01.webp"
+      },
+      "aboutResidence": {
+        "shutter": true,
+        "mainInfo": "120 متر, 3 اتاق, همکف, فلت (یک طبقه)",
+        "capacity": "6 نفر, 8 نفر اضافه",
+        "bedRoom": "5 پتو, 5 سرویس خواب کامل, 3 تخت دو نفره",
+        "bathRoom": "1 دوش در سرویس, 1 سرویس ایرانی, 1 سرویس فرنگی",
+        "view": "جنگل, روستایی, ساحلی/ نزدیک به دریا"
+      },
+      "descriptionResidence": {
+        "header": "اجاره روزانه و ماهانه باغ لوکس امیرحسین نزدیک به دریا، 120 متر برای 6 نفر به همراه 8 نفر اضافی در شهر انزلی با تضمین بهترین کیفیت و قیمت در اتاقک",
+        "text": "ویلا باغ امیرحسین انزلی با استخر آبگرم برای آرامش و تفریح شماست. این ویلا در زمینی به مساحت 2000 متر مربع با زیر بنای 130 متر مربع در 400 متری شهر انزلی واقع شده است. . ویلا دو طبقه بوده و دارای سه اتاق خواب، دو حمام و سه دستشویی (یک ایرانی و دو فرنگی) است. حیاط بزرگ ویلا برای پارک 6  خودرو مناسب است. ویلا مناسب سالمندان، کودکان و افراد دارای معلولیت است. پذیرش حیوان خانگی در این ویلا مجاز نیست.",
+        "propertyList": [
+          " استخر آبگرم با سیستم تصفیه اتوماتیک به ابعاد 9.80 در 4.8 متر با عمق 1.65 متر",
+          " سالن بازی دارای فوتبال دستی و ایرهاکی",
+          " آشپزخانه با امکانات رفاهی شامل اجاق گاز ، ماشین لباسشویی، یخچال، فریزر و لوازم کامل آشپزی",
+          "اتاق پذیرایی دارای مبلمان ، تلویزیون، سیستم صوتی، تاب ریلکسی",
+          "سیستم سرمایشی کولر گازی و گرمایشی شوفاژ",
+          "آب آشامیدنی مجهز به سیستم تصفیه اتوماتیک",
+          "منقل کباب در حیاط",
+          "تراس ویلا شامل میز و صندلی"
+        ],
+        "accessList": [
+          " فاصله تا سوپر مارکت 1 کیلومتر",
+          " فاصله تا نانوایی 1 کیلومتر",
+          "فاصله تا ساحل 10 دقیقه با ماشین ",
+          "فاصله تا پمپ بنزین 1 کیلومتر"
+        ]
+      },
+      "propertyResidence":{
+        "games":{
+          "billiards":true,
+          "footballTable":true
+
+        }
+        ,"amenities":{
+          "barbecue":true,
+          "grill":true
+        },
+        "homeAppliances":{
+          "digitalReceiver":true,
+          "soundSystem":true,
+          "furniture":true,
+          "tv":true
+        },
+        "kitchenAppliances":{
+          "kettle":true,
+          "centralKitchen":true,
+          "microwave":true,
+          "oven":true,
+          "cookingAccessories":true,
+          "dishWashingAppliances":true,
+          "refrigerator":true,
+          "washingMachine":true
+        },
+        "heatingService":{
+          "shoofaje":true
+        },
+        "coolingService":{
+          "fan":true,
+          "airConditioner":true
+        },
+        "securityFacilities":{
+          "CCTV":true,
+          "securityDoor":true
+        },
+        "buildingFacilities":{
+          "gazebo":true
+        },
+        "parking":{
+          "openParking":true
+        },
+        "pool":{
+          "indoorPool":true
+        }
+      }
     },
     {
       "id": 2399132,
@@ -1137,6 +1256,14 @@
     }
   ],
   "managers": [
-    { "managerId": 1, "firstNama": "فرشاد", "lastName": "عبدی", "rooms": [] }
+    {
+      "managerId": 1,
+      "firstNama": "فرشاد",
+      "lastName": "عبدی",
+      "rooms": [],
+      "experience": "بیش از 2 سال میزبان اتاقک",
+      "successRent": 56,
+      "image": "/images/users/manager-01.webp"
+    }
   ]
 }

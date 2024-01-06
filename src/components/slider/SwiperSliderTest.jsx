@@ -5,8 +5,6 @@ const SwiperSliderTest = () => {
         <Swiper
         spaceBetween={50}
         slidesPerView={3}
-        onSlideChange={()=>{console.log("Changed");}}
-        onSwiper={(swiper)=>{console.log(swiper);}}
       
         >
         <SwiperSlide>

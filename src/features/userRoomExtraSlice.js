@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { API_ADDRESS, API_ADDRESS_ROOMS } from "../constant/address";
-
+const EmbedComments="?_embed=comments";
 const InitialState = {
     isLoading: true,
     data: null,
@@ -14,7 +14,7 @@ export const fetchRoom = createAsyncThunk(
     "userRoomExtra/fetchRoom",
     async (roomId) => {
       const result = await axios
-        .get(`${API_ADDRESS}/${API_ADDRESS_ROOMS}/${roomId}`)
+        .get(`${API_ADDRESS}/${API_ADDRESS_ROOMS}/${roomId}${EmbedComments}`)
         .then((response) => response.data)
         .catch((err) => {
           return { error: true, text: err.message };

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { twMerge } from "tailwind-merge";
-const transitionDurationMs = 1000;
+
 export default function Popup({
   header,
   children,
@@ -12,6 +12,7 @@ export default function Popup({
   headerParentClassName="",
   exitClassName=""
 }) {
+  const transitionDurationMs = 1000;
   const [playAnimation, setPlayAnimation] = useState(false);
   const backgroundRef = useRef();
   const closeRef = useRef();
@@ -35,13 +36,14 @@ export default function Popup({
 
   return (
     <>
-      <div
-        ref={backgroundRef}
-        className={`absolute  bg-gray-500 w-screen h-screen top-0 left-0 bg-opacity-20`}
-      ></div>
+  
 
-      {createPortal(
+      {createPortal(<>
         <div
+        ref={backgroundRef}
+        className={`fixed z-50 bg-gray-500 w-screen h-screen top-0 left-0 bg-opacity-20`}
+      ></div>
+       <div
           dir="rtl"
           style={{ transitionDuration: `${transitionDurationMs}ms` }}
           className={`${playAnimation && twMerge("bottom-[95%]", playClassName)}
@@ -51,7 +53,7 @@ export default function Popup({
               )}
             `}
         >
-          <div className={twMerge("flex items-center gap-x-6 border-b  border-b-gray-400 py-8 text-xl font-semibold text-gray-600",headerParentClassName)}>
+          <div className={twMerge("flex items-center gap-x-6 border-b  border-b-gray-400 pt-4 pb-3 text-xl font-semibold text-gray-600",headerParentClassName)}>
             {" "}
             <span
               ref={closeRef}
@@ -63,7 +65,9 @@ export default function Popup({
             {header||<></>}
           </div>
           <div className={`py-8 flex ${childrenClassName}`}> {children}</div>
-        </div>,
+        </div>
+      </>
+       ,
         document.body
       )}
     </>

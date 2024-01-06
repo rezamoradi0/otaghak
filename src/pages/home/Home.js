@@ -38,10 +38,11 @@ const HomePage = () => {
         <main className="px-28 ">
           <QuickAccess data={mainState.mainData.quickAccess} />
           <Banners data={mainState.mainData.banners} />
-          {mainState.mainData.mainSections.map((sliderData) => {
+          {mainState.mainData.mainSections.map((sliderData,i) => {
             if (sliderData.type === "slider") {
               return (
                 <MainSlider
+                key={i}
                   text={sliderData.text}
                   description={sliderData.description}
                   url={sliderData.url}
@@ -50,17 +51,17 @@ const HomePage = () => {
                 />
               );
             } else if (sliderData.type==="popularCites"){
-             return <PopularCities data={sliderData} />
+             return <PopularCities  key={i} data={sliderData} />
             }
             else if(sliderData.type==="staticSlider"){
-              return <StaticSlider data={sliderData}/>;
+              return <StaticSlider  key={i} data={sliderData}/>;
             }
             else if(sliderData.type==="banner"){
-              return <BannerSlide data={sliderData}/>;
+              return <BannerSlide  key={i} data={sliderData}/>;
             }else if (sliderData.type==="customSlider"){
-              return <CustomSlider data={sliderData}/>;
+              return <CustomSlider  key={i} data={sliderData}/>;
             }else if(sliderData.type==="text"){
-              return  <TextAccordion data={sliderData}/>;
+              return  <TextAccordion  key={i} data={sliderData}/>;
             }
             else {
               <></>

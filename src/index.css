@@ -2,41 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-  .bg-clip-path{
-   
-    background-color:  rgb(230, 230, 230);
-    box-shadow: 0 0 0 100vmax rgb(230, 230, 230);;
-    clip-path:inset(0 -100vmax);
+@layer utilities {
+  .bg-clip-path {
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0 0 0 100vmax rgb(230, 230, 230);
+    clip-path: inset(0 -100vmax);
+  }
+  .scroll-none::-webkit-scrollbar {
+    width: 0px;
+  }
+  .popup-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 65vh;
   }
 }
+
 @font-face {
   font-family: iranSans;
-  src: url("./assets/fonts/farsi/iransans-light/IRANSansWeb_Light.ttf") format("truetype");
+  src: url("./assets/fonts/farsi/iransans-light/IRANSansWeb_Light.ttf")
+    format("truetype");
 }
-*{
+* {
   font-family: iranSans;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-
 .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

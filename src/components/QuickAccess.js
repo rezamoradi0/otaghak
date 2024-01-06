@@ -12,8 +12,8 @@ const QuickAccess = ({data}) => {
     return ( <div className="my-0 flex flex-col ">
             <p className="w-full text-right text-black text-2xl font-semibold my-8">{data.text}</p>
             <div className={`${isFarsi?"flex-row-reverse":"flex-row"} flex  flex-wrap items-center justify-evenly`}>
-            {items.map((item)=>{
-                return <ItemComp text={item.text} url={item.url} svgPath={item.svg}/>;
+            {items.map((item,i)=>{
+                return <ItemComp   key={i}  text={item.text} url={item.url} svgPath={item.svg}/>;
             })}
             </div>
     </div> );

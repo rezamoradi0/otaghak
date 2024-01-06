@@ -5,9 +5,9 @@ const CustomSlider = ({  data }) => {
   return <>
   <p className="my-4 text-right font-bold text-gray-700 text-xl">{data.header}</p>
   <Swiper slidesPerView={data.items.length} spaceBetween={16}>
-    {data.items.map((item)=>{
+    {data.items.map((item,i)=>{
      const dateInfoFa=GetDate(item.date);
-        return  <SwiperSlide>
+        return  <SwiperSlide key={i}>
             <div className="rounded-xl border  text-right overflow-hidden border-gray-300 flex flex-col">
              <a className="block" href={item.url} > <img className="h-44 w-full object-cover object-center" src={item.img} alt={item.header} /></a>
              <div dir="rtl" className="px-3 text-justify">

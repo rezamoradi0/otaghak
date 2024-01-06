@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import ImagesGallery from "./components/body/ImagesGallery";
 import { fetchRoom } from "../../features/userRoomExtraSlice";
+import MainInformation from "./components/body/Information/MainInformation";
+import ReserveTable from "./components/body/ReserveTable";
 
 function Room() {
   const theParams = useParams();
@@ -26,8 +28,7 @@ function Room() {
     console.log("theDomPublicChanged " + theDomPublicState);
   }, [theDomPublicState]);
   if (!theRoomExtraState.data) {
-    console.log("LOADING");
-    return <div className="bg-gray-500 min-h-screen min-w-full"> TEST ING </div>
+    return <div className="bg-gray-500 min-h-screen min-w-full">Loading... </div>
   }
   return (
     <div dir="rtl"
@@ -42,6 +43,10 @@ function Room() {
         isExpand={theRoomState.selectedGallery}
         imageLinks={theRoomExtraState.data.images}
       />
+    <div className="flex relative gap-x-12">
+    <MainInformation data={theRoomExtraState.data}/>
+    <ReserveTable parentMarginTop={_marginTop}/>
+    </div>
     </div>
   );
 }

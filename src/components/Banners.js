@@ -54,6 +54,7 @@ const Banners = ({ data }) => {
             url={banner.url}
             row={divRows}
             col={divCols}
+            key={i}
           />
         );
       })}

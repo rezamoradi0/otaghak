@@ -15,22 +15,6 @@ const MainSlider = ({ text, description, url, dataArray, bg_color }) => {
   const sliderScrollDivRef = useRef();
   const [scrollValue, setMouseIsDown, setMousePosition, mouseIsDown] =
     UseSliderMovement(usedWidth);
-
-  // useLayoutEffect(() => {
-  //   sliderBodyRef.current.style.width = dataArray.length * usedWidth + "px";
-  // }, []);
-
-  // useEffect(() => {
-  //   ScrollSlider(scrollValue);
-  // }, [scrollValue]);
-  // function onClickSliderButtons(direction) {
-  //   direction > 0 ? ScrollSlider(usedWidth) : ScrollSlider(-usedWidth);
-  // }
-  // function ScrollSlider(xValue, yValue = 0) {
-  //   sliderScrollDivRef.current.scrollBy(xValue, yValue);
-  //   console.log(xValue);
-  // }
-
   return (
     <div
       className="text-right my-4 relative"
@@ -66,12 +50,10 @@ const MainSlider = ({ text, description, url, dataArray, bg_color }) => {
       <Swiper
         spaceBetween={10}
         slidesPerView={"auto"}
-        onSlideChange={()=>{console.log("Changed");}}
-        onSwiper={(swiper)=>{console.log(swiper);}}
         dir="rtl"
         >
-              {dataArray.map((itemData) => {
-            return <SwiperSlide style={{width:"fit-content"}}>
+              {dataArray.map((itemData,i) => {
+            return <SwiperSlide key={i} style={{width:"fit-content"}}>
               <SliderItem data={itemData} />
             </SwiperSlide>;
           }).reverse()}
