@@ -18,6 +18,7 @@ import Warranty from "./components/Warranty";
 import AboutResidence from "./components/AboutResidence";
 import DetailResidence from "./components/DetailResidence";
 import PropertyResidence from "./components/PropertyResidence";
+import TimeRegulationsResidence from "./components/TimeRegulationsResidence";
 
 export default function MainInformation({ data }) {
   return (
@@ -141,6 +142,8 @@ export default function MainInformation({ data }) {
       <DetailResidence descriptionResidenceData={data.descriptionResidence} />
       <hr className="bg-red-500 my-4" />
       <PropertyResidence propertyResidenceData={data.propertyResidence}/>
+      <hr className="bg-red-500 my-4" />
+      <TimeRegulationsResidence  TimeRegulationsResidenceData={data.residenceTimeRegulations}/>
       <hr className="bg-red-500 my-4" />
     </div>
   );

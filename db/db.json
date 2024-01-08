@@ -1228,6 +1228,19 @@
         "pool":{
           "indoorPool":true
         }
+      },
+      "residenceTimeRegulations":{
+        "enterTime":"15:00",
+        "exitTime":"12:00",
+        "animals":true,
+        "party":false,
+        "withShoes":false,
+        "smoke":false,
+        "yard":true,
+        "coupleIds":false,
+        "hostRoles":"همراه داشتن مدارک شناسایی معتبر مانند کارت ملی هوشمند یا شناسنامه جدید به جمع های مجردی اقایان اجاره داده نمی شود",
+        "cancelType":1
+
       }
     },
     {

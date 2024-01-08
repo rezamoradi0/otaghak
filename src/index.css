@@ -16,6 +16,13 @@
     overflow-x: hidden;
     max-height: 65vh;
   }
+
+  .border-dashed-custom{
+    background-image: linear-gradient(90deg,#fff 48%,#d6d6de 0);
+    background-position: top;
+    background-size: 16px 1px;
+    background-repeat: repeat-x;
+  }
 }
 
 @font-face {
