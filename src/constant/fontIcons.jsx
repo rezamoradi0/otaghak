@@ -122,6 +122,10 @@ export const ICON_HOME_APPLIANCES = (props) => (
  <CreateIconComponent fontAwesome={"fa-regular fa-hat-chef "} {...props} />
 );
 
+export const ICON_MAP_MARKER = (props) => (
+  <CreateIconComponent fontAwesome={"fa-solid fa-location-dot "} {...props} />
+ );
+
 export const ICON_KEY_STROKE_IMG = ({ className = "" }) => (
   <img
     className={` w-full ${className}`}

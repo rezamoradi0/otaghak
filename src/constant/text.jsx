@@ -169,5 +169,10 @@ export const ROOM_PAGE_TEXT = {
       case:"مورد",
       adminReply:"پاسخ ادمین : " 
     }
+    ,
+    positionResidence:{
+      header:"موقعیت تقریبی اقامتگاه",
+      text:"آدرس و موقعیت دقیق اقامتگاه، پس از رزرو برای شما ارسال خواهد شد."
+    }
   },
 };

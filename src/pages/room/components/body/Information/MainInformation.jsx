@@ -20,7 +20,7 @@ import DetailResidence from "./components/DetailResidence";
 import PropertyResidence from "./components/PropertyResidence";
 import TimeRegulationsResidence from "./components/TimeRegulationsResidence";
 import CommentsResidence from "./components/CommentsResidence";
-
+import PositionResidence from "./components/PostionResidence";
 export default function MainInformation({ data }) {
   return (
     <div dir="rtl" className="flex  w-2/3 flex-col">
@@ -147,6 +147,8 @@ export default function MainInformation({ data }) {
       <TimeRegulationsResidence  TimeRegulationsResidenceData={data.residenceTimeRegulations}/>
       <hr className="bg-red-500 my-4" />
       <CommentsResidence commentRatesData={data.rating} commentsData={data.comments}/>
+      <hr className="bg-red-500 my-4" />
+      <PositionResidence positionData={data.position} />
       <hr className="bg-red-500 my-4" />
 
     </div>
