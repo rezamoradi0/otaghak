@@ -1182,65 +1182,73 @@
           "فاصله تا پمپ بنزین 1 کیلومتر"
         ]
       },
-      "propertyResidence":{
-        "games":{
-          "billiards":true,
-          "footballTable":true
-
-        }
-        ,"amenities":{
-          "barbecue":true,
-          "grill":true
+      "propertyResidence": {
+        "games": {
+          "billiards": true,
+          "footballTable": true
         },
-        "homeAppliances":{
-          "digitalReceiver":true,
-          "soundSystem":true,
-          "furniture":true,
-          "tv":true
+        "amenities": {
+          "barbecue": true,
+          "grill": true
         },
-        "kitchenAppliances":{
-          "kettle":true,
-          "centralKitchen":true,
-          "microwave":true,
-          "oven":true,
-          "cookingAccessories":true,
-          "dishWashingAppliances":true,
-          "refrigerator":true,
-          "washingMachine":true
+        "homeAppliances": {
+          "digitalReceiver": true,
+          "soundSystem": true,
+          "furniture": true,
+          "tv": true
         },
-        "heatingService":{
-          "shoofaje":true
+        "kitchenAppliances": {
+          "kettle": true,
+          "centralKitchen": true,
+          "microwave": true,
+          "oven": true,
+          "cookingAccessories": true,
+          "dishWashingAppliances": true,
+          "refrigerator": true,
+          "washingMachine": true
         },
-        "coolingService":{
-          "fan":true,
-          "airConditioner":true
+        "heatingService": {
+          "shoofaje": true
         },
-        "securityFacilities":{
-          "CCTV":true,
-          "securityDoor":true
+        "coolingService": {
+          "fan": true,
+          "airConditioner": true
         },
-        "buildingFacilities":{
-          "gazebo":true
+        "securityFacilities": {
+          "CCTV": true,
+          "securityDoor": true
         },
-        "parking":{
-          "openParking":true
+        "buildingFacilities": {
+          "gazebo": true
         },
-        "pool":{
-          "indoorPool":true
+        "parking": {
+          "openParking": true
+        },
+        "pool": {
+          "indoorPool": true
         }
       },
-      "residenceTimeRegulations":{
-        "enterTime":"15:00",
-        "exitTime":"12:00",
-        "animals":true,
-        "party":false,
-        "withShoes":false,
-        "smoke":false,
-        "yard":true,
-        "coupleIds":false,
-        "hostRoles":"همراه داشتن مدارک شناسایی معتبر مانند کارت ملی هوشمند یا شناسنامه جدید به جمع های مجردی اقایان اجاره داده نمی شود",
-        "cancelType":1
-
+      "residenceTimeRegulations": {
+        "enterTime": "15:00",
+        "exitTime": "12:00",
+        "animals": true,
+        "party": false,
+        "withShoes": false,
+        "smoke": false,
+        "yard": true,
+        "coupleIds": false,
+        "hostRoles": "همراه داشتن مدارک شناسایی معتبر مانند کارت ملی هوشمند یا شناسنامه جدید به جمع های مجردی اقایان اجاره داده نمی شود",
+        "cancelType": 1
+      },
+      "rating": {
+        "completeRate": 5,
+        "rate": 5,
+        "safe": 5,
+        "accepting": 5,
+        "clean": 5,
+        "communication": 5,
+        "value": 5,
+        "information": 5
       }
     },
     {
@@ -1265,7 +1273,126 @@
   "comments": [
     {
       "roomId": 2399131,
-      "text": "test comment"
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": true,
+      "adminText": "سپاس از شما"
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "userImg":"/images/users/manager-01.webp",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": true,
+      "adminText": "سپاس از شما"
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "userImg":"/images/users/manager-01.webp",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": false
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کر و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "userImg":"/images/users/manager-01.webp",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": false
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": true,
+      "adminText": "سپاس از شما"
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "userImg":"/images/users/manager-01.webp",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": true,
+      "adminText": "سپاس از شما"
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "userImg":"/images/users/manager-01.webp",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": false
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کر و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "userImg":"/images/users/manager-01.webp",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": false
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": true,
+      "adminText": "سپاس از شما"
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "userImg":"/images/users/manager-01.webp",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": true,
+      "adminText": "سپاس از شما"
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "userImg":"/images/users/manager-01.webp",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": false
+    },
+    {
+      "roomId": 2399131,
+      "text": "خیلی ویلای تمیزی بود.کر و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "userImg":"/images/users/manager-01.webp",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": false
     }
   ],
   "managers": [

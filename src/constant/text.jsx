@@ -30,6 +30,7 @@ export const ROOM_PAGE_TEXT = {
     shareWithWhatsapp: "ارسال با واتساپ",
     copyLink: "کپی کردن لینک",
     moreDetail: "نمایش جزئیات بیشتر",
+    moreComments:"مشاهده همه نظر ها"
   },
   popups: {
     share: {
@@ -155,5 +156,18 @@ export const ROOM_PAGE_TEXT = {
         },
       },
     },
+    commentResidence:{
+      header:"نظرات مهمان ها",
+      rate:"امتیاز",
+      comment:"نظر",
+      safe:"امنیت محله",
+      accepting:"پذیرش میزبان",
+      clean:"نظافت و تمیزی",
+      communication:"ارتباط با مشتری",
+      value:"ارزش کلی اقامتگاه",
+      information:"صحت اطلاعات",
+      case:"مورد",
+      adminReply:"پاسخ ادمین : " 
+    }
   },
 };

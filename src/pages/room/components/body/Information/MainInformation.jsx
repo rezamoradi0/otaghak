@@ -19,6 +19,7 @@ import AboutResidence from "./components/AboutResidence";
 import DetailResidence from "./components/DetailResidence";
 import PropertyResidence from "./components/PropertyResidence";
 import TimeRegulationsResidence from "./components/TimeRegulationsResidence";
+import CommentsResidence from "./components/CommentsResidence";
 
 export default function MainInformation({ data }) {
   return (
@@ -145,6 +146,9 @@ export default function MainInformation({ data }) {
       <hr className="bg-red-500 my-4" />
       <TimeRegulationsResidence  TimeRegulationsResidenceData={data.residenceTimeRegulations}/>
       <hr className="bg-red-500 my-4" />
+      <CommentsResidence commentRatesData={data.rating} commentsData={data.comments}/>
+      <hr className="bg-red-500 my-4" />
+
     </div>
   );
 }
