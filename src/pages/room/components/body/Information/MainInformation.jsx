@@ -21,6 +21,8 @@ import PropertyResidence from "./components/PropertyResidence";
 import TimeRegulationsResidence from "./components/TimeRegulationsResidence";
 import CommentsResidence from "./components/CommentsResidence";
 import PositionResidence from "./components/PostionResidence";
+import ManagerResidence from "./components/ManagerResidence";
+import DateReservation from "./components/DateReservation";
 export default function MainInformation({ data }) {
   return (
     <div dir="rtl" className="flex  w-2/3 flex-col">
@@ -75,7 +77,7 @@ export default function MainInformation({ data }) {
             )}
           </span>
           <div className="flex flex-col justify-between">
-            <span className="text-xl font-semibold text-gray-600">{`${data.managerInfo.firstNama} ${data.managerInfo.lastName}`}</span>
+            <span className="text-xl font-semibold text-gray-600">{`${data.managerInfo.firstName} ${data.managerInfo.lastName}`}</span>
             <span className="text-gray-600">
               {e2p(data.managerInfo.experience)}
             </span>
@@ -150,7 +152,10 @@ export default function MainInformation({ data }) {
       <hr className="bg-red-500 my-4" />
       <PositionResidence positionData={data.position} />
       <hr className="bg-red-500 my-4" />
-
+      <ManagerResidence managerData={data.managerInfo} />
+      <hr className="bg-red-500 my-4" />
+      <DateReservation  DateReservationData={data.reservation}/> 
+      <hr className="bg-red-500 my-4" />
     </div>
   );
 }

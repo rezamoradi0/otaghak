@@ -5,10 +5,10 @@ import { ROOM_PAGE_TEXT } from "../../../../../../constant/text";
 export default function TimeRegulationsResidence({
   TimeRegulationsResidenceData,
 }) {
-  console.log(
-    "TimeRegulationsResidenceData = > ",
-    TimeRegulationsResidenceData
-  );
+  // console.log(
+  //   "TimeRegulationsResidenceData = > ",
+  //   TimeRegulationsResidenceData
+  // );
   return (
     <div className="flex flex-col">
       <p className="text-lg font-semibold  text-gray-800 my-4">

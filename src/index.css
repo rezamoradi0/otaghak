@@ -55,3 +55,7 @@ code {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.ol-viewport>div:last-of-type{
+  display: none;
+}

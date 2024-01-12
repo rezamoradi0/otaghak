@@ -10,6 +10,7 @@ import {
 } from "./fontIcons";
 
 export const ROOM_PAGE_TEXT = {
+  price:"تومان",
   header: {
     id: "شناسه",
     images: "تصاویر",
@@ -173,6 +174,46 @@ export const ROOM_PAGE_TEXT = {
     positionResidence:{
       header:"موقعیت تقریبی اقامتگاه",
       text:"آدرس و موقعیت دقیق اقامتگاه، پس از رزرو برای شما ارسال خواهد شد."
-    }
+    },
+    managerResidence:{
+      responseTime:"زمان پاسخگویی",
+      acceptRate:"میزان تایید رزرو",
+      range:"حدود",
+      percent:"درصد",
+      profileBtn:"مشاهده پروفایل میزبان"
+    },
+      dateReservationResidence:{
+        header:"تقویم و نرخ رزرو",
+        childrenPrice:"نرخ ورود کودک",
+        additionalPrice:"نرخ هر نفر اضافه",
+        forPerson:"به ازای بیشتر از ",
+        person:"نفر",
+      }
   },
 };
+
+export const DATE_COMPONENT_TEXT={
+  dayNames:{
+    0:"شنبه",
+    1:"یکشنبه",
+    2:"دوشنبه",
+    3:"سه‌شنبه",
+    4:"چهارشنبه",
+    5:"پنجشنبه",
+    6:"جمعه"
+  },
+  monthNames:{
+    1:"فروردین",
+    2:"اردیبهشت",
+    3:"خرداد",
+    4:"تیر",
+    5:"مرداد",
+    6:"اردیبهشت",
+    7:"مهر",
+    8:"آبان",
+    9:"آذر",
+    10:"دی",
+    11:"بهمن",
+    12:"اسفند"
+  }
+}

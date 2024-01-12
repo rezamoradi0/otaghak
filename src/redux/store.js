@@ -5,6 +5,7 @@ import userLayoutSliceReducer from "./userLayoutSlice";
 import userRoomSliceReducer from "../features/userRoomSlice";
 import userRoomExtraSlice from "../features/userRoomExtraSlice";
 import domPublicSliceReducer from "../features/domPublicSlice";
+import userDatePickerSlice from "../features/userDatePickerSlice";
 const store=configureStore({
     reducer:{
         [apiSlice.reducerPath]:apiSlice.reducer,
@@ -12,7 +13,8 @@ const store=configureStore({
         userLayout:userLayoutSliceReducer,
         userRoom:userRoomSliceReducer,
         domPublic:domPublicSliceReducer,
-        userRoomExtra:userRoomExtraSlice
+        userRoomExtra:userRoomExtraSlice,
+        userDatePicker:userDatePickerSlice
     },
     middleware:getDefaultMiddleware=>getDefaultMiddleware().concat(apiSlice.middleware)
 });

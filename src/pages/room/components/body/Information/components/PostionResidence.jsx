@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { Map } from "@neshan-maps-platform/ol";
+// import { useEffect, useRef } from "react";
+// import { Map } from "@neshan-maps-platform/ol";
 
 import NeshanMap, {
   NeshanMapRef,
@@ -8,7 +8,7 @@ import { ICON_MAP_MARKER } from "../../../../../../constant/fontIcons";
 import { ROOM_PAGE_TEXT } from "../../../../../../constant/text";
 
 export default function PositionResidence({ positionData }) {
-  console.log(positionData);
+  // console.log(positionData);
   return (
     <div>
       <p className="text-lg font-semibold my-3">{ROOM_PAGE_TEXT.body.positionResidence.header}</p>

@@ -1,10 +1,7 @@
-export const ICON_WHATSAPP = (props) => (
- <CreateIconComponent fontAwesome={"fa-brands fa-square-whatsapp "} {...props} />
-);
 
 const CreateIconComponent = (props) => {
   const _classNames = `${props.fontAwesome} ${props.className}`;
-  return <i className={_classNames}></i>;
+  return <i className={_classNames} onClick={props.onClick}></i>;
 };
 export const ICON_SHARE = (props) => {
   return (
@@ -14,7 +11,10 @@ export const ICON_SHARE = (props) => {
     />
   );
 };
-
+export const ICON_WHATSAPP = (props) => (
+  <CreateIconComponent fontAwesome={"fa-brands fa-square-whatsapp "} {...props} />
+ );
+ 
 export const ICON_HEART = (props) => {
   return <CreateIconComponent fontAwesome="fa-regular fa-heart" {...props} />;
 };
@@ -27,6 +27,9 @@ export const ICON_LINK = (props) => (
     fontAwesome="fa-regular fa-link-horizontal "
     {...props}
   />
+);
+export const ICON_RIGHT = (props) => (
+  <CreateIconComponent fontAwesome={"fa-solid fa-chevron-right"} {...props} />
 );
 export const ICON_LEFT = (props) => (
   <CreateIconComponent fontAwesome={"fa-solid fa-chevron-left"} {...props} />

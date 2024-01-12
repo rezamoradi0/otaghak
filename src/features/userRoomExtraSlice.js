@@ -35,7 +35,7 @@ export const fetchRoom = createAsyncThunk(
         if (action.payload.error) {
           state.errorMessage=action.payload.error.text;
         } else {
-            console.log(action.payload);
+            // console.log(action.payload);
           state.data = action.payload;
           state.errorMessage=null;
         }

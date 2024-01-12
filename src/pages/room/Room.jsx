@@ -25,7 +25,7 @@ function Room() {
     theDispatch_Room(fetchRoom(RoomId));
   }, []);
   useEffect(() => {
-    console.log("theDomPublicChanged " + theDomPublicState);
+    // console.log("theDomPublicChanged " + theDomPublicState);
   }, [theDomPublicState]);
   if (!theRoomExtraState.data) {
     return <div className="bg-gray-500 min-h-screen min-w-full">Loading... </div>

@@ -61,7 +61,7 @@ const AppRoutes = () => {
     },
     {
       path: "/test",
-      element: <>Tersas</>,
+      element: <>Test</>,
     },
   ]);
 
