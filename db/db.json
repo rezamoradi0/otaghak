@@ -107,7 +107,7 @@
         ]
       }
     },
-    "time": "2024-01-10T00:00:00"
+    "time": "2024-01-13T00:00:00"
   },
   "mainInfo": {
     "header": {
@@ -883,7 +883,7 @@
         ]
       }
     },
-    "time": "2023-12-21T00:00:00"
+    "time": "2024-01-13T00:00:00"
   },
 
   "residenceTypes": [
@@ -1262,7 +1262,7 @@
         "additionalPrice": 300000,
         "maxGuests": 6,
         "dates": {
-          "date": "2024-01-10T00:00:00",
+          "date": "2024-01-13T00:00:00",
           "months": [
             {
               "id": 0,
@@ -1271,7 +1271,7 @@
                   "isPrime": false,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
+                  "available": false
                 },
                 {
                   "isPrime": true,
@@ -1301,7 +1301,7 @@
                   "isPrime": true,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
+                  "available": false
                 },
                 {
                   "isPrime": false,
@@ -1319,13 +1319,13 @@
                   "isPrime": false,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
+                  "available": false
                 },
                 {
                   "isPrime": false,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
+                  "available": false
                 },
                 {
                   "isPrime": false,
@@ -1337,43 +1337,7 @@
                   "isPrime": true,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": true,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": true,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": false,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": false,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": false,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": false,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
+                  "available": false
                 },
                 {
                   "isPrime": true,
@@ -1400,9 +1364,51 @@
                   "available": true
                 },
                 {
+                  "isPrime": false,
+                  "price": 2100000,
+         
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 2100000,
+         
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 2100000,
+         
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 2100000,
+         
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                  "price": 2100000,
+         
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 2100000,
+         
+                  "available": true
+                },
+                {
                   "isPrime": true,
                   "price": 2100000,
                   "discount": 10,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 2100000,
+              
                   "available": true
                 },
                 {
@@ -1415,19 +1421,13 @@
                   "isPrime": true,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
+                  "available": false
                 },
                 {
                   "isPrime": true,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": true,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
+                  "available": false
                 },
                 {
                   "isPrime": true,
@@ -1454,9 +1454,33 @@
               "days": [
                 {
                   "isPrime": true,
+                  "price": 2400000,
+                 
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 2500000,
+                  "discount": 10,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 2200000,
+                  "discount": 10,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 2100000,
+                  "discount": 10,
+                  "available": false
                 },
                 {
                   "isPrime": true,
@@ -1509,55 +1533,30 @@
                 {
                   "isPrime": true,
                   "price": 2100000,
-                  "discount": 10,
+               
                   "available": true
                 },
                 {
                   "isPrime": true,
                   "price": 2100000,
-                  "discount": 10,
+               
                   "available": true
                 },
                 {
                   "isPrime": true,
                   "price": 2100000,
-                  "discount": 10,
+               
                   "available": true
                 },
                 {
                   "isPrime": true,
                   "price": 2100000,
-                  "discount": 10,
+               
                   "available": true
                 },
                 {
                   "isPrime": true,
                   "price": 2100000,
-                  "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": true,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": true,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": true,
-                  "price": 2100000,
-                  "discount": 10,
-                  "available": true
-                },
-                {
-                  "isPrime": true,
-                  "price": 2100000,
-                  "discount": 10,
                   "available": true
                 },
                 {
@@ -1653,7 +1652,7 @@
                   "isPrime": true,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
+                  "available": false
                 },
                 {
                   "isPrime": false,
@@ -1677,7 +1676,7 @@
                   "isPrime": false,
                   "price": 2100000,
                   "discount": 10,
-                  "available": true
+                  "available": false
                 },
                 {
                   "isPrime": false,

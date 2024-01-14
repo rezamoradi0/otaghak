@@ -120,7 +120,7 @@ export function GetNextMonth(monthNumber) {
 //Get Date in Shams
 export function GetDate(dateString) {
   const myTime = Date.parse(dateString);
-  // console.log(myTime);
+  // console.log(getFirstDay(p2e(getDateFormat(myTime, { day: "2-digit" })),dayNameToNumber(getDateFormat(myTime, { weekday: "long" }))));
   const todayFa = {
     day: getDateFormat(myTime, { day: "2-digit" }),
     month: getDateFormat(myTime, { month: "numeric" }),
@@ -128,7 +128,7 @@ export function GetDate(dateString) {
     year: getDateFormat(myTime, { year: "numeric" }),
     dayWeek: getDateFormat(myTime, { weekday: "long" }),
     firstDayIndex: getFirstDay(
-      getDateFormat(myTime, { day: "2-digit" }),
+      p2e(getDateFormat(myTime, { day: "2-digit" })),
       dayNameToNumber(getDateFormat(myTime, { weekday: "long" }))
     ),
     yearEn: Number(p2e(getDateFormat(myTime, { year: "numeric" }))),
@@ -251,6 +251,7 @@ function GetYear(DateRef, nextMonthCount) {
   return year;
 }
 export function GetFullDataForMonth(thisMonthData, nextMonth = 0) {
+  // console.log(thisMonthData.firstDayIndex);
   if (nextMonth === 0) {
     return {
       year: thisMonthData.yearEn,

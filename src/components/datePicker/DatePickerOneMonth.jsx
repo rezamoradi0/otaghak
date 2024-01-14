@@ -10,10 +10,9 @@ export default function DatePickerOneMonth({
   const canNext = useSelector((state) => state.userDatePicker.canNext);
   const canPerv = useSelector((state) => state.userDatePicker.canPerv);
   const theDispatch = useDispatch();
-  console.log(monthData);
   if (clickDirection === -1) {
     return (
-      <div className="py-4 px-2 my-2 w-[450px] h-[400px] flex flex-col">
+      <div className="py-4 px-2 my-2 w-[450px] min-h-[400px] flex flex-col">
         <DatePickerMonthHeader
           monthName={monthData.monthName}
           yearNumber={monthData.year}
@@ -30,7 +29,7 @@ export default function DatePickerOneMonth({
   }
   if (clickDirection === 1) {
     return (
-      <div className="py-4 px-2 my-2 w-[450px]  h-[400px] flex flex-col">
+      <div className="py-4 px-2 my-2 w-[450px]  min-h-[400px] flex flex-col">
         <DatePickerMonthHeader
           monthName={monthData.monthName}
           yearNumber={monthData.year}
@@ -47,7 +46,7 @@ export default function DatePickerOneMonth({
   }
   if (clickDirection === 0) {
     return (
-      <div className="py-4 px-2 my-2 w-[450px]  h-[400px] flex flex-col">
+      <div className="py-4 px-2 my-2 w-[450px]  min-h-[400px] flex flex-col">
         <DatePickerMonthHeader
           monthName={monthData.monthName}
           yearNumber={monthData.year}
@@ -68,7 +67,7 @@ export default function DatePickerOneMonth({
     );
   }
   return (
-    <div className="py-4 px-2 my-2 w-[450px]  h-[400px] flex flex-col">
+    <div className="py-4 px-2 my-2 w-[450px]  min-h-[400px] flex flex-col">
       <DatePickerMonthHeader
         monthName={monthData.monthName}
         yearNumber={monthData.year}
