@@ -2,8 +2,9 @@ import { ICON_FLASH } from "../../../constant/fontIcons";
 import { twMerge } from "tailwind-merge";
 import { e2p } from "../../../utils/functions/DateFunc";
 import { useDispatch, useSelector } from "react-redux";
-import { selectDay } from "../../../features/userDatePickerSlice";
+import { selectDay, addDay ,clearDay} from "../../../features/userDatePickerSlice";
 import { useEffect, useState } from "react";
+import { DATE_COMPONENT_TEXT } from "../../../constant/text";
 export default function DatePickerDay({
   value = "",
   dayNumber,
@@ -11,6 +12,8 @@ export default function DatePickerDay({
   day,
   dayRealNumber,
   monthIndex,
+  monthName,
+  year,
 }) {
   const [dynamicStyle, setDynamicStyle] = useState(null);
   const theDispatch = useDispatch();
@@ -23,6 +26,14 @@ export default function DatePickerDay({
       theDispatch(selectDay({ monthIndex, day: dayRealNumber }));
     }
   };
+  const addDayHandler = (monthName, dayRealNumber, year) => {
+    const monthNumber = DATE_COMPONENT_TEXT.monthNumber[monthName];
+    const day = { year: year, month: monthNumber, day: dayRealNumber };
+    theDispatch(addDay(day));
+  };
+  const clearDayHandler=()=>{
+    theDispatch(clearDay());
+  }
   useEffect(() => {
     if (
       (selectedDaysInfoState.enterDay.day === dayRealNumber &&
@@ -30,29 +41,53 @@ export default function DatePickerDay({
       (selectedDaysInfoState.exitDay.day === dayRealNumber &&
         selectedDaysInfoState.exitDay.monthIndex === monthIndex)
     ) {
-      dayNumber % 7 === 0 ?setDynamicStyle(" bg-gray-700  [&>span:nth-child(3)]:text-white") : setDynamicStyle(" bg-gray-700 text-white [&>*]:text-white");
-     
-    } 
-  else  if(selectedDaysInfoState.enterDay.day&&selectedDaysInfoState.exitDay.day&& data?.available){
+      //first Day Selected or Last Day Selected
+      if (selectedDaysInfoState.exitDay.day === dayRealNumber||selectedDaysInfoState.exitDay.day) {
+        // if selected second or finished and adding first 
+        addDayHandler(monthName, dayRealNumber, year);
+      }else {
+        clearDayHandler();
+      }
+      //checking for weekend => red text
+      dayNumber % 7 === 0
+        ? setDynamicStyle(" bg-gray-700  [&>span:nth-child(3)]:text-white")
+        : setDynamicStyle(" bg-gray-700 text-white [&>*]:text-white");
+    } else if (
+      selectedDaysInfoState.enterDay.day &&
+      selectedDaysInfoState.exitDay.day &&
+      data?.available
+    ) {
       //selected Two Days
-      if(selectedDaysInfoState.enterDay.monthIndex===selectedDaysInfoState.exitDay.monthIndex){
+      if (
+        selectedDaysInfoState.enterDay.monthIndex ===
+        selectedDaysInfoState.exitDay.monthIndex
+      ) {
         //One Month selected
-        if(selectedDaysInfoState.enterDay.day<dayRealNumber &&dayRealNumber<selectedDaysInfoState.exitDay.day&&monthIndex===selectedDaysInfoState.exitDay.monthIndex){
+        if (
+          selectedDaysInfoState.enterDay.day < dayRealNumber &&
+          dayRealNumber < selectedDaysInfoState.exitDay.day &&
+          monthIndex === selectedDaysInfoState.exitDay.monthIndex
+        ) {
           setDynamicStyle(" bg-gray-200 ");
+          addDayHandler(monthName, dayRealNumber, year);
         }
-      }
-      else {
+      } else {
         // Two Month selected
-        if(monthIndex===selectedDaysInfoState.enterDay.monthIndex&&dayRealNumber>selectedDaysInfoState.enterDay.day){
+        if (
+          monthIndex === selectedDaysInfoState.enterDay.monthIndex &&
+          dayRealNumber > selectedDaysInfoState.enterDay.day
+        ) {
           setDynamicStyle(" bg-gray-200 ");
-        }
-        else if(monthIndex===selectedDaysInfoState.exitDay.monthIndex&&dayRealNumber<selectedDaysInfoState.exitDay.day){
+          addDayHandler(monthName, dayRealNumber, year);
+        } else if (
+          monthIndex === selectedDaysInfoState.exitDay.monthIndex &&
+          dayRealNumber < selectedDaysInfoState.exitDay.day
+        ) {
           setDynamicStyle(" bg-gray-200 ");
-          console.log("HERE");
+          addDayHandler(monthName, dayRealNumber, year);
         }
       }
-    }
-    else if (dynamicStyle) {
+    } else if (dynamicStyle) {
       setDynamicStyle(null);
     }
   }, [selectedDaysInfoState]);

@@ -10,7 +10,7 @@ import {
 } from "./fontIcons";
 
 export const ROOM_PAGE_TEXT = {
-  price:"تومان",
+  price: "تومان",
   header: {
     id: "شناسه",
     images: "تصاویر",
@@ -31,7 +31,7 @@ export const ROOM_PAGE_TEXT = {
     shareWithWhatsapp: "ارسال با واتساپ",
     copyLink: "کپی کردن لینک",
     moreDetail: "نمایش جزئیات بیشتر",
-    moreComments:"مشاهده همه نظر ها"
+    moreComments: "مشاهده همه نظر ها",
   },
   popups: {
     share: {
@@ -142,7 +142,7 @@ export const ROOM_PAGE_TEXT = {
       hostRoles: "قوانین میزبان",
       cancelHeader: "مقررات لغو رزرو",
       cancelType: {
-      1: {
+        1: {
           header: "سختگیرانه",
           mainText:
             "بیشتر از 72 ساعت به زمان ورود: 80% کل مبلغ بازگشت داده می‌شود کمتر از 72 ساعت به زمان ورود: 0%شب اول + 80% باقی شب ها پس از ورود به اقامتگاه: بدون بازگشت هزینه",
@@ -157,63 +157,76 @@ export const ROOM_PAGE_TEXT = {
         },
       },
     },
-    commentResidence:{
-      header:"نظرات مهمان ها",
-      rate:"امتیاز",
-      comment:"نظر",
-      safe:"امنیت محله",
-      accepting:"پذیرش میزبان",
-      clean:"نظافت و تمیزی",
-      communication:"ارتباط با مشتری",
-      value:"ارزش کلی اقامتگاه",
-      information:"صحت اطلاعات",
-      case:"مورد",
-      adminReply:"پاسخ ادمین : " 
-    }
-    ,
-    positionResidence:{
-      header:"موقعیت تقریبی اقامتگاه",
-      text:"آدرس و موقعیت دقیق اقامتگاه، پس از رزرو برای شما ارسال خواهد شد."
+    commentResidence: {
+      header: "نظرات مهمان ها",
+      rate: "امتیاز",
+      comment: "نظر",
+      safe: "امنیت محله",
+      accepting: "پذیرش میزبان",
+      clean: "نظافت و تمیزی",
+      communication: "ارتباط با مشتری",
+      value: "ارزش کلی اقامتگاه",
+      information: "صحت اطلاعات",
+      case: "مورد",
+      adminReply: "پاسخ ادمین : ",
     },
-    managerResidence:{
-      responseTime:"زمان پاسخگویی",
-      acceptRate:"میزان تایید رزرو",
-      range:"حدود",
-      percent:"درصد",
-      profileBtn:"مشاهده پروفایل میزبان"
+    positionResidence: {
+      header: "موقعیت تقریبی اقامتگاه",
+      text: "آدرس و موقعیت دقیق اقامتگاه، پس از رزرو برای شما ارسال خواهد شد.",
     },
-      dateReservationResidence:{
-        header:"تقویم و نرخ رزرو",
-        childrenPrice:"نرخ ورود کودک",
-        additionalPrice:"نرخ هر نفر اضافه",
-        forPerson:"به ازای بیشتر از ",
-        person:"نفر",
-      }
+    managerResidence: {
+      responseTime: "زمان پاسخگویی",
+      acceptRate: "میزان تایید رزرو",
+      range: "حدود",
+      percent: "درصد",
+      profileBtn: "مشاهده پروفایل میزبان",
+    },
+    dateReservationResidence: {
+      header: "تقویم و نرخ رزرو",
+      childrenPrice: "نرخ ورود کودک",
+      additionalPrice: "نرخ هر نفر اضافه",
+      forPerson: "به ازای بیشتر از ",
+      person: "نفر",
+    },
   },
 };
 
-export const DATE_COMPONENT_TEXT={
-  dayNames:{
-    0:"شنبه",
-    1:"یکشنبه",
-    2:"دوشنبه",
-    3:"سه‌شنبه",
-    4:"چهارشنبه",
-    5:"پنجشنبه",
-    6:"جمعه"
+export const DATE_COMPONENT_TEXT = {
+  dayNames: {
+    0: "شنبه",
+    1: "یکشنبه",
+    2: "دوشنبه",
+    3: "سه‌شنبه",
+    4: "چهارشنبه",
+    5: "پنجشنبه",
+    6: "جمعه",
   },
-  monthNames:{
-    1:"فروردین",
-    2:"اردیبهشت",
-    3:"خرداد",
-    4:"تیر",
-    5:"مرداد",
-    6:"اردیبهشت",
-    7:"مهر",
-    8:"آبان",
-    9:"آذر",
-    10:"دی",
-    11:"بهمن",
-    12:"اسفند"
-  }
-}
+  monthNames: {
+    1: "فروردین",
+    2: "اردیبهشت",
+    3: "خرداد",
+    4: "تیر",
+    5: "مرداد",
+    6: "اردیبهشت",
+    7: "مهر",
+    8: "آبان",
+    9: "آذر",
+    10: "دی",
+    11: "بهمن",
+    12: "اسفند",
+  },
+  monthNumber: {
+    "فروردین": 1,
+    "اردیبهشت": 2,
+    "خرداد": 3,
+    "تیر": 4,
+    "مرداد": 5,
+    "اردیبهشت": 6,
+    "مهر": 7,
+    "آبان": 8,
+    "آذر": 9,
+    "دی": 10,
+    "بهمن": 11,
+  "اسفند":  12,
+  },
+};

@@ -12,7 +12,9 @@ export default function DatePickerTable({ DatePickerData }) {
   useEffect(() => {
     theUserDatePickerDispatch(DateWorks(DatePickerData));
   }, []);
-
+useEffect(()=>{
+  console.log(datePickerState.selectedDays);
+},[datePickerState.selectedDays]);
   useEffect(() => {}, [datePickerState]);
   if(datePickerState.monthTables.length===0) return <p>loading</p>
   if (datePickerState.monthTables.length > 0) {

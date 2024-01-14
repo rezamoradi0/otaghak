@@ -1,6 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { GetDate, GetFullDataForMonth } from "../utils/functions/DateFunc";
 
+function ResetDayInfo(state) {
+  state.daysInfo = {
+    enterDay: { day: null, monthIndex: null },
+    exitDay: { day: null, monthIndex: null },
+  };
+  state.selectedDays = [];
+}
+
 const initialState = {
   //{year: 1402 , monthName : "Dey" ,dayCount:30 , DayStartIndex:4 ,daysInfo:[{isPrime:false ,price:3300,discount:10,available:true}]}
   monthTables: [],
@@ -15,6 +23,8 @@ const initialState = {
     enterDay: { day: null, monthIndex: null },
     exitDay: { day: null, monthIndex: null },
   },
+
+  selectedDays: [],
 };
 const DatePickerSlice = createSlice({
   name: "datePicker",
@@ -37,6 +47,7 @@ const DatePickerSlice = createSlice({
     },
 
     nextMonth(state) {
+      ResetDayInfo(state);
       state.canNext = true;
       state.canPerv = true;
       if (state.tableIndex < state.maxTabIndex - state.tablesNumber) {
@@ -49,6 +60,7 @@ const DatePickerSlice = createSlice({
       }
     },
     pervMonth(state) {
+      ResetDayInfo(state);
       state.canPerv = true;
       state.canNext = true;
       if (state.tableIndex > 0) {
@@ -70,19 +82,28 @@ const DatePickerSlice = createSlice({
       ) {
         state.daysInfo.enterDay = action.payload;
         state.daysInfo.exitDay = { day: null, monthIndex: null };
+   
+
       } else if (
         state.daysInfo.enterDay.day === action.payload.day &&
         state.daysInfo.enterDay.monthIndex === action.payload.monthIndex
       ) {
+        state.selectedDays=[];
         state.daysInfo.enterDay = { day: null, monthIndex: null };
         state.daysInfo.exitDay = { day: null, monthIndex: null };
       } else {
         state.daysInfo.exitDay = action.payload;
       }
     },
+    addDay(state, action) {
+      state.selectedDays.push(action.payload);
+    },
+    clearDay(state){
+      state.selectedDays=[];
+    }
   },
 });
 
-export const { DateWorks, nextMonth, pervMonth, selectDay } =
+export const { DateWorks, nextMonth, pervMonth, selectDay, addDay ,clearDay} =
   DatePickerSlice.actions;
 export default DatePickerSlice.reducer;
