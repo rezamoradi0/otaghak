@@ -5,14 +5,15 @@ import { useDispatch, useSelector } from "react-redux";
 import DatePickerMonthBody from "./components/DatePickerMonthBody";
 export default function DatePickerOneMonth({
   monthData,
-  clickDirection = null
+  clickDirection = null,
+  thisIsSecond
 }) {
   const canNext = useSelector((state) => state.userDatePicker.canNext);
   const canPerv = useSelector((state) => state.userDatePicker.canPerv);
   const theDispatch = useDispatch();
   if (clickDirection === -1) {
     return (
-      <div className="py-4 px-2 my-2 w-[450px] min-h-[400px] flex flex-col">
+      <div className="py-4 px-2 my-1 w-[450px] min-h-[400px] flex flex-col">
         <DatePickerMonthHeader
           monthName={monthData.monthName}
           yearNumber={monthData.year}
@@ -23,13 +24,13 @@ export default function DatePickerOneMonth({
           }}
           canPerv={canPerv}
         />
-       <DatePickerMonthBody monthData={monthData}/>
+       <DatePickerMonthBody thisIsSecond={thisIsSecond} monthData={monthData}/>
       </div>
     );
   }
   if (clickDirection === 1) {
     return (
-      <div className="py-4 px-2 my-2 w-[450px]  min-h-[400px] flex flex-col">
+      <div className="py-4 px-2 my-1 w-[450px]  min-h-[400px] flex flex-col">
         <DatePickerMonthHeader
           monthName={monthData.monthName}
           yearNumber={monthData.year}
@@ -40,7 +41,7 @@ export default function DatePickerOneMonth({
           }}
           canNext={canNext}
         />
-            <DatePickerMonthBody monthData={monthData}/>
+            <DatePickerMonthBody  thisIsSecond={thisIsSecond} monthData={monthData}/>
       </div>
     );
   }
@@ -62,7 +63,7 @@ export default function DatePickerOneMonth({
           canPerv={canPerv}
           canNext={canNext}
         />
-            <DatePickerMonthBody monthData={monthData}/>
+            <DatePickerMonthBody  thisIsSecond={thisIsSecond} monthData={monthData}/>
       </div>
     );
   }

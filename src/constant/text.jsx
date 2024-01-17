@@ -187,6 +187,8 @@ export const ROOM_PAGE_TEXT = {
       additionalPrice: "نرخ هر نفر اضافه",
       forPerson: "به ازای بیشتر از ",
       person: "نفر",
+      primeText: "رزرو سریع اقامتگاه بدون نیاز به تایید میزبان",
+      priceText: "قیمت‌ها به هزار تومان است. (3 صفر حذف شده)",
     },
   },
 };
@@ -216,17 +218,57 @@ export const DATE_COMPONENT_TEXT = {
     12: "اسفند",
   },
   monthNumber: {
-    "فروردین": 1,
-    "اردیبهشت": 2,
-    "خرداد": 3,
-    "تیر": 4,
-    "مرداد": 5,
-    "اردیبهشت": 6,
-    "مهر": 7,
-    "آبان": 8,
-    "آذر": 9,
-    "دی": 10,
-    "بهمن": 11,
-  "اسفند":  12,
+    فروردین: 1,
+    اردیبهشت: 2,
+    خرداد: 3,
+    تیر: 4,
+    مرداد: 5,
+    اردیبهشت: 6,
+    مهر: 7,
+    آبان: 8,
+    آذر: 9,
+    دی: 10,
+    بهمن: 11,
+    اسفند: 12,
   },
 };
+
+export const SLIDER_COMPONENT_TEXT = {
+  otherRooms:"سایر اقامتگاه‌های مشابه در منطقه ",
+  allBtn:"نمایش همه",
+  tags: {
+    1: {
+      text: "رزرو آنی",
+      description: "رزرو سریع اقامتگاه بدون نیاز به تایید میزبان",
+      icon:<ICON_FLASH className="fa-solid text-yellow-400"/>
+    },
+    2: {
+      description: "رزرو آنی اقامتگاه ممتاز ، همراه بسته بهداشتی",
+      text: "پرایم",
+      icon:<ICON_FLASH className="fa-solid text-blue-500"/>
+    },
+    3: {
+      text: "شبانه",
+      description: " رزرو شبانه اقامتگاه با امکان تحویل 24 ساعته",
+      icon:<ICON_FLASH className="fa-solid text-purple-600"/>
+    },
+  },
+};
+
+export const LINKS_TEXT={
+  searchOtherRooms:"جستجو در اقامتگاه‌های مشابه"
+}
+export const RESERVE_TABLE_TEXT={
+  fromPrice:"هر شب از",
+  comment:"پس از ثبت درخواست می توانید با میزبان خود مستقیما گفتگوی آنلاین داشته باشید",
+  enterTime:"تاریخ ورود",
+  exitTime:"تاریخ خروج",
+  datePickerGuide:"راهنمای تقویم",
+  datePickerJourney:"تاریخ سفر",
+  personCount:"تعداد نفرات را انتخاب کنید",
+  kidsRoles:"کودکان تا زیر 3 سال در صورتحساب لحاظ نمی‌گردند.",
+  selectDate:"انتخاب تاریخ",
+  selectPersons:"انتخاب تعداد نفرات",
+  reserveRequest:"درخواست رزرو (رایگان)"
+
+}

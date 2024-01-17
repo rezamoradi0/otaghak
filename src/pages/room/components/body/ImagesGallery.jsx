@@ -66,7 +66,7 @@ export default function ImagesGallery({ isExpand, imageLinks }) {
             headerParentClassName="py-3 border-b-0"
             exitClassName="text-white text-base"
           >
-            <div className="w-full h-full flex items-center justify-between flex-col">
+            <div className="images-gallery  w-full h-full flex items-center justify-between flex-col">
               <ImagesSwiper setSwiperRealIndex={setSwiperRealIndex}  images={imageLinks}/>
             </div>
           </Popup>

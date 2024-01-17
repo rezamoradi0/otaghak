@@ -14,7 +14,7 @@ export default function DatePickerMonthHeader({
   canPerv
 }) {
   return (
-    <div className={twMerge(`flex items-center  justify-between my-2`, className)}>
+    <div className={twMerge(`flex items-center  justify-between `, className)}>
       {PervIcon ? <ICON_RIGHT className={`${canPerv?"cursor-pointer":"text-gray-400 cursor-not-allowed"}`} onClick={PervOnClick}/> : <span></span>}
       <div className="flex gap-x-4 font-semibold text-lg text-gray-700">
         <span>{monthName}</span>

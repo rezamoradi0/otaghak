@@ -2,7 +2,11 @@ import { ICON_FLASH } from "../../../constant/fontIcons";
 import { twMerge } from "tailwind-merge";
 import { e2p } from "../../../utils/functions/DateFunc";
 import { useDispatch, useSelector } from "react-redux";
-import { selectDay, addDay ,clearDay} from "../../../features/userDatePickerSlice";
+import {
+  selectDay,
+  addDay,
+  clearDay,
+} from "../../../features/userDatePickerSlice";
 import { useEffect, useState } from "react";
 import { DATE_COMPONENT_TEXT } from "../../../constant/text";
 export default function DatePickerDay({
@@ -14,7 +18,9 @@ export default function DatePickerDay({
   monthIndex,
   monthName,
   year,
+  thisIsSecond
 }) {
+ 
   const [dynamicStyle, setDynamicStyle] = useState(null);
   const theDispatch = useDispatch();
   const selectedDaysInfoState = useSelector((state) => {
@@ -27,13 +33,30 @@ export default function DatePickerDay({
     }
   };
   const addDayHandler = (monthName, dayRealNumber, year) => {
+    if(thisIsSecond)return;
     const monthNumber = DATE_COMPONENT_TEXT.monthNumber[monthName];
-    const day = { year: year, month: monthNumber, day: dayRealNumber };
+    const day = data.discount
+      ? {
+          year: year,
+          month: monthNumber,
+          day: dayRealNumber,
+          dayName:DATE_COMPONENT_TEXT.dayNames[(dayNumber-1)%7],
+          discountedPrice: data.discountedPrice,
+          price: data.price,
+        }
+      : {
+          year: year,
+          month: monthNumber,
+          dayName:DATE_COMPONENT_TEXT.dayNames[(dayNumber-1)%7],
+          day: dayRealNumber,
+          price: data.price,
+        };
+
     theDispatch(addDay(day));
   };
-  const clearDayHandler=()=>{
+  const clearDayHandler = () => {
     theDispatch(clearDay());
-  }
+  };
   useEffect(() => {
     if (
       (selectedDaysInfoState.enterDay.day === dayRealNumber &&
@@ -42,10 +65,13 @@ export default function DatePickerDay({
         selectedDaysInfoState.exitDay.monthIndex === monthIndex)
     ) {
       //first Day Selected or Last Day Selected
-      if (selectedDaysInfoState.exitDay.day === dayRealNumber||selectedDaysInfoState.exitDay.day) {
-        // if selected second or finished and adding first 
+      if (
+        selectedDaysInfoState.exitDay.day === dayRealNumber ||
+        selectedDaysInfoState.exitDay.day
+      ) {
+        // if selected second or finished and adding first
         addDayHandler(monthName, dayRealNumber, year);
-      }else {
+      } else {
         clearDayHandler();
       }
       //checking for weekend => red text
@@ -94,7 +120,7 @@ export default function DatePickerDay({
   if (!data) {
     return (
       <div
-        className={`col-span-1 row-span-1 m-1 rounded-md text-xs text-gray-500 text-center flex flex-col justify-center items-center  w-3/4  min-h-[55px]`}
+        className={`col-span-1 row-span-1 m-[1px] rounded-md text-xs text-gray-500 text-center flex flex-col justify-center items-center  w-3/4  min-h-[50px]`}
         key={crypto.randomUUID()}
       >
         <span> {value}</span>
@@ -118,7 +144,7 @@ export default function DatePickerDay({
         clickHandler();
       }}
       className={twMerge(
-        `col-span-1 row-span-1 m-1 rounded-md ${dynamicStyle} text-xs text-gray-500 text-center flex flex-col justify-center items-center relative   w-3/4   min-h-[55px] `,
+        `col-span-1 row-span-1 m-[2px] rounded-md ${dynamicStyle} text-xs text-gray-500 text-center flex flex-col justify-center items-center relative   w-3/4   min-h-[50px] `,
         _classNames
       )}
       key={crypto.randomUUID()}
@@ -150,7 +176,7 @@ export default function DatePickerDay({
                 {e2p(data.price.toLocaleString().slice(0, -4))}
               </span>
               <span className="text-[10px] -my-2">
-                {e2p(data.price.toLocaleString().slice(0, -4))}
+                {e2p(data.discountedPrice.toLocaleString().slice(0, -4))}
               </span>
             </>
           ) : (

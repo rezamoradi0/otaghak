@@ -1,73 +1,73 @@
-
+/* 
 .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: transparent;
-  
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .swiper {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .swiper-slide {
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .mySwiper2 {
-    height: 500px;
-    width:65%;
+  width: 100%;
+  height: 100%;
+} */
 
+.images-gallery .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
 
-  }
-  .mySwiper2 .swiper-slide img{
-    width: 70%;
-    height: 90%;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-  .mySwiper {
-    height:100px;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
-  
-  .mySwiper .swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-  
-  .mySwiper .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .swiper-button-prev::after,.swiper-button-next::after{
-    color: #d1d1d1;
-    font-size: 20px;
-  }
+.images-gallery .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.images-gallery  .swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.images-gallery  .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.images-gallery  .mySwiper2 {
+  height: 500px;
+  width:65%;
+
+
+}
+.images-gallery  .mySwiper2 .swiper-slide img{
+  width: 70%;
+  height: 90%;
+}
+
+.images-gallery  .mySwiper {
+  height:100px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.images-gallery  .mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.images-gallery  .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.images-gallery  .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.images-gallery  .swiper-button-prev::after,.swiper-button-next::after{
+  color: #d1d1d1;
+  font-size: 20px;
+}

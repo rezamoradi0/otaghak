@@ -155,7 +155,7 @@ export default function MainInformation({ data }) {
       <ManagerResidence managerData={data.managerInfo} />
       <hr className="bg-red-500 my-4" />
       <DateReservation  DateReservationData={data.reservation}/> 
-      <hr className="bg-red-500 my-4" />
+      <hr className="bg-red-500  mt-8" />
     </div>
   );
 }

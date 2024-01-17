@@ -1,7 +1,7 @@
 import {Swiper,SwiperSlide} from "swiper/react"
 import "swiper/css"
 const SwiperSliderTest = () => {
-    return ( <div>  
+    return ( <div className="main-slider">  
         <Swiper
         spaceBetween={50}
         slidesPerView={3}

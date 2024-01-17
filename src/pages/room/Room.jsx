@@ -5,6 +5,9 @@ import ImagesGallery from "./components/body/ImagesGallery";
 import { fetchRoom } from "../../features/userRoomExtraSlice";
 import MainInformation from "./components/body/Information/MainInformation";
 import ReserveTable from "./components/body/ReserveTable";
+import DefaultSlider from "../../components/swiperSlider/sliders/DefaultSlider";
+import { SLIDER_COMPONENT_TEXT } from "../../constant/text";
+import OtherResidenceLinks from "./components/body/Information/components/OtherResidenceLinks";
 
 function Room() {
   const theParams = useParams();
@@ -28,25 +31,39 @@ function Room() {
     // console.log("theDomPublicChanged " + theDomPublicState);
   }, [theDomPublicState]);
   if (!theRoomExtraState.data) {
-    return <div className="bg-gray-500 min-h-screen min-w-full">Loading... </div>
+    return (
+      <div className="bg-gray-500 min-h-screen min-w-full">Loading... </div>
+    );
   }
   return (
-    <div dir="rtl"
+    <div
+      dir="rtl"
       style={
         !!theDomPublicState?.header
           ? { marginTop: `${theDomPublicState.header + _marginTop}px` }
           : {}
       }
-      className="px-10 min-h-screen"
+      className="px-10 min-h-screen "
     >
       <ImagesGallery
         isExpand={theRoomState.selectedGallery}
         imageLinks={theRoomExtraState.data.images}
       />
-    <div className="flex relative gap-x-12">
-    <MainInformation data={theRoomExtraState.data}/>
-    <ReserveTable parentMarginTop={_marginTop}/>
-    </div>
+      <div className="flex relative gap-x-12 w-full overflow-x-clip">
+        <MainInformation data={theRoomExtraState.data} />
+        <ReserveTable parentMarginTop={_marginTop} data={theRoomExtraState.data}/>
+      </div>
+   
+      <div className="mt-4">
+        <DefaultSlider
+          SliderItemsData={theRoomExtraState.data.otherResidences}
+          Header={SLIDER_COMPONENT_TEXT.otherRooms}
+          hasSlider={true}
+        />
+
+        <hr className="my-10"/>
+      <OtherResidenceLinks  linksData={theRoomExtraState.data.otherResidenceLinks}/>
+      </div>
     </div>
   );
 }

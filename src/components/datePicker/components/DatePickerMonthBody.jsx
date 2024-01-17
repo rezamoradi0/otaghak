@@ -3,7 +3,7 @@ import { e2p } from "../../../utils/functions/DateFunc";
 import DatePickerDay from "./DatePickerDay";
 
 
-export default function DatePickerMonthBody({ monthData }) {
+export default function DatePickerMonthBody({ monthData ,thisIsSecond}) {
   // console.log(monthData);
   return (
     <div className="grid-cols-7 grid  grid-rows-7  grid-flow-row place-items-center h-full">
@@ -28,6 +28,7 @@ export default function DatePickerMonthBody({ monthData }) {
             monthIndex={monthData.monthIndex}
             monthName={monthData.monthName}
             year={monthData.year}
+            thisIsSecond={thisIsSecond}
           />
         ))}
     </div>

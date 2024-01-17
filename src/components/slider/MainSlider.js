@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import SliderItem from "./SliderItem";
 import UseSliderMovement from "./UseSliderMovement";
 import {Swiper,SwiperSlide} from "swiper/react"
-import "swiper/css"
+
 /**
  *
  * @param {"text"} param0
@@ -60,43 +60,15 @@ const MainSlider = ({ text, description, url, dataArray, bg_color }) => {
           </Swiper>
 
 
-      {/* <div
-        dir="rtl"
-    
-        // scroll-smooth   snap-x snap-mandatory
-        className={`${
-          mouseIsDown ? "" : "scroll-smooth "
-        } snap-mandatory   overflow-x-scroll scrollbar-hide w-full`}
-      >
-        <div
-          dir="ltr"
-          ref={sliderBodyRef}
-          className="h-full  p-2 flex flex-row"
-        >
-          {dataArray.map((itemData) => {
-            return <SliderItem data={itemData} />;
-          })}
-        </div>
-      </div> */}
       <span
-        onClick={() => {
-          // onClickSliderButtons(-1);
-        }}
-        onTouchEnd={() => {
-          // onClickSliderButtons(-1);
-        }}
+        
         className="flex items-center p-2 h-4/5 w-8 absolute px-8 left-0 -translate-x-full bottom-0 cursor-pointer "
       >
         {" "}
         <i className=" fa-solid fa-angle-left text-3xl"></i>
       </span>
       <span
-        onClick={() => {
-          // onClickSliderButtons(+1);
-        }}
-        onTouchEnd={() => {
-          // onClickSliderButtons(+1);
-        }}
+    
         className="flex items-center p-2 h-4/5 w-8 absolute px-8 right-0 translate-x-full bottom-0 cursor-pointer   "
       >
         {" "}

@@ -25,11 +25,16 @@ const initialState = {
   },
 
   selectedDays: [],
+
+  secondTable:false,
+
+  personCount:{count:0,more:0}
 };
 const DatePickerSlice = createSlice({
   name: "datePicker",
   initialState: initialState,
   reducers: {
+
     DateWorks(state, action) {
       const dateInfoFa = GetDate(action.payload.date);
       state.maxTabIndex = action.payload.months.length;
@@ -73,6 +78,7 @@ const DatePickerSlice = createSlice({
       }
     },
     selectDay(state, action) {
+    
       if (
         (state.daysInfo.enterDay.day && state.daysInfo.exitDay.day) ||
         !state.daysInfo.enterDay.day ||
@@ -92,6 +98,7 @@ const DatePickerSlice = createSlice({
         state.daysInfo.enterDay = { day: null, monthIndex: null };
         state.daysInfo.exitDay = { day: null, monthIndex: null };
       } else {
+        state.selectedDays=[];
         state.daysInfo.exitDay = action.payload;
       }
     },
@@ -100,10 +107,19 @@ const DatePickerSlice = createSlice({
     },
     clearDay(state){
       state.selectedDays=[];
+    },
+    clearData(state){
+      state.selectedDays=[];
+      state.daysInfo.enterDay = { day: null, monthIndex: null };
+      state.daysInfo.exitDay = { day: null, monthIndex: null };
+    }
+    ,
+    setPersonCount(state,action){
+      state.personCount=action.payload;
     }
   },
 });
 
-export const { DateWorks, nextMonth, pervMonth, selectDay, addDay ,clearDay} =
+export const { DateWorks, nextMonth, pervMonth, selectDay, addDay ,clearDay,clearData,setPersonCount} =
   DatePickerSlice.actions;
 export default DatePickerSlice.reducer;

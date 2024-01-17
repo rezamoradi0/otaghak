@@ -24,7 +24,7 @@ const TextAccordion = ({ data }) => {
         type="button"
       >
         
-        {isOpen ? "نمایش بیشتر" : "نمایش کمتر"}
+        {isOpen ? "نمایش کمتر" : "نمایش بیشتر"}
         <span><i className={`${isOpen?"rotate-180":""} text-blue-700 text-xl  relative translate-y-1/4 transition-all fa-solid fa-chevron-down`}></i></span>
       </button>
     </div>

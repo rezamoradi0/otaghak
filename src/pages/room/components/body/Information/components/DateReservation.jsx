@@ -4,8 +4,8 @@ import DatePickerTable from "../../../../../../components/datePicker/DatePickerT
 import { ICON_USER } from "../../../../../../constant/fontIcons";
 import { ROOM_PAGE_TEXT } from "../../../../../../constant/text";
 
-export default function DateReservation({DateReservationData}) {
-   return <div>
+export default function DateReservation({DateReservationData,className=""}) {
+   return <div className={className}>
         <p className="text-lg font-semibold  my-2 text-gray-700">{ROOM_PAGE_TEXT.body.dateReservationResidence.header}</p>
 
         <div className="flex flex-col gap-y-2">
@@ -31,6 +31,7 @@ export default function DateReservation({DateReservationData}) {
         </div>
 
     <DatePickerTable DatePickerData={DateReservationData.dates}/>
+    
 
     </div>
 }
