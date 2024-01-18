@@ -8,9 +8,11 @@ import { useEffect, useRef, useState } from "react";
 import MoreButton from "../../../../components/MoreButton";
 import EnterExitDate from "./ReserveTable/EnterExitDate";
 import PersonCount from "./ReserveTable/PersonCount";
+import PriceInfo from "./ReserveTable/PriceInfo";
 export default function ReserveTable({ parentMarginTop = 20, data }) {
   const datePickerRef = useRef();
   const datePickerBgRef = useRef();
+  //useReducer is Better
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenDatePicker, setIsOpenDatePicker] = useState(false);
   const [openedHeight, setOpenedHeight] = useState(0);
@@ -18,6 +20,7 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
   const [btnTextState, setBtnTextState] = useState(
     () => RESERVE_TABLE_TEXT.selectDate
   );
+  const [showPriceInfo, setShowPriceInfo] = useState(false);
   const theDomPublicState = useSelector((state) => {
     return state.domPublic.publicDomElements;
   });
@@ -27,15 +30,19 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
   });
 
   useEffect(() => {
-    console.log("Changed", datePickerState.selectedDays.length);
+    
     if (datePickerState.selectedDays.length == 0) {
       setBtnState(0);
+      setShowPriceInfo(false);
       setBtnTextState(RESERVE_TABLE_TEXT.selectDate);
     } else if (datePickerState.personCount.count === 0) {
       setBtnState(1);
+      setShowPriceInfo(false);
+
       setBtnTextState(RESERVE_TABLE_TEXT.selectPersons);
     } else {
       setBtnState(2);
+      setShowPriceInfo(true);
       setBtnTextState(RESERVE_TABLE_TEXT.reserveRequest);
     }
   }, [datePickerState.selectedDays, datePickerState.personCount]);
@@ -50,6 +57,7 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
       case 1:
         setIsOpen(true);
         break;
+      //GetReservation Here
       default:
         break;
     }
@@ -112,7 +120,11 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
         maxGuests={data.maxGuests}
       />
       <p className="text-gray-500 my-2">{e2p(RESERVE_TABLE_TEXT.kidsRoles)}</p>
-      <hr />
+      <PriceInfo
+        display={showPriceInfo}
+        morePricePerPerson={data.reservation.additionalPrice}
+      />
+      <hr className="my-2" />
       <button
         onClick={() => {
           MainBtnHandler();

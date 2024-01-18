@@ -269,6 +269,12 @@ export const RESERVE_TABLE_TEXT={
   kidsRoles:"کودکان تا زیر 3 سال در صورتحساب لحاظ نمی‌گردند.",
   selectDate:"انتخاب تاریخ",
   selectPersons:"انتخاب تعداد نفرات",
-  reserveRequest:"درخواست رزرو (رایگان)"
+  reserveRequest:"درخواست رزرو (رایگان)",
+  bill:"صورت حساب",
+  oneNight:"شب",
+  allDiscounts:"مجموع تخفیف ها",
+  allPrice:"مبلغ کل",
+  morePerson:"نفر اضافه"
+
 
 }
