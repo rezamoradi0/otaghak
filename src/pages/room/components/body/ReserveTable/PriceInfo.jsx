@@ -7,7 +7,11 @@ import {
 import { ICON_AMENITIES, ICON_FLOWER } from "../../../../../constant/fontIcons";
 import { e2p } from "../../../../../utils/functions/DateFunc";
 
-export default function PriceInfo({ display = false, morePricePerPerson = 0 }) {
+export default function PriceInfo({
+  display = false,
+  morePricePerPerson = 0,
+  setStartDayDiscount,
+}) {
   const [priceTable, setPriceTable] = useState(null);
   const userDatePickerSelectedDaysState = useSelector((state) => {
     return state.userDatePicker.selectedDays;
@@ -21,7 +25,19 @@ export default function PriceInfo({ display = false, morePricePerPerson = 0 }) {
       !userDatePickerSelectedDaysState.length
     )
       return;
+   
+    const discountJsx = userDatePickerSelectedDaysState[0].discountedPrice ? (
+      <span>
+        <span className="line-through decoration-red-500 mx-2">
+          {e2p(userDatePickerSelectedDaysState[0].price.toLocaleString().replaceAll(",","،"))}
+        </span>
+        <span className="text-white bg-red-500  text-center rounded-md px-1 py-[2px] inline-flex items-center justify-center w-min"> <span>{e2p(userDatePickerSelectedDaysState[0].discountPercent)}<span>%</span></span></span>
+      </span>
+    ) : (
+      <span></span>
+    );
 
+    setStartDayDiscount(discountJsx);
     let priceTable = {
       priceArray: [],
       allDiscount: 0,
@@ -68,9 +84,9 @@ export default function PriceInfo({ display = false, morePricePerPerson = 0 }) {
       </p>
       {priceTable && (
         <div className="flex flex-col gap-y-2">
-          {priceTable.priceArray.map((priceList) => {
+          {priceTable.priceArray.map((priceList,i) => {
             return (
-              <p className="flex justify-between items-center">
+              <p key={i} className="flex justify-between items-center">
                 <span className="text-gray-500">
                   {e2p(priceList.count)} {RESERVE_TABLE_TEXT.oneNight} ×{" "}
                   {e2p(priceList.price.toLocaleString().replaceAll(",", "،"))}{" "}
@@ -130,7 +146,28 @@ export default function PriceInfo({ display = false, morePricePerPerson = 0 }) {
               </span>
             </p>
           )}
-          <div className="border-dashed-custom h-1 my-2"></div>
+          <div className="border-dashed-custom h-1 my-2 "></div>
+
+          <div className="flex justify-between items-center">
+            <span className="text-lg  text-gray-500">
+              {RESERVE_TABLE_TEXT.allPrice}
+            </span>
+            <span className="font-semibold text-lg text-gray-800">
+              {e2p(
+                userDatePickerSelectedDaysState
+                  .slice(0, -1)
+                  .reduce((allPrice, thisDay) => {
+                    const thisPrice = thisDay.discountedPrice
+                      ? thisDay.discountedPrice
+                      : thisDay.price;
+                    return (allPrice += thisPrice);
+                  }, 0)
+                  .toLocaleString()
+                  .replaceAll(",", "،")
+              )}{" "}
+              {ROOM_PAGE_TEXT.price}
+            </span>
+          </div>
         </div>
       )}
     </div>

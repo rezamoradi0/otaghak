@@ -21,6 +21,7 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
     () => RESERVE_TABLE_TEXT.selectDate
   );
   const [showPriceInfo, setShowPriceInfo] = useState(false);
+  const [startDayDiscount,setStartDayDiscount]=useState(0);
   const theDomPublicState = useSelector((state) => {
     return state.domPublic.publicDomElements;
   });
@@ -30,7 +31,6 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
   });
 
   useEffect(() => {
-    
     if (datePickerState.selectedDays.length == 0) {
       setBtnState(0);
       setShowPriceInfo(false);
@@ -93,19 +93,27 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
       style={
         !!theDomPublicState?.header
           ? {
-              top: `${theDomPublicState.header + parentMarginTop}px`,
+              top: `${theDomPublicState.header + parentMarginTop -15}px`,
               marginBottom: `${openedHeight}px`,
             }
           : {}
       }
-      className={`w-1/3 flex flex-col   h-fit  rounded-3xl min-h-[200px] border border-gray-100 p-4  sticky shadow-xl `}
+      className={`w-1/3 flex flex-col   h-fit  rounded-3xl min-h-[200px] border border-gray-100 p-2  sticky shadow-xl `}
     >
-      <p className="text-gray-500 my-4">
-        <span>{RESERVE_TABLE_TEXT.fromPrice} </span>{" "}
-        <span className="text-gray-700 text-xl font-semibold">
-          {e2p(data.availablePrice.price.toLocaleString().replaceAll(",", "،"))}
-        </span>{" "}
-        <span>{ROOM_PAGE_TEXT.price}</span>
+      <p className="text-gray-500 my-4 flex flex-wrap justify-between">
+        <span>
+          {" "}
+          <span>{RESERVE_TABLE_TEXT.fromPrice} </span>{" "}
+          <span className="text-gray-700 text-xl font-semibold">
+            {startDayDiscount?e2p(datePickerState.selectedDays[0].discountedPrice.toLocaleString().replaceAll(",","،")): e2p(
+              data.availablePrice.price.toLocaleString().replaceAll(",", "،")
+            )}
+          </span>{" "}
+          <span>{ROOM_PAGE_TEXT.price}</span>
+        </span>
+          <span>
+          {startDayDiscount||""}
+            </span>
       </p>
       <EnterExitDate
         onClick={() => {
@@ -123,6 +131,7 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
       <PriceInfo
         display={showPriceInfo}
         morePricePerPerson={data.reservation.additionalPrice}
+        setStartDayDiscount={setStartDayDiscount}
       />
       <hr className="my-2" />
       <button

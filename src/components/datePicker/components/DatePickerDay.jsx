@@ -43,6 +43,7 @@ export default function DatePickerDay({
           dayName:DATE_COMPONENT_TEXT.dayNames[(dayNumber-1)%7],
           discountedPrice: data.discountedPrice,
           price: data.price,
+          discountPercent:data.discount
         }
       : {
           year: year,

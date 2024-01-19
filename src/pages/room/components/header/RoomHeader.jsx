@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectGallery } from "../../../../features/userRoomSlice";
 import ShareRoom from "./ShareRoom";
 import AddFavorite from "./AddFavorite";
+import { useEffect } from "react";
 export default function RoomHeader() {
   const theLocation = useLocation();
   const theDispatch = useDispatch();
@@ -19,9 +20,24 @@ export default function RoomHeader() {
     return state.userRoom.selectedGallery;
   });
 
+
   const closeImagesGalleryHandler=()=>{
     theDispatch(selectGallery());
   }
+
+  useEffect(()=>{
+    function onScrollHandler(event) {
+      console.log(event);
+    }
+    document.addEventListener("scrollend",(event)=>{
+      onScrollHandler(event);
+    });
+
+    return ()=>{
+      document.removeEventListener("scrollend",onScrollHandler);
+
+    }
+  },[])
   return (
     <div dir="rtl" className="bg-white w-full py-4 px-12 flex justify-between">
       {selectedGalleryState ? (
