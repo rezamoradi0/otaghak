@@ -9,7 +9,8 @@ import MoreButton from "../../../../components/MoreButton";
 import EnterExitDate from "./ReserveTable/EnterExitDate";
 import PersonCount from "./ReserveTable/PersonCount";
 import PriceInfo from "./ReserveTable/PriceInfo";
-export default function ReserveTable({ parentMarginTop = 20, data }) {
+import { twMerge } from "tailwind-merge";
+export default function ReserveTable({ parentMarginTop = 20, data ,className=""}) {
   const datePickerRef = useRef();
   const datePickerBgRef = useRef();
   //useReducer is Better
@@ -98,7 +99,7 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
             }
           : {}
       }
-      className={`w-1/3 flex flex-col   h-fit  rounded-3xl min-h-[200px] border border-gray-100 p-2  sticky shadow-xl `}
+      className={twMerge( `w-1/3 flex flex-col   h-fit  rounded-3xl min-h-[200px] border border-gray-100 p-2  sticky shadow-xl `,className)}
     >
       <p className="text-gray-500 my-4 flex flex-wrap justify-between">
         <span>

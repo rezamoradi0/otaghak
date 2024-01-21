@@ -7,7 +7,7 @@ import { addObject } from "../../../../features/domPublicSlice";
 import ImagesSwiper from "./ImagesSwiper";
 import Popup from "../../../../components/popup/Popup";
 import ImagesGalleryHeader from "./ImagesGalleryHeader";
-export default function ImagesGallery({ isExpand, imageLinks }) {
+export default function ImagesGallery({ isExpand, imageLinks,children }) {
   const [showSwiper, setShowSwiper] = useState(false);
   const [swiperRealIndex,setSwiperRealIndex]=useState(0);
   const theDispatch = useDispatch();
@@ -40,7 +40,7 @@ export default function ImagesGallery({ isExpand, imageLinks }) {
 
   if (isExpand) {
     return (
-      <div ref={imagesGalleryRef}
+      <>    <div ref={imagesGalleryRef}
         className={`${" relative overflow-hidden w-2/3 grid gap-4 grid-cols-2 grid-flow-row auto-rows-[240px] "}`}
       >
         {imageLinks.map((imgLink, i) => {
@@ -77,6 +77,9 @@ export default function ImagesGallery({ isExpand, imageLinks }) {
           </Popup>
         )}
       </div>
+      {children}
+      </>
+  
     );
   }
 

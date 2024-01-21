@@ -26,7 +26,7 @@ export default function RoomHeader() {
   const closeImagesGalleryHandler=()=>{
     theDispatch(selectGallery());
   }
-  useEffect(()=>{console.log(tabState);},[tabState])
+  // useEffect(()=>{console.log(tabState);},[tabState])
  
   return (
     <div dir="rtl" className="bg-white w-full py-4 px-12 flex justify-between">
@@ -43,14 +43,14 @@ export default function RoomHeader() {
           <div className="flex gap-x-6 ml-auto">
             {Object.values(ROOM_PAGE_TEXT.header).map((value, i) => {
               if (i == 0) return;
-            
+        
               return (
                 <div
                    style={tabState == value.key ? { color: "black" } : {}}
                   key={i}
                   onClick={() => {
-                    console.log(value.key);
-                     theDispatch(selectTab(value.key));
+                 
+                    theDispatch(selectTab(value.key));
                     theDispatch(setObjForScroll(value.key));
 
                   }}

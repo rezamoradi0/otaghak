@@ -6,10 +6,9 @@ import { fetchRoom } from "../../features/userRoomExtraSlice";
 import MainInformation from "./components/body/Information/MainInformation";
 import ReserveTable from "./components/body/ReserveTable";
 import DefaultSlider from "../../components/swiperSlider/sliders/DefaultSlider";
-import { ROOM_PAGE_TEXT, SLIDER_COMPONENT_TEXT } from "../../constant/text";
+import { SLIDER_COMPONENT_TEXT } from "../../constant/text";
 import OtherResidenceLinks from "./components/body/Information/components/OtherResidenceLinks";
-import { addObject,setNullObjForScroll } from "../../features/domPublicSlice";
-import { getOffsetTop } from "../../utils/functions/DomFunc";
+import { setNullObjForScroll } from "../../features/domPublicSlice";
 import { selectTab } from "../../features/userRoomSlice";
 function Room() {
   const theParams = useParams();
@@ -45,7 +44,7 @@ function Room() {
   }, []);
 
   useEffect(()=>{
-    function onScrollHandler(event) {
+    function  onScrollHandler(event) {
       // console.log(window.scrollY);
       theDispatch_Room(setNullObjForScroll());
       let sortedListOfDom=[];
@@ -58,24 +57,24 @@ function Room() {
       sortedListOfDom.sort((a,b)=>{
         return a[1] - b[1];
       })
-      let thisSelectedTab=false;
-    for (const [tag,value,height] of sortedListOfDom){
+       for (const [tag,value,height] of sortedListOfDom){
       
       const topValue=value+height-theDomPublicState["header"].height-100;
-  
-      if(topValue>=window.scrollY&&tag!="header"){
+     
+
+     if(sortedListOfDom.length>1&&sortedListOfDom[sortedListOfDom.length-1][1]<window.scrollY){
+     
+        theDispatch_Room(selectTab(sortedListOfDom[sortedListOfDom.length-1][0]));
+         break;
+   
+     }
+     else if(topValue>=window.scrollY&&tag!="header"){
         theDispatch_Room(selectTab(tag));
-        // console.log(theDomPublicState[tag]);
-        thisSelectedTab=true;
-        // console.log(thisSelectedTab);
         break;
       }
 
     }
-    if(!thisSelectedTab){
-      theDispatch_Room(selectTab(sortedListOfDom[sortedListOfDom.length-1][0]));
-    }
-   
+ 
     }
     document.addEventListener("scrollend",(event)=>{
       onScrollHandler(event);
@@ -107,12 +106,15 @@ function Room() {
           ? { marginTop: `${theDomPublicState.header.value + _marginTop}px` }
           : {}
       }
-      className="px-10 min-h-screen scroll-smooth"
+      className={`${theRoomState.selectedGallery?" flex flex-row gap-x-6":"flex flex-col"} px-10 min-h-screen scroll-smooth `}
     >
       <ImagesGallery
         isExpand={theRoomState.selectedGallery}
         imageLinks={theRoomExtraState.data.images}
-      />
+      >     {theRoomState.selectedGallery&& <ReserveTable parentMarginTop={_marginTop} data={theRoomExtraState.data}/>}
+  </ImagesGallery>
+
+    {!theRoomState.selectedGallery&&  <>
       <div className="flex relative gap-x-12 w-full overflow-x-clip">
         <MainInformation  data={theRoomExtraState.data} />
         <ReserveTable parentMarginTop={_marginTop} data={theRoomExtraState.data}/>
@@ -127,7 +129,7 @@ function Room() {
 
         <hr className="my-10"/>
       <OtherResidenceLinks  linksData={theRoomExtraState.data.otherResidenceLinks}/>
-      </div>
+      </div></>}
     </div>
   );
 }

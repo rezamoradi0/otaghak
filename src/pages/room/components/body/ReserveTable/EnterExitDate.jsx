@@ -9,10 +9,10 @@ export default function EnterExitDate({ isVertical = true, children,onClick }) {
     return state.userDatePicker.selectedDays;
   });
   const theDispatch=useDispatch();
-  useEffect(() => {
-    console.log(datePickerState);
-    // console.log(datePickerState[0]);
-  }, [datePickerState]);
+  // useEffect(() => {
+  //   // console.log(datePickerState);
+  //   // console.log(datePickerState[0]);
+  // }, [datePickerState]);
   return (
     <div
 
