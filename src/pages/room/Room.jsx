@@ -58,16 +58,20 @@ function Room() {
       sortedListOfDom.sort((a,b)=>{
         return a[1] - b[1];
       })
-   
+      let selectedTab=false;
     for (const [tag,value,height] of sortedListOfDom){
       
       const topValue=value+height-theDomPublicState["header"].height-100;
       if(topValue>=window.scrollY&&tag!="header"){
         theDispatch_Room(selectTab(tag));
         console.log(theDomPublicState[tag]);
+        selectedTab=true;
         break;
       }
 
+    }
+    if(!selectTab){
+      theDispatch_Room(selectTab(sortedListOfDom[sortedListOfDom.length-1][0]));
     }
    
     }

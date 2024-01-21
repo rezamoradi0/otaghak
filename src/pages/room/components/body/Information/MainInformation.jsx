@@ -178,16 +178,19 @@ export default function MainInformation({ data }) {
       <hr  className="bg-red-500 my-4" />
       <div ref={positionInformationRef}>
         <PositionResidence positionData={data.position} />
-      </div>
-      
-      <hr className="bg-red-500 my-4" />
+        <hr className="bg-red-500 my-4" />
       <ManagerResidence managerData={data.managerInfo} />
-      <hr  className="bg-red-500 my-4" />
-      <div ref={dateInformationRef}>
-        <DateReservation  DateReservationData={data.reservation}/> 
       </div>
       
-      <hr className="bg-red-500  mt-8" />
+    
+     
+      <div ref={dateInformationRef}>
+      <hr  className="bg-red-500 my-4" />
+        <DateReservation  DateReservationData={data.reservation}/> 
+        <hr className="bg-red-500  mt-8" />
+      </div>
+      
+
     </div>
   );
 }
