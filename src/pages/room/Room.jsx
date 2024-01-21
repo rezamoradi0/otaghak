@@ -46,31 +46,33 @@ function Room() {
 
   useEffect(()=>{
     function onScrollHandler(event) {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
       theDispatch_Room(setNullObjForScroll());
       let sortedListOfDom=[];
-      console.log(theDomPublicState);
+      // console.log(theDomPublicState);
       for (const domObj of Object.entries(theDomPublicState)) {
-        console.log(domObj);
+        // console.log(domObj);
         sortedListOfDom.push([domObj[0],domObj[1].value,domObj[1].height]);
       }
     
       sortedListOfDom.sort((a,b)=>{
         return a[1] - b[1];
       })
-      let selectedTab=false;
+      let thisSelectedTab=false;
     for (const [tag,value,height] of sortedListOfDom){
       
       const topValue=value+height-theDomPublicState["header"].height-100;
+  
       if(topValue>=window.scrollY&&tag!="header"){
         theDispatch_Room(selectTab(tag));
-        console.log(theDomPublicState[tag]);
-        selectedTab=true;
+        // console.log(theDomPublicState[tag]);
+        thisSelectedTab=true;
+        // console.log(thisSelectedTab);
         break;
       }
 
     }
-    if(!selectTab){
+    if(!thisSelectedTab){
       theDispatch_Room(selectTab(sortedListOfDom[sortedListOfDom.length-1][0]));
     }
    
