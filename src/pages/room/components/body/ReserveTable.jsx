@@ -105,14 +105,14 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
           {" "}
           <span>{RESERVE_TABLE_TEXT.fromPrice} </span>{" "}
           <span className="text-gray-700 text-xl font-semibold">
-            {startDayDiscount?e2p(datePickerState.selectedDays[0].discountedPrice.toLocaleString().replaceAll(",","،")): e2p(
+            { startDayDiscount&&datePickerState.selectedDays.length>0&&datePickerState.selectedDays[0].discountedPrice?e2p(datePickerState.selectedDays[0].discountedPrice.toLocaleString().replaceAll(",","،")): e2p(
               data.availablePrice.price.toLocaleString().replaceAll(",", "،")
             )}
           </span>{" "}
           <span>{ROOM_PAGE_TEXT.price}</span>
         </span>
           <span>
-          {startDayDiscount||""}
+          {datePickerState.selectedDays.length>0&&datePickerState.selectedDays[0].discountedPrice&&startDayDiscount||""}
             </span>
       </p>
       <EnterExitDate
