@@ -12,13 +12,13 @@ import {
 export const ROOM_PAGE_TEXT = {
   price: "تومان",
   header: {
-    id: "شناسه",
-    images: "تصاویر",
-    information: "مشخصات",
-    roles: "قوانین",
-    comments: "نظرات",
-    location: "موقعیت",
-    date: "تقویم",
+    id: {text: "شناسه"},
+    images: {text:"تصاویر", key:"imagesGallery"},
+    information: { text:"مشخصات" ,key:"information"} ,
+    roles:{text: "قوانین",key:"roles"},
+    comments:{text: "نظرات",key:"comments"},
+    location: {text:"موقعیت",key:"location"},
+    date:{text: "تقویم",key:"date"},
   },
   buttons: {
     share: "اشتراک گذاری",

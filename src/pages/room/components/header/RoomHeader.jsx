@@ -8,12 +8,14 @@ import { selectGallery } from "../../../../features/userRoomSlice";
 import ShareRoom from "./ShareRoom";
 import AddFavorite from "./AddFavorite";
 import { useEffect } from "react";
+import { setObjForScroll } from "../../../../features/domPublicSlice";
 export default function RoomHeader() {
   const theLocation = useLocation();
   const theDispatch = useDispatch();
 
 
   const tabState = useSelector((state) => {
+
     return state.userRoom.selectedTab;
   });
   const selectedGalleryState = useSelector((state) => {
@@ -24,20 +26,8 @@ export default function RoomHeader() {
   const closeImagesGalleryHandler=()=>{
     theDispatch(selectGallery());
   }
-
-  useEffect(()=>{
-    function onScrollHandler(event) {
-      console.log(event);
-    }
-    document.addEventListener("scrollend",(event)=>{
-      onScrollHandler(event);
-    });
-
-    return ()=>{
-      document.removeEventListener("scrollend",onScrollHandler);
-
-    }
-  },[])
+  useEffect(()=>{console.log(tabState);},[tabState])
+ 
   return (
     <div dir="rtl" className="bg-white w-full py-4 px-12 flex justify-between">
       {selectedGalleryState ? (
@@ -47,23 +37,26 @@ export default function RoomHeader() {
       ) : (
         <>
           <div className="mx-12">
-            {ROOM_PAGE_TEXT.header.id} :{" "}
+            {ROOM_PAGE_TEXT.header.id.text} :{" "}
             {e2p(theLocation.pathname.replace(`/${ROOM_PATH}/`, ""))}
           </div>
           <div className="flex gap-x-6 ml-auto">
             {Object.values(ROOM_PAGE_TEXT.header).map((value, i) => {
               if (i == 0) return;
+            
               return (
                 <div
-                  style={tabState == i ? { color: "black" } : {}}
+                   style={tabState == value.key ? { color: "black" } : {}}
                   key={i}
                   onClick={() => {
-                    console.log(i);
-                    theDispatch(selectTab(i));
+                    console.log(value.key);
+                     theDispatch(selectTab(value.key));
+                    theDispatch(setObjForScroll(value.key));
+
                   }}
                   className="font-semibold text-gray-400 "
                 >
-                  {value}
+                  {value.text}
                 </div>
               );
             })}

@@ -2,7 +2,8 @@ import { ROOM_PAGE_TEXT } from "../../../../constant/text";
 import { ICON_LEFT } from "../../../../constant/fontIcons";
 import { selectGallery } from "../../../../features/userRoomSlice";
 import { useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { addObject } from "../../../../features/domPublicSlice";
 import ImagesSwiper from "./ImagesSwiper";
 import Popup from "../../../../components/popup/Popup";
 import ImagesGalleryHeader from "./ImagesGalleryHeader";
@@ -10,10 +11,14 @@ export default function ImagesGallery({ isExpand, imageLinks }) {
   const [showSwiper, setShowSwiper] = useState(false);
   const [swiperRealIndex,setSwiperRealIndex]=useState(0);
   const theDispatch = useDispatch();
-
+  const imagesGalleryRef=useRef();
   useEffect(() => {
     if (!isExpand) setShowSwiper(false);
   }, [isExpand]);
+  useEffect(()=>{
+    theDispatch(addObject({key:ROOM_PAGE_TEXT.header.images.key,value:imagesGalleryRef.current.offsetTop,height:imagesGalleryRef.current.offsetHeight}))
+  
+  },[])
   function calcGrid(index) {
     const newIndex = index > 6 ? index % 7 : index;
 
@@ -35,7 +40,7 @@ export default function ImagesGallery({ isExpand, imageLinks }) {
 
   if (isExpand) {
     return (
-      <div
+      <div ref={imagesGalleryRef}
         className={`${" relative overflow-hidden w-2/3 grid gap-4 grid-cols-2 grid-flow-row auto-rows-[240px] "}`}
       >
         {imageLinks.map((imgLink, i) => {
@@ -76,7 +81,7 @@ export default function ImagesGallery({ isExpand, imageLinks }) {
   }
 
   return (
-    <div
+    <div ref={imagesGalleryRef}
       onClick={() => {
         theDispatch(selectGallery());
       }}

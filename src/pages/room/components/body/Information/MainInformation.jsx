@@ -23,9 +23,29 @@ import CommentsResidence from "./components/CommentsResidence";
 import PositionResidence from "./components/PostionResidence";
 import ManagerResidence from "./components/ManagerResidence";
 import DateReservation from "./components/DateReservation";
+import { useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { addObject } from "../../../../../features/domPublicSlice";
+import { getOffsetTop } from "../../../../../utils/functions/DomFunc";
+
 export default function MainInformation({ data }) {
+  const theDispatch=useDispatch();
+  const rolesInformationRef=useRef();
+  const commentInformationRef=useRef();
+  const positionInformationRef=useRef();
+  const dateInformationRef=useRef();
+  const mainInformationRef=useRef();
+  useEffect(()=>{
+     theDispatch(addObject({key:ROOM_PAGE_TEXT.header.information.key,value:getOffsetTop (mainInformationRef.current),height:mainInformationRef.current.offsetHeight}))
+    theDispatch(addObject({key:ROOM_PAGE_TEXT.header.roles.key,value:getOffsetTop(rolesInformationRef.current),height:rolesInformationRef.current.offsetHeight}))
+    theDispatch(addObject({key:ROOM_PAGE_TEXT.header.comments.key,value:getOffsetTop(commentInformationRef.current),height:commentInformationRef.current.offsetHeight}))
+    theDispatch(addObject({key:ROOM_PAGE_TEXT.header.location.key,value:getOffsetTop(positionInformationRef.current),height:positionInformationRef.current.offsetHeight}))
+    theDispatch(addObject({key:ROOM_PAGE_TEXT.header.date.key,value:getOffsetTop(dateInformationRef.current),height:dateInformationRef.current.offsetHeight} ))
+  
+  },[])
   return (
     <div dir="rtl" className="flex  w-2/3 flex-col">
+      <div ref={mainInformationRef}>
       <p className="flex gap-x-3 items-center text-gray-400">
         {" "}
         <Link to={"/"} className="text-sm">
@@ -146,15 +166,27 @@ export default function MainInformation({ data }) {
       <hr className="bg-red-500 my-4" />
       <PropertyResidence propertyResidenceData={data.propertyResidence}/>
       <hr className="bg-red-500 my-4" />
-      <TimeRegulationsResidence  TimeRegulationsResidenceData={data.residenceTimeRegulations}/>
-      <hr className="bg-red-500 my-4" />
-      <CommentsResidence commentRatesData={data.rating} commentsData={data.comments}/>
-      <hr className="bg-red-500 my-4" />
-      <PositionResidence positionData={data.position} />
+      </div>
+    <div  ref={rolesInformationRef} >
+      
+      <TimeRegulationsResidence   TimeRegulationsResidenceData={data.residenceTimeRegulations}/>
+    </div>
+      <hr    className="bg-red-500 my-4" />
+      <div ref={commentInformationRef}>
+         <CommentsResidence commentRatesData={data.rating} commentsData={data.comments}/>
+      </div>
+      <hr  className="bg-red-500 my-4" />
+      <div ref={positionInformationRef}>
+        <PositionResidence positionData={data.position} />
+      </div>
+      
       <hr className="bg-red-500 my-4" />
       <ManagerResidence managerData={data.managerInfo} />
-      <hr className="bg-red-500 my-4" />
-      <DateReservation  DateReservationData={data.reservation}/> 
+      <hr  className="bg-red-500 my-4" />
+      <div ref={dateInformationRef}>
+        <DateReservation  DateReservationData={data.reservation}/> 
+      </div>
+      
       <hr className="bg-red-500  mt-8" />
     </div>
   );

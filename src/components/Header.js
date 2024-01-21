@@ -33,7 +33,7 @@ const Header = (props) => {
    }
   }
   useEffect(()=>{
-    theDispatch(addObject({key:"header",value:headerRef.current.offsetHeight}))
+    theDispatch(addObject({key:"header",value:headerRef.current.offsetHeight,height:headerRef.current.offsetHeight}))
   },[])
   return (
     <header ref={headerRef} className="w-full z-10 border fixed top-0  flex flex-col justify-start items-center" >

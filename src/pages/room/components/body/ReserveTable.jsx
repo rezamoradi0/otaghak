@@ -93,7 +93,7 @@ export default function ReserveTable({ parentMarginTop = 20, data }) {
       style={
         !!theDomPublicState?.header
           ? {
-              top: `${theDomPublicState.header + parentMarginTop -15}px`,
+              top: `${theDomPublicState.header.value + parentMarginTop -15}px`,
               marginBottom: `${openedHeight}px`,
             }
           : {}
