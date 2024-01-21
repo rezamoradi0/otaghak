@@ -46,7 +46,8 @@ export default function RoomHeader() {
         
               return (
                 <div
-                   style={tabState == value.key ? { color: "black" } : {}}
+              
+             
                   key={i}
                   onClick={() => {
                  
@@ -54,7 +55,7 @@ export default function RoomHeader() {
                     theDispatch(setObjForScroll(value.key));
 
                   }}
-                  className="font-semibold text-gray-400 "
+                  className={`${tabState==value.key?"text-black border-b-2  border-b-gray-900":" text-gray-400"} font-semibold `}
                 >
                   {value.text}
                 </div>

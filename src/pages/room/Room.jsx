@@ -28,8 +28,10 @@ function Room() {
     return  state.domPublic.publicSelectedObjForScroll;
   })
 
-  
+ 
   useEffect(()=>{
+    // console.log(theSelectedObjectToScroll);
+
     if(!theSelectedObjectToScroll) return;
 
 
@@ -38,15 +40,15 @@ function Room() {
      behavior:"smooth"
     })
 
-  },[theSelectedObjectToScroll,theRoomState.selectedTab]);
+  },[theSelectedObjectToScroll,theRoomState.selectedTab,theDomPublicState]);
   useEffect(() => {
     theDispatch_Room(fetchRoom(RoomId));
   }, []);
 
   useEffect(()=>{
-    function  onScrollHandler(event) {
-      // console.log(window.scrollY);
-      theDispatch_Room(setNullObjForScroll());
+    function  onScrollHandler() {
+      //  console.log(window.scrollY);
+       theDispatch_Room(setNullObjForScroll());
       let sortedListOfDom=[];
       // console.log(theDomPublicState);
       for (const domObj of Object.entries(theDomPublicState)) {
@@ -61,7 +63,7 @@ function Room() {
       
       const topValue=value+height-theDomPublicState["header"].height-100;
      
-
+  
      if(sortedListOfDom.length>1&&sortedListOfDom[sortedListOfDom.length-1][1]<window.scrollY){
      
         theDispatch_Room(selectTab(sortedListOfDom[sortedListOfDom.length-1][0]));
@@ -72,19 +74,19 @@ function Room() {
         theDispatch_Room(selectTab(tag));
         break;
       }
-
+  
     }
- 
+  
     }
-    document.addEventListener("scrollend",(event)=>{
-      onScrollHandler(event);
-    });
+    document.addEventListener("scrollend",()=>{
+      onScrollHandler();
+    }); 
 
     return ()=>{
       document.removeEventListener("scrollend",onScrollHandler);
 
     }
-  },[])
+  },[theDomPublicState])
 
 
   useEffect(()=>{
@@ -114,13 +116,13 @@ function Room() {
       >     {theRoomState.selectedGallery&& <ReserveTable parentMarginTop={_marginTop} data={theRoomExtraState.data}/>}
   </ImagesGallery>
 
-    {!theRoomState.selectedGallery&&  <>
-      <div className="flex relative gap-x-12 w-full overflow-x-clip">
+   
+      <div className={`${theRoomState.selectedGallery?"hidden":""} flex relative gap-x-12 w-full overflow-x-clip`}>
         <MainInformation  data={theRoomExtraState.data} />
         <ReserveTable parentMarginTop={_marginTop} data={theRoomExtraState.data}/>
       </div>
    
-      <div className="mt-4">
+      <div className={` ${theRoomState.selectedGallery?"hidden":""} mt-4`}>
         <DefaultSlider
           SliderItemsData={theRoomExtraState.data.otherResidences}
           Header={SLIDER_COMPONENT_TEXT.otherRooms}
@@ -129,7 +131,9 @@ function Room() {
 
         <hr className="my-10"/>
       <OtherResidenceLinks  linksData={theRoomExtraState.data.otherResidenceLinks}/>
-      </div></>}
+      </div>
+
+
     </div>
   );
 }

@@ -10,6 +10,7 @@ const domPublicSlice = createSlice({
   initialState: initialState,
   reducers: {
     addObject(state, action) {
+      // console.log(action.payload);
       const key = action.payload.key;
       state.publicDomElements[key] = {value:action.payload.value,height:action.payload.height};
     },
