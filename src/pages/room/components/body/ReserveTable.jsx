@@ -18,6 +18,7 @@ export default function ReserveTable({ parentMarginTop = 20, data ,className=""}
   const [isOpenDatePicker, setIsOpenDatePicker] = useState(false);
   const [openedHeight, setOpenedHeight] = useState(0);
   const [btnState, setBtnState] = useState(0);
+  const thisRef=useRef();
   const [btnTextState, setBtnTextState] = useState(
     () => RESERVE_TABLE_TEXT.selectDate
   );
@@ -70,7 +71,7 @@ export default function ReserveTable({ parentMarginTop = 20, data ,className=""}
     };
     if (isOpenDatePicker) {
       setOpenedHeight(
-        datePickerRef.current?.offsetHeight / 2 + parentMarginTop * 5
+        datePickerRef.current?.offsetHeight  - parentMarginTop/2 - thisRef.current?.offsetHeight
       );
       datePickerBgRef.current?.addEventListener("click", ExitDatePicker, true);
     } else {
@@ -91,6 +92,7 @@ export default function ReserveTable({ parentMarginTop = 20, data ,className=""}
   }, [isOpenDatePicker]);
   return (
     <div
+    ref={thisRef}
       style={
         !!theDomPublicState?.header
           ? {

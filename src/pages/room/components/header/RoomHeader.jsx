@@ -55,7 +55,7 @@ export default function RoomHeader() {
                     theDispatch(setObjForScroll(value.key));
 
                   }}
-                  className={`${tabState==value.key?"text-black border-b-2  border-b-gray-900":" text-gray-400"} font-semibold `}
+                  className={`${tabState==value.key?"text-black border-b-2  border-b-gray-900":" text-gray-400"} font-semibold cursor-pointer hover:text-gray-600`}
                 >
                   {value.text}
                 </div>

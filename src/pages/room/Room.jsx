@@ -108,7 +108,7 @@ function Room() {
           ? { marginTop: `${theDomPublicState.header.value + _marginTop}px` }
           : {}
       }
-      className={`${theRoomState.selectedGallery?" flex flex-row gap-x-6":"flex flex-col"} px-10 min-h-screen scroll-smooth `}
+      className={`${theRoomState.selectedGallery?" flex flex-row gap-x-6":"flex flex-col"} px-10 min-h-screen scroll-smooth overflow-x-clip `}
     >
       <ImagesGallery
         isExpand={theRoomState.selectedGallery}
