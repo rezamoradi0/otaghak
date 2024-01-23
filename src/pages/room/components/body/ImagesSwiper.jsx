@@ -44,7 +44,7 @@ export default function ImagesSwiper({images,setSwiperRealIndex}) {
       >
          { images.map((image,i)=>{
           
-        return <SwiperSlide key={i}> <img src={image} alt="" /></SwiperSlide>
+        return <SwiperSlide key={i}> <img loading="lazy" src={image} alt="" /></SwiperSlide>
        })}
       </Swiper>
       <Swiper
@@ -57,7 +57,7 @@ export default function ImagesSwiper({images,setSwiperRealIndex}) {
         className="mySwiper"
       >
        { images.map((image,i)=>{
-        return <SwiperSlide key={i}> <img src={image} alt="" /></SwiperSlide>
+        return <SwiperSlide key={i}> <img loading="lazy" src={image} alt="" /></SwiperSlide>
        })}
       </Swiper>
     </>

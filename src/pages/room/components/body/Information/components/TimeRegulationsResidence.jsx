@@ -15,7 +15,7 @@ export default function TimeRegulationsResidence({
         {ROOM_PAGE_TEXT.body.timeRegulationsResidence.header}
       </p>
       <div className="flex gap-x-4 ">
-        <div className="flex flex-col gap-y-2 border border-gray-200 w-fit  min-w-[220px] py-2 px-4 rounded-xl">
+        <div className="flex flex-col gap-y-2 border border-gray-200 w-fit  min-w-[220px] py-2 px-4 rounded-xl md:min-w-fit">
           <span className="text-lg text-gray-500 ">
             {ROOM_PAGE_TEXT.body.timeRegulationsResidence.enterTime}
           </span>
@@ -24,7 +24,7 @@ export default function TimeRegulationsResidence({
             {e2p(TimeRegulationsResidenceData.enterTime)}
           </span>
         </div>
-        <div className="flex flex-col gap-y-2 border border-gray-200 w-fit  min-w-[220px] py-2 px-4 rounded-xl">
+        <div className="flex flex-col gap-y-2 border border-gray-200 w-fit  min-w-[220px] py-2 px-4 rounded-xl md:min-w-fit">
           <span className="text-lg text-gray-500 ">
             {ROOM_PAGE_TEXT.body.timeRegulationsResidence.exitTime}
           </span>

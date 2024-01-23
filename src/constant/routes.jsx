@@ -1,7 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 import Layout from "../pages/Layout";
 import HomePage from "../pages/home/Home";
-import App from "../App";
 import HomeError from "../pages/home/HomeError";
 import { useRoutes } from "react-router-dom";
 import City from "../pages/city/City";

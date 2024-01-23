@@ -19,7 +19,7 @@ const Footer = ({ FooterObj,HeaderObj }) => {
            <p className="text-lg text-gray-600  font-semibold">
               {FooterObj.getApp.text}
             </p>
-            <div className="flex flex-wrap justify-between gap-y-3 p-3 ">
+            <div className="flex flex-wrap justify-between gap-y-3 p-3  ">
               {FooterObj.getApp.links.map((link) => {
                 return (
                   <a
@@ -47,7 +47,7 @@ const Footer = ({ FooterObj,HeaderObj }) => {
             </p>
             <div className="flex flex-col my-8">
               <div className="flex items-center justify-center">
-                <img
+                <img loading="lazy"
                   className="h-16"
                   src={FooterObj.awards.img}
                   alt={FooterObj.awards.text}
@@ -64,7 +64,7 @@ const Footer = ({ FooterObj,HeaderObj }) => {
                       target="_blank"
                       key={crypto.randomUUID()}
                     >
-                      <img className="w-full h-full" src={item.img} alt="" />
+                      <img loading="lazy" className="w-full h-full" src={item.img} alt="" />
                     </a>
                   );
                 })}{" "}
@@ -73,12 +73,12 @@ const Footer = ({ FooterObj,HeaderObj }) => {
           </div>
 
           <div className="flex flex-col w-2/3 items-end  md:order-1 md:items-center">
-            <img className="h-16 md:mb-6" src={logo} alt="logo" />
+            <img loading="lazy" className="h-16 md:mb-6" src={logo} alt="logo" />
             <div className="hidden items-center flex-col md:flex">
            <p className="text-lg  text-gray-600 font-semibold">
               {FooterObj.getApp.text}
             </p>
-            <div className="flex flex-wrap justify-between gap-y-3 p-3 ">
+            <div className="flex flex-wrap justify-between gap-y-3 p-3 md:w-screen md:justify-around ">
               {FooterObj.getApp.links.map((link) => {
                 return (
                   <a

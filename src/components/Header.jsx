@@ -39,7 +39,7 @@ const Header = (props) => {
     theDispatch(addObject({key:"header",value:headerRef.current.offsetHeight,height:headerRef.current.offsetHeight}))
   },[])
   return (
-    <header ref={headerRef} className="w-full z-10 md:border-0 border fixed top-0  flex flex-col justify-start items-center" >
+    <header ref={headerRef} className="w-full z-50 md:border-0 border fixed top-0  flex flex-col justify-start items-center" >
       {/* <div className="h-16 w-full bg-red-500">
       </div> */}
       {headerNav()}

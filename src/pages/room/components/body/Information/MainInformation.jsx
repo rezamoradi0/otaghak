@@ -45,7 +45,7 @@ export default function MainInformation({ data ,className=""}) {
   
   },[])
   return (
-    <div dir="rtl" className={twMerge("flex  w-2/3 flex-col",className)}>
+    <div dir="rtl" className={twMerge("flex pt-2 w-2/3 flex-col",className)}>
       <div ref={mainInformationRef}>
       <p className="flex gap-x-3 items-center text-gray-400">
         {" "}
@@ -64,22 +64,22 @@ export default function MainInformation({ data ,className=""}) {
       <h2 className=" my-2 text-2xl font-semibold text-gray-700">
         {data.text} , {ROOM_PAGE_TEXT.body.in} {data.cityName}
       </h2>
-      <p className="flex my-4 items-center gap-x-4 text-gray-500 font-semibold">
+      <p className="flex my-4 items-center gap-x-4 text-gray-500 font-semibold md:text-sm md:gap-x-1">
         <span>
           <ICON_KEY />{" "}
           {data.shutter
             ? ROOM_PAGE_TEXT.body.shutter
             : ROOM_PAGE_TEXT.body.non_shutter}
         </span>{" "}
-        <ICON_CIRCLE className="text-[7px]" />
+        <ICON_CIRCLE className="text-[7px] md:text-[4px]" />
         <span>
           <ICON_RULER /> {e2p(data.metres)} {ROOM_PAGE_TEXT.body.meter}
         </span>{" "}
-        <ICON_CIRCLE className="text-[7px]" />
+        <ICON_CIRCLE className="text-[7px] md:text-[4px]" />
         <span>
           <ICON_USER /> {e2p(data.maxGuests)} {ROOM_PAGE_TEXT.body.guests}
         </span>{" "}
-        <ICON_CIRCLE className="text-[7px]" />
+        <ICON_CIRCLE className="text-[7px] md:text-[4px]" />
         <span>
           <ICON_BEDROOM /> {e2p(data.bedRooms)} {ROOM_PAGE_TEXT.body.bedroom}
         </span>{" "}
@@ -157,38 +157,38 @@ export default function MainInformation({ data ,className=""}) {
         </div>
       )}
       {/* {End Of First Information} */}
-      <hr className="bg-red-500 my-4" />
+      <hr className="bg-gray-500 my-4" />
       {/* {End Of First Information} */}
       <Warranty />
-      <hr className="bg-red-500 my-4" />
+      <hr className="bg-gray-500 my-4" />
       <AboutResidence aboutResidenceData={data.aboutResidence} />
-      <hr className="bg-red-500 my-4" />
+      <hr className="bg-gray-500 my-4" />
       <DetailResidence descriptionResidenceData={data.descriptionResidence} />
-      <hr className="bg-red-500 my-4" />
+      <hr className="bg-gray-500 my-4" />
       <PropertyResidence propertyResidenceData={data.propertyResidence}/>
-      <hr className="bg-red-500 my-4" />
+      <hr className="bg-gray-500 my-4" />
       </div>
     <div  ref={rolesInformationRef} >
       
       <TimeRegulationsResidence   TimeRegulationsResidenceData={data.residenceTimeRegulations}/>
     </div>
-      <hr    className="bg-red-500 my-4" />
+      <hr    className="bg-gray-500 my-4" />
       <div ref={commentInformationRef}>
          <CommentsResidence commentRatesData={data.rating} commentsData={data.comments}/>
       </div>
-      <hr  className="bg-red-500 my-4" />
+      <hr  className="bg-gray-500 my-4" />
       <div ref={positionInformationRef}>
         <PositionResidence positionData={data.position} />
-        <hr className="bg-red-500 my-4" />
+        <hr className="bg-gray-500 my-4" />
       <ManagerResidence managerData={data.managerInfo} />
       </div>
       
     
      
       <div ref={dateInformationRef}>
-      <hr  className="bg-red-500 my-4" />
+      <hr  className="bg-gray-500 my-4" />
         <DateReservation  DateReservationData={data.reservation}/> 
-        <hr className="bg-red-500  mt-8" />
+        <hr className="bg-gray-500  mt-8" />
       </div>
       
 

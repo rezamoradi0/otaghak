@@ -20,7 +20,7 @@ export default function ImagesGallery({ isExpand, imageLinks,children }) {
     if (!isExpand) setShowSwiper(false);
   }, [isExpand]);
   useEffect(()=>{
-    theDispatch(addObject({key:ROOM_PAGE_TEXT.header.images.key,value:imagesGalleryRef.current.offsetTop,height:imagesGalleryRef.current.offsetHeight}))
+    theDispatch(addObject({key:ROOM_PAGE_TEXT.header.images.key,value:imagesGalleryRef.current?.offsetTop,height:imagesGalleryRef.current?.offsetHeight}))
   
   },[isExpand])
   function calcGrid(index) {
@@ -94,7 +94,7 @@ if(deviceScreenSize==breakPoints.md){
     }} />
   </div> 
 }
-else return (
+else if(deviceScreenSize==breakPoints.xl_2) return (
     <div ref={imagesGalleryRef}
       onClick={() => {
         theDispatch(selectGallery());
@@ -103,19 +103,19 @@ else return (
       className=" grid grid-cols-4 mb-6 h-[480px] grid-rows-2 gap-2 [&_img]:h-full  [&_img]:w-full [&_img]:duration-500 [&_img]:transition-all [&_img:hover]:opacity-70 [&_img]:object-cover [&_img]:object-center [&>div]:bg-gray-800 overflow-hidden rounded-lg "
     >
       <div className="col-span-2  row-span-2 h-[480px] [&>div]:h-full">
-        <img src={imageLinks[0]} alt="" />
+        <img src={imageLinks[0]} loading="lazy" alt="" />
       </div>
       <div>
-        <img src={imageLinks[1]} alt="" />
+        <img src={imageLinks[1]} loading="lazy" alt="" />
       </div>
       <div>
-        <img src={imageLinks[2]} alt="" />
+        <img src={imageLinks[2]} loading="lazy" alt="" />
       </div>
       <div>
-        <img src={imageLinks[3]} alt="" />
+        <img src={imageLinks[3]} loading="lazy"alt="" />
       </div>
       <div className="relative">
-        <img src={imageLinks[4]} alt="" />{" "}
+        <img src={imageLinks[4]} loading="lazy" alt="" />{" "}
         <div className="cursor-pointer absolute w-full h-full flex justify-center items-center text-white font-semibold bg-gray-800 bg-opacity-80 top-0 left-0">
           <span>{ROOM_PAGE_TEXT.body.moreGallery} </span>
           <ICON_LEFT className="mx-2" />
@@ -123,4 +123,7 @@ else return (
       </div>
     </div>
   );
+  else {
+    return <>Loading</>;
+  }
 }

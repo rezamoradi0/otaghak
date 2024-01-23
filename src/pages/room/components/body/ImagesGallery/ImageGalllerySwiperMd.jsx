@@ -34,7 +34,7 @@ export default function ImagesGallerySwiperMd({onClick,imageLinks}) {
           className="images-md-swiper h-full w-full"
         >
             {imageLinks.map((imageLink,i)=>{
-                return <SwiperSlide key={i} className="w-full h-full"><img className="w-full h-full" src={imageLink} alt="" /></SwiperSlide>
+                return <SwiperSlide key={i} className="w-full h-full"><img  loading="lazy" className="w-full h-full" src={imageLink} alt="" /></SwiperSlide>
             })}
      
         </Swiper>
@@ -54,7 +54,7 @@ export default function ImagesGallerySwiperMd({onClick,imageLinks}) {
         >
         <ICON_LEFT className="text-2xl text-gray-100 fa-regular"/>
         </button>
-        <div className="rounded-md absolute left-6 flex flex-row-reverse px-3 py-1 gap-x-2 items-center  bottom-2 z-20 bg-gray-900 bg-opacity-40 text-white font-semibold">
+        <div className="rounded-md absolute left-6 flex flex-row-reverse px-3 py-1 gap-x-2 items-center  bottom-2 z-10 bg-gray-900 bg-opacity-40 text-white font-semibold">
             <span>{e2p(imageLinks?.length)}</span>
             <span> / </span>
             <span>{e2p(indexOfSwiper)}</span>

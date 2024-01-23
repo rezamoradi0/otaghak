@@ -44,7 +44,7 @@ export default function DefaultSlide({ SlideData, hasSlider }) {
                       key={i}
                       style={{ width: "fit-content" }}
                     >
-                      <img
+                      <img loading="lazy"
                         className="h-full w-full object-cover object-center"
                         src={imageLink}
                         alt=""
@@ -56,6 +56,7 @@ export default function DefaultSlide({ SlideData, hasSlider }) {
             </SwiperSlide>
           ) : (
             <img
+            loading="lazy"
               draggable={false}
               className="h-[236px] w-full rounded-xl object-cover object-center"
               src={SlideData.img}

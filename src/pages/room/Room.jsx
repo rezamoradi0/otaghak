@@ -44,7 +44,7 @@ function Room() {
     // console.log(theSelectedObjectToScroll);
 
     if (!theSelectedObjectToScroll) return;
-
+   
     window.scrollTo({
       top:
         theDomPublicState[theSelectedObjectToScroll].value -
@@ -54,6 +54,7 @@ function Room() {
   }, [theSelectedObjectToScroll, theRoomState.selectedTab, theDomPublicState]);
   useEffect(() => {
     theDispatch_Room(fetchRoom(RoomId));
+  
   }, []);
 
   useEffect(() => {
@@ -91,14 +92,19 @@ function Room() {
     document.addEventListener("scrollend", () => {
       onScrollHandler();
     });
-
+    document.addEventListener("touchmove", () => {
+      onScrollHandler();
+    });
     return () => {
       document.removeEventListener("scrollend", onScrollHandler);
+      document.removeEventListener("touchmove", onScrollHandler);
+
     };
   }, [theDomPublicState]);
 
   useEffect(() => {
     if (!theRoomExtraState.data) return;
+    document.title=`${theRoomExtraState.data.text} | ${theRoomExtraState.data.residenceName  } | ${theRoomExtraState.data.cityName}`
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [theRoomExtraState]);
   if (!theRoomExtraState.data) {
