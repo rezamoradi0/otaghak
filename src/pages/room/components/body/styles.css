@@ -37,8 +37,6 @@
 .images-gallery  .mySwiper2 {
   height: 500px;
   width:65%;
-
-
 }
 .images-gallery  .mySwiper2 .swiper-slide img{
   width: 70%;
@@ -70,4 +68,23 @@
 .images-gallery  .swiper-button-prev::after,.swiper-button-next::after{
   color: #d1d1d1;
   font-size: 20px;
+}
+.images-gallery  .swiper-pagination .swiper-pagination-bullet{
+  background:white;
+
+}
+@media only screen and (max-width: 768px) {
+ 
+.images-gallery  .mySwiper2 {
+  height: 500px;
+  width:100%;
+
+}
+.images-gallery  .mySwiper2 .swiper-slide img{
+  width: 100%;
+  height: 90%;
+  border-radius: 20px;
+  overflow: clip;
+}
+
 }

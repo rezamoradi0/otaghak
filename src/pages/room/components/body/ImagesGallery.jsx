@@ -7,9 +7,13 @@ import { addObject } from "../../../../features/domPublicSlice";
 import ImagesSwiper from "./ImagesSwiper";
 import Popup from "../../../../components/popup/Popup";
 import ImagesGalleryHeader from "./ImagesGalleryHeader";
+import useDeviceScreenSize from "../../../../utils/customHooks/useDeviceScreenSize";
+import { breakPoints } from "../../../../constant/breakPoints";
+import ImagesGallerySwiperMd from "./ImagesGallery/ImageGalllerySwiperMd";
 export default function ImagesGallery({ isExpand, imageLinks,children }) {
   const [showSwiper, setShowSwiper] = useState(false);
   const [swiperRealIndex,setSwiperRealIndex]=useState(0);
+  const deviceScreenSize=useDeviceScreenSize();
   const theDispatch = useDispatch();
   const imagesGalleryRef=useRef();
   useEffect(() => {
@@ -82,8 +86,15 @@ export default function ImagesGallery({ isExpand, imageLinks,children }) {
   
     );
   }
+if(deviceScreenSize==breakPoints.md){
+  return  <div className="w-full"  ref={imagesGalleryRef}>
 
-  return (
+    <ImagesGallerySwiperMd imageLinks={imageLinks} onClick={()=>{
+       theDispatch(selectGallery());
+    }} />
+  </div> 
+}
+else return (
     <div ref={imagesGalleryRef}
       onClick={() => {
         theDispatch(selectGallery());

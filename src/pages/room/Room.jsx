@@ -13,13 +13,14 @@ import { selectTab } from "../../features/userRoomSlice";
 import { breakPoints } from "../../constant/breakPoints";
 import { createPortal } from "react-dom";
 import { setTablesNumber } from "../../features/userDatePickerSlice";
+import useDeviceScreenSize from "../../utils/customHooks/useDeviceScreenSize";
 
 function Room() {
   const theParams = useParams();
   const RoomId = theParams.roomId;
   const theDispatch_Room = useDispatch();
   const _marginTop = 16;
-  const [DeviceScreenSize,setDeviceScreenSize] = useState(breakPoints.xl_2);
+  const deviceScreenSize=useDeviceScreenSize();
   const theRoomState = useSelector((state) => {
     return state.userRoom;
   });
@@ -33,21 +34,12 @@ function Room() {
     return state.domPublic.publicSelectedObjForScroll;
   });
   useEffect(()=>{
-    if(window.innerWidth<=breakPoints.md){
-      setDeviceScreenSize(breakPoints.md);
-
-    }else {
-      setDeviceScreenSize(breakPoints.xl_2);
-    }
-  
-  },[]);
-  useEffect(()=>{
-    if(DeviceScreenSize==breakPoints.md){
+    if(deviceScreenSize==breakPoints.md){
       theDispatch_Room(setTablesNumber(1));
     }
 
 
-  },[DeviceScreenSize])
+  },[deviceScreenSize])
   useEffect(() => {
     // console.log(theSelectedObjectToScroll);
 
@@ -126,7 +118,7 @@ function Room() {
         theRoomState.selectedGallery
           ? " flex flex-row gap-x-6"
           : "flex flex-col"
-      } px-10 min-h-screen scroll-smooth overflow-x-clip `}
+      } px-10 min-h-screen scroll-smooth overflow-x-clip md:px-0`}
     >
       <ImagesGallery
         isExpand={theRoomState.selectedGallery}
@@ -145,11 +137,11 @@ function Room() {
       <div
         className={`${
           theRoomState.selectedGallery ? "hidden" : ""
-        } flex relative gap-x-12 w-full overflow-x-clip`}
+        } flex relative gap-x-12 w-full overflow-x-clip md:px-10`}
       >
         <MainInformation className="md:w-full" data={theRoomExtraState.data} />
      
-        {DeviceScreenSize == breakPoints.md ? (
+        {deviceScreenSize == breakPoints.md ? (
           createPortal(
             // <ReserveTable
             //   className="md:fixed md:left-0 md:bottom-0 md:bg-white md:w-full "
@@ -170,7 +162,7 @@ function Room() {
         )}
       </div>
 
-      <div className={` ${theRoomState.selectedGallery ? "hidden" : ""} mt-4`}>
+      <div className={` ${theRoomState.selectedGallery ? "hidden" : ""} mt-4 md:px-10`}>
         <DefaultSlider
           SliderItemsData={theRoomExtraState.data.otherResidences}
           Header={SLIDER_COMPONENT_TEXT.otherRooms}

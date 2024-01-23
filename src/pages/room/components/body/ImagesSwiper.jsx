@@ -11,12 +11,22 @@ import 'swiper/css/thumbs';
 import "./styles.css"
 // import required modules
 import { FreeMode, Navigation, Pagination, Thumbs } from 'swiper/modules';
+import useDeviceScreenSize from '../../../../utils/customHooks/useDeviceScreenSize';
+import { breakPoints } from '../../../../constant/breakPoints';
 
+const bottomSwiperSliderPerViewMd=4;
+const bottomSwiperSliderPerViewDefault=10;
 export default function ImagesSwiper({images,setSwiperRealIndex}) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const deviceScreenSize=useDeviceScreenSize();
+  const [bottomSwiperSliderPerView,setBottomSwiperSliderPerView]=useState(bottomSwiperSliderPerViewDefault)
     useEffect(()=>{
-      setSwiperRealIndex(0)
-    },[])
+      setSwiperRealIndex(0);
+      if(deviceScreenSize==breakPoints.md){
+    
+      setBottomSwiperSliderPerView(bottomSwiperSliderPerViewMd);
+      }
+    },[deviceScreenSize])
   return (
     <>
       <Swiper
@@ -30,7 +40,7 @@ export default function ImagesSwiper({images,setSwiperRealIndex}) {
         thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
         onSlideChange={(swiperData) =>setSwiperRealIndex(swiperData.realIndex)}
         modules={[FreeMode, Navigation, Thumbs,Pagination]}
-        className="mySwiper2"
+        className="mySwiper2 "
       >
          { images.map((image,i)=>{
           
@@ -40,7 +50,7 @@ export default function ImagesSwiper({images,setSwiperRealIndex}) {
       <Swiper
         onSwiper={setThumbsSwiper}
         spaceBetween={10}
-        slidesPerView={10}
+        slidesPerView={bottomSwiperSliderPerView}
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
