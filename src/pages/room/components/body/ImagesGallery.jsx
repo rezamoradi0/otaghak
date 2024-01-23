@@ -18,7 +18,7 @@ export default function ImagesGallery({ isExpand, imageLinks,children }) {
   useEffect(()=>{
     theDispatch(addObject({key:ROOM_PAGE_TEXT.header.images.key,value:imagesGalleryRef.current.offsetTop,height:imagesGalleryRef.current.offsetHeight}))
   
-  },[])
+  },[isExpand])
   function calcGrid(index) {
     const newIndex = index > 6 ? index % 7 : index;
 
@@ -41,7 +41,7 @@ export default function ImagesGallery({ isExpand, imageLinks,children }) {
   if (isExpand) {
     return (
       <>    <div ref={imagesGalleryRef}
-        className={`${" relative overflow-hidden w-2/3 grid gap-4 grid-cols-2 grid-flow-row auto-rows-[240px] "}`}
+        className={`${"md:w-full relative overflow-hidden w-2/3 grid gap-4 grid-cols-2 grid-flow-row auto-rows-[240px] "}`}
       >
         {imageLinks.map((imgLink, i) => {
           const gridTemp = calcGrid(i);

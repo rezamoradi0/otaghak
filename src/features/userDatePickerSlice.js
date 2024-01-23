@@ -2,11 +2,20 @@ import { createSlice } from "@reduxjs/toolkit";
 import { GetDate, GetFullDataForMonth } from "../utils/functions/DateFunc";
 
 function ResetDayInfo(state) {
-  state.daysInfo = {
-    enterDay: { day: null, monthIndex: null },
-    exitDay: { day: null, monthIndex: null },
-  };
+  //if selected lastDay => clean ofter change month
+  if(state.daysInfo.exitDay.day){
   state.selectedDays = [];
+  state.daysInfo= {
+    enterDay: { day: null, monthIndex: null },
+    exitDay: { day: null, monthIndex: null }
+  }
+}
+  else {
+    state.daysInfo={
+      enterDay:{...state.daysInfo.enterDay,monthIndex:  state.daysInfo.enterDay.monthIndex},
+      exitDay:{...state.daysInfo.exitDay,monthIndex:  state.daysInfo.exitDay.monthIndex}
+     }
+  }
 }
 
 const initialState = {
@@ -52,11 +61,14 @@ const DatePickerSlice = createSlice({
     },
 
     nextMonth(state) {
-      ResetDayInfo(state);
+       ResetDayInfo(state);
+
+
       state.canNext = true;
       state.canPerv = true;
       if (state.tableIndex < state.maxTabIndex - state.tablesNumber) {
         state.tableIndex++;
+    
         if (state.tableIndex === state.maxTabIndex - state.tablesNumber) {
           state.canNext = false;
         }
@@ -65,11 +77,13 @@ const DatePickerSlice = createSlice({
       }
     },
     pervMonth(state) {
-      ResetDayInfo(state);
+       ResetDayInfo(state);
+
       state.canPerv = true;
       state.canNext = true;
       if (state.tableIndex > 0) {
         state.tableIndex--;
+     
         if (state.tableIndex === 0) {
           state.canPerv = false;
         }
@@ -116,10 +130,13 @@ const DatePickerSlice = createSlice({
     ,
     setPersonCount(state,action){
       state.personCount=action.payload;
+    },
+    setTablesNumber(state,action){
+      state.tablesNumber=action.payload;
     }
   },
 });
 
-export const { DateWorks, nextMonth, pervMonth, selectDay, addDay ,clearDay,clearData,setPersonCount} =
+export const { DateWorks, nextMonth, pervMonth, selectDay, addDay ,clearDay,clearData,setPersonCount,setTablesNumber} =
   DatePickerSlice.actions;
 export default DatePickerSlice.reducer;

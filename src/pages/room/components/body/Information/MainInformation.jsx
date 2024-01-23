@@ -27,8 +27,9 @@ import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addObject } from "../../../../../features/domPublicSlice";
 import { getOffsetTop } from "../../../../../utils/functions/DomFunc";
+import { twMerge } from "tailwind-merge";
 
-export default function MainInformation({ data }) {
+export default function MainInformation({ data ,className=""}) {
   const theDispatch=useDispatch();
   const rolesInformationRef=useRef();
   const commentInformationRef=useRef();
@@ -44,7 +45,7 @@ export default function MainInformation({ data }) {
   
   },[])
   return (
-    <div dir="rtl" className="flex  w-2/3 flex-col">
+    <div dir="rtl" className={twMerge("flex  w-2/3 flex-col",className)}>
       <div ref={mainInformationRef}>
       <p className="flex gap-x-3 items-center text-gray-400">
         {" "}

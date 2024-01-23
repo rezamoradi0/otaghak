@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import MoreButton from "../../../../../../components/MoreButton";
 import { e2p } from "../../../../../../components/dateBox/Functions";
 import { ICON_STAR, ICON_USER } from "../../../../../../constant/fontIcons";
@@ -44,7 +45,7 @@ function SingleComment({ singleCommentData, isExpand = false, ...props }) {
       key={props.key}
       className={`${
         isExpand ? "w-full" : " w-[49%]"
-      } rounded-lg flex flex-col gap-y-2 border border-gray-300  p-2`}
+      } rounded-lg flex flex-col gap-y-2 border border-gray-300  p-2 md:w-full`}
     >
       <div className="flex items-start gap-x-2 ">
         {singleCommentData.userImg ? (
@@ -139,7 +140,7 @@ function AllComments({ commentRatesData, commentsData }) {
             })`}
           </span>
       </p>
-      <div className="flex w-full flex-wrap justify-between my-4 gap-y-2">
+      <div className="flex w-full flex-wrap justify-between my-4 gap-y-2 ">
         {commentsData.map((commentData, i) => {
           return <SingleComment isExpand={true} key={i} singleCommentData={commentData} />;
         })}
@@ -204,18 +205,20 @@ export default function CommentsResidence({ commentRatesData, commentsData }) {
           })}
         </div>
       </div>
-      <MoreButton
-        text={`${ROOM_PAGE_TEXT.buttons.moreComments} ( ${e2p(
-          commentsData.length
-        )}${ROOM_PAGE_TEXT.body.commentResidence.case} )`}
-        header={ROOM_PAGE_TEXT.body.commentResidence.header}
-        PopupBody={
-          <AllComments
-            commentRatesData={commentRatesData}
-            commentsData={commentsData}
-          />
-        }
-      />
+     {useMemo(()=>{
+    return   <MoreButton
+       text={`${ROOM_PAGE_TEXT.buttons.moreComments} ( ${e2p(
+         commentsData.length
+       )}${ROOM_PAGE_TEXT.body.commentResidence.case} )`}
+       header={ROOM_PAGE_TEXT.body.commentResidence.header}
+       PopupBody={
+         <AllComments
+           commentRatesData={commentRatesData}
+           commentsData={commentsData}
+         />
+       }
+     />
+     },[commentsData])}
     </>
   );
 }

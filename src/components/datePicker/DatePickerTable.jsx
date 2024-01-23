@@ -26,14 +26,14 @@ const DatePickerTable = forwardRef(function DatePickerTable(
     theUserDatePickerDispatch(DateWorks(DatePickerData));
   }, []);
   // useEffect(()=>{
-  //   // console.log(datePickerState.selectedDays);
-  // },[datePickerState.selectedDays]);
+  //    console.log(datePickerState.daysInfo);
+  // },[datePickerState.daysInfo]);
   // useEffect(() => {
   //   console.log(datePickerState);
   // }, [datePickerState]);
   if (datePickerState.monthTables.length === 0) return <p>loading</p>;
   if (datePickerState.monthTables.length > 0) {
-    if (datePickerState.monthTables.length > 1) {
+    if (datePickerState.monthTables.length > 1&&datePickerState.tablesNumber>1) {
       return (
         <div className={className} ref={ref}>
           <div dir="rtl" className="flex bg-white">
@@ -72,8 +72,9 @@ const DatePickerTable = forwardRef(function DatePickerTable(
         </div>
       );
     } else {
+     
       return (
-        <div className="flex">
+        <div className="flex md:justify-center">
           <DatePickerOneMonth
             thisIsSecond={thisIsSecond}
             monthData={datePickerState.monthTables[datePickerState.tableIndex]}

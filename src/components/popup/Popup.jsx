@@ -46,9 +46,9 @@ export default function Popup({
        <div
           dir="rtl"
           style={{ transitionDuration: `${transitionDurationMs}ms` }}
-          className={`${playAnimation && twMerge("bottom-[95%]", playClassName)}
+          className={`${playAnimation && twMerge("bottom-[95%] ", playClassName)}
               ${twMerge(
-                "[&>*]:px-12 z-50 h-min fixed rounded-xl transition-all overflow-x-clip  -bottom-0 translate-y-full left-1/2 -translate-x-1/2  bg-white pb-8 w-1/2",
+                " md:w-full md:h-full [&>*]:px-12 z-50 h-min fixed rounded-xl transition-all overflow-x-clip  -bottom-0 translate-y-full left-1/2 -translate-x-1/2  bg-white pb-8 w-1/2",
                 className
               )}
             `}

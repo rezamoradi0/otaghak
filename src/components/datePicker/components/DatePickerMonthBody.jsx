@@ -1,11 +1,13 @@
+import { useSelector } from "react-redux";
 import { DATE_COMPONENT_TEXT } from "../../../constant/text";
 import { e2p } from "../../../utils/functions/DateFunc";
 import DatePickerDay from "./DatePickerDay";
+import { useEffect } from "react";
 
 
 export default function DatePickerMonthBody({ monthData ,thisIsSecond}) {
-  // console.log(monthData);
-  return (
+
+   return (
     <div className="grid-cols-7 grid  grid-rows-7  grid-flow-row place-items-center h-full">
       {Object.values(DATE_COMPONENT_TEXT.dayNames).map((value, i) => {
         return <DatePickerDay key={i} value={value} />;

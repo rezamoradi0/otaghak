@@ -10,7 +10,7 @@ import EnterExitDate from "./ReserveTable/EnterExitDate";
 import PersonCount from "./ReserveTable/PersonCount";
 import PriceInfo from "./ReserveTable/PriceInfo";
 import { twMerge } from "tailwind-merge";
-export default function ReserveTable({ parentMarginTop = 20, data ,className=""}) {
+export default function ReserveTable({ parentMarginTop = 20, data ,className="",pinToBottom=false}) {
   const datePickerRef = useRef();
   const datePickerBgRef = useRef();
   //useReducer is Better
@@ -94,7 +94,7 @@ export default function ReserveTable({ parentMarginTop = 20, data ,className=""}
     <div
     ref={thisRef}
       style={
-        !!theDomPublicState?.header
+        !!theDomPublicState?.header&&!pinToBottom
           ? {
               top: `${theDomPublicState.header.value + parentMarginTop -15}px`,
               marginBottom: `${openedHeight}px`,

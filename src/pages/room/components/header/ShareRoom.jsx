@@ -16,7 +16,7 @@ export default function ShareRoom({ className = "", bodyClassName = "" }) {
         className="cursor-pointer flex items-center gap-x-2 text-base"
       >
         {" "}
-        <ICON_SHARE className={"text-2xl"} />{ROOM_PAGE_TEXT.buttons.share}
+        <ICON_SHARE className={"text-2xl"} /><span className="md:hidden">{ROOM_PAGE_TEXT.buttons.share}</span>
       </button>
       {show && (
         <Popup header={ROOM_PAGE_TEXT.popups.share.header} setShow={setShow}>

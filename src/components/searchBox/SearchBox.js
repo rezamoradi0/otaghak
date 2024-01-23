@@ -161,10 +161,10 @@ const SearchBox = (props) => {
     }
   }
    return (
-    <div
+    <div dir=""
       className={`${
         !showSearchBox && "invisible"
-      }  group z-0 relative w-full h-5/6  scroll-smooth   flex justify-between items-center ${props.inBox?"":"py-2 pr-6 mr-4 ml-24 border border-gray-800 rounded-full"}`}
+      }  group z-0 relative grow   max-h-40 scroll-smooth   flex justify-between items-center ${props.inBox?"":" pr-6 ml-5  border border-gray-800 rounded-2xl"}`}
     >
       <button 
         className={`${props.inBox?"hidden":"flex"}  items-center p-4 ml-2 hover:bg-gray-200 rounded-full`}
