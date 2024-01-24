@@ -92,12 +92,12 @@ function Room() {
     document.addEventListener("scrollend", () => {
       onScrollHandler();
     });
-    document.addEventListener("touchmove", () => {
-      onScrollHandler();
-    });
+    // document.addEventListener("touchmove", () => {
+    //   onScrollHandler();
+    // });
     return () => {
       document.removeEventListener("scrollend", onScrollHandler);
-      document.removeEventListener("touchmove", onScrollHandler);
+      // document.removeEventListener("touchmove", onScrollHandler);
 
     };
   }, [theDomPublicState]);

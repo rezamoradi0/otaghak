@@ -4,7 +4,7 @@ import SearchBox from "./SearchBox";
 import { useSelector } from "react-redux";
 import { useRef } from "react";
 import PeopleCounter from "./PeopleCounter";
-
+import DatePickerTable from "./../datePicker/DatePickerTable"
 const SearchBoxMain = (props) => {
   const [showDate, setShowDate] = useState(false);
   const popoverRef = useRef(null);
@@ -121,7 +121,8 @@ const SearchBoxMain = (props) => {
         </label>
         {showDate && mainState.mainData && (
           <div  ref={popoverRef}>
-            <DatePicker time={mainState.mainData.time} />
+            {/* <DatePicker time={mainState.mainData.time} /> */}
+            {/* <DatePickerTable  time={mainState.mainData.time}/> */}
           </div>
         )}
       </label>

@@ -35,7 +35,7 @@ const HomePage = () => {
             <SearchBoxMain />
           </section>
         </div>
-        <main className="px-28 ">
+        <main className="px-28 md:px-5">
           <QuickAccess data={mainState.mainData.quickAccess} />
           <Banners data={mainState.mainData.banners} />
           {mainState.mainData.mainSections.map((sliderData,i) => {

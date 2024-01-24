@@ -132,7 +132,7 @@ export default function PriceInfo({
               </span>
             </p>
           )}
-          {priceTable.allDiscount && (
+          {!!priceTable.allDiscount && (
             <p className="text-red-500 flex items-center justify-between">
               <span>
                 {RESERVE_TABLE_TEXT.allDiscounts}{" "}
@@ -154,14 +154,17 @@ export default function PriceInfo({
             </span>
             <span className="font-semibold text-lg text-gray-800">
               {e2p(
-                userDatePickerSelectedDaysState
+             (userDatePickerSelectedDaysState
                   .slice(0, -1)
                   .reduce((allPrice, thisDay) => {
                     const thisPrice = thisDay.discountedPrice
                       ? thisDay.discountedPrice
                       : thisDay.price;
                     return (allPrice += thisPrice);
-                  }, 0)
+                  }, 0)+   (
+                    ((userDatePickerSelectedDaysState.length - 1) *
+                    morePricePerPerson*userDatePickerPersonCountState.more)
+                  ))
                   .toLocaleString()
                   .replaceAll(",", "،")
               )}{" "}
