@@ -43,7 +43,7 @@ export default function RoomHeader() {
             {ROOM_PAGE_TEXT.header.id.text} :{" "}
             {e2p(theLocation.pathname.replace(`/${ROOM_PATH}/`, ""))}
           </div>
-          <div className="flex gap-x-6 ml-auto  md:order-3 md:w-full md:justify-around md:border-t md:border-gray-800 md:pt-2 md:gap-x-0">
+          <div className="flex gap-x-6 ml-auto  md:order-3 md:w-full md:justify-around md:border-t md:border-gray-800 md:pt-2 md:gap-x-0 md:text-sm md:font-light">
             {Object.values(ROOM_PAGE_TEXT.header).map((value, i) => {
               if (i == 0) return;
         

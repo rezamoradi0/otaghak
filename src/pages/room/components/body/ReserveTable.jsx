@@ -10,20 +10,28 @@ import EnterExitDate from "./ReserveTable/EnterExitDate";
 import PersonCount from "./ReserveTable/PersonCount";
 import PriceInfo from "./ReserveTable/PriceInfo";
 import { twMerge } from "tailwind-merge";
-export default function ReserveTable({ parentMarginTop = 20, data ,className="",pinToBottom=false}) {
+import { clearData } from "../../../../features/userDatePickerSlice";
+export default function ReserveTable({
+  parentMarginTop = 20,
+  data,
+  className = "",
+  pinToBottom = false,
+  getDiscountJsx=()=>{}
+}) {
   const datePickerRef = useRef();
   const datePickerBgRef = useRef();
+  const theDispatch = useDispatch();
   //useReducer is Better
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenDatePicker, setIsOpenDatePicker] = useState(false);
   const [openedHeight, setOpenedHeight] = useState(0);
   const [btnState, setBtnState] = useState(0);
-  const thisRef=useRef();
+  const thisRef = useRef();
   const [btnTextState, setBtnTextState] = useState(
     () => RESERVE_TABLE_TEXT.selectDate
   );
   const [showPriceInfo, setShowPriceInfo] = useState(false);
-  const [startDayDiscount,setStartDayDiscount]=useState(0);
+  const [startDayDiscount, setStartDayDiscount] = useState(0);
   const theDomPublicState = useSelector((state) => {
     return state.domPublic.publicDomElements;
   });
@@ -31,7 +39,9 @@ export default function ReserveTable({ parentMarginTop = 20, data ,className="",
   const datePickerState = useSelector((state) => {
     return state.userDatePicker;
   });
-
+  useEffect(()=>{
+    getDiscountJsx(startDayDiscount);
+  })
   useEffect(() => {
     if (datePickerState.selectedDays.length == 0) {
       setBtnState(0);
@@ -71,7 +81,9 @@ export default function ReserveTable({ parentMarginTop = 20, data ,className="",
     };
     if (isOpenDatePicker) {
       setOpenedHeight(
-        datePickerRef.current?.offsetHeight  - parentMarginTop/2 - thisRef.current?.offsetHeight
+        datePickerRef.current?.offsetHeight -
+          parentMarginTop / 2 -
+          thisRef.current?.offsetHeight
       );
       datePickerBgRef.current?.addEventListener("click", ExitDatePicker, true);
     } else {
@@ -92,31 +104,47 @@ export default function ReserveTable({ parentMarginTop = 20, data ,className="",
   }, [isOpenDatePicker]);
   return (
     <div
-    ref={thisRef}
+      ref={thisRef}
       style={
-        !!theDomPublicState?.header&&!pinToBottom
+        !!theDomPublicState?.header && !pinToBottom
           ? {
-              top: `${theDomPublicState.header.value + parentMarginTop -15}px`,
+              top: `${theDomPublicState.header.value + parentMarginTop - 15}px`,
               marginBottom: `${openedHeight}px`,
             }
           : {}
       }
-      className={twMerge( `w-1/3 flex flex-col   h-fit  rounded-3xl min-h-[200px] border border-gray-100 p-2  sticky shadow-xl `,className)}
+      className={twMerge(
+        `w-1/3 flex flex-col   h-fit  rounded-3xl min-h-[200px] border border-gray-100 p-2  sticky shadow-xl `,
+        className
+      )}
     >
       <p className="text-gray-500 my-4 flex flex-wrap justify-between">
         <span>
           {" "}
           <span>{RESERVE_TABLE_TEXT.fromPrice} </span>{" "}
           <span className="text-gray-700 text-xl font-semibold">
-            { startDayDiscount&&datePickerState.selectedDays.length>0&&datePickerState.selectedDays[0].discountedPrice?e2p(datePickerState.selectedDays[0].discountedPrice.toLocaleString().replaceAll(",","،")): e2p(
-              data.availablePrice.price.toLocaleString().replaceAll(",", "،")
-            )}
+            {startDayDiscount &&
+            datePickerState.selectedDays.length > 0 &&
+            datePickerState.selectedDays[0].discountedPrice
+              ? e2p(
+                  datePickerState.selectedDays[0].discountedPrice
+                    .toLocaleString()
+                    .replaceAll(",", "،")
+                )
+              : e2p(
+                  data.availablePrice.price
+                    .toLocaleString()
+                    .replaceAll(",", "،")
+                )}
           </span>{" "}
           <span>{ROOM_PAGE_TEXT.price}</span>
         </span>
-          <span>
-          {datePickerState.selectedDays.length>0&&datePickerState.selectedDays[0].discountedPrice&&startDayDiscount||""}
-            </span>
+        <span>
+          {(datePickerState.selectedDays.length > 0 &&
+            datePickerState.selectedDays[0].discountedPrice &&
+            startDayDiscount) ||
+            ""}
+        </span>
       </p>
       <EnterExitDate
         onClick={() => {
@@ -150,17 +178,19 @@ export default function ReserveTable({ parentMarginTop = 20, data ,className="",
         <>
           <div
             ref={datePickerRef}
-            className="absolute top-0 z-10 bg-white left-0  border rounded-xl  px-5 "
+            className="absolute top-0 z-10 bg-white left-0  border rounded-xl  px-5 md:w-full md:h-fit"
           >
             <EnterExitDate isVertical={false}>
               {RESERVE_TABLE_TEXT.datePickerJourney}
             </EnterExitDate>
+
             <DatePickerTable
               showTagsInfo={false}
               thisIsSecond={true}
               DatePickerData={data.reservation.dates}
             >
               <hr className=" w-full text-red-400" />
+
               <div className="flex items-center justify-between z-50 py-1">
                 <MoreButton
                   icon={<></>}
@@ -181,7 +211,24 @@ export default function ReserveTable({ parentMarginTop = 20, data ,className="",
                 </button>
               </div>
             </DatePickerTable>
+            <div className="hidden md:flex gap-x-12 flex-row-reverse w-full   my-2 justify-between">
+              <button className="bg-zinc-600  grow-0 px-7 rounded-lg py-2   text-gray-50 font-semibold"
+                onClick={() => {
+                  setIsOpenDatePicker(false);
+                }}
+              >
+                {btnState > 0 ? "تایید" : "بستن"}
+              </button>
+          { (datePickerState.selectedDays.length != 0) &&  <button className="  bg-gray-200 grow px-7 rounded-lg py-2   text-zinc-600 font-semibold"
+                onClick={() => {
+                  theDispatch(clearData());
+                }}
+              >
+                {(datePickerState.selectedDays.length == 0)?  "":"پاک کردن تاریخ" }
+              </button>}
+            </div>
           </div>
+
           <div
             ref={datePickerBgRef}
             className="absolute z-0 h-screen w-screen  -top-8  left-0 "

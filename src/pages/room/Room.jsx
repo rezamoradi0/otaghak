@@ -14,6 +14,7 @@ import { breakPoints } from "../../constant/breakPoints";
 import { createPortal } from "react-dom";
 import { setTablesNumber } from "../../features/userDatePickerSlice";
 import useDeviceScreenSize from "../../utils/customHooks/useDeviceScreenSize";
+import StickyReserveTable from "./components/body/ReserveTable/StickyReserveTable";
 
 function Room() {
   const theParams = useParams();
@@ -155,7 +156,7 @@ function Room() {
             //   parentMarginTop={_marginTop}
             //   data={theRoomExtraState.data}
             // />,
-            <></>,
+            <StickyReserveTable      data={theRoomExtraState.data}/>,
             document.body
           )
         ) : (

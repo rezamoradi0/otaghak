@@ -78,7 +78,7 @@ const Footer = ({ FooterObj,HeaderObj }) => {
            <p className="text-lg  text-gray-600 font-semibold">
               {FooterObj.getApp.text}
             </p>
-            <div className="flex flex-wrap justify-between gap-y-3 p-3 md:w-screen md:justify-around ">
+            <div className="flex flex-wrap justify-between gap-y-3 p-3  md:justify-around ">
               {FooterObj.getApp.links.map((link) => {
                 return (
                   <a
