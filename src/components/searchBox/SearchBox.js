@@ -51,8 +51,8 @@ const SearchBox = (props) => {
         return     <div
         dir="rtl"
         className={`
-        flex z-50 absolute result  flex-col rounded-s-xl
-         justify-start border border-slate-200 bg-white w-full max-h-[50vh] overflow-y-auto p-3 -bottom-7 translate-y-full`}
+          flex z-50 absolute md:min-w-[300px]  result  flex-col rounded-s-xl
+         justify-start border border-slate-200 bg-white w-full max-h-[50vh] overflow-y-auto p-3 left-0 -bottom-7 translate-y-full`}
       >
         <p dir="rtl" className="mb-5  mt-3  text-blue-800 font-bold">
           {defaultData.bestCities.text}

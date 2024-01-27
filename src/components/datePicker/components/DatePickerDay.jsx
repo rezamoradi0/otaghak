@@ -139,6 +139,36 @@ export default function DatePickerDay({
   if (value && dayNumber) {
     _classNames += dayNumber % 7 === 0 ? " text-red-500 " : " ";
   }
+
+  if(data.price===undefined||data.price===null){
+    return  (
+      <div
+        onClick={() => {
+          clickHandler();
+        }}
+        className={twMerge(
+          `col-span-1 row-span-1 m-[2px] rounded-md ${dynamicStyle} text-xs text-gray-500 text-center flex flex-col justify-center items-center relative   w-3/4   min-h-[50px] `,
+          _classNames
+        )}
+        key={crypto.randomUUID()}
+      >
+        {(day && dayRealNumber < day) || !data.available ? (
+          <>
+            {" "}
+            <span className=" -my-2"> {value} </span>
+            <span
+              className={`${
+                dayNumber % 7 === 0 ? "bg-red-500" : "bg-black"
+              } w-full max-w-[22px] top-1/2 -rotate-45    h-[1px] absolute`}
+            ></span>
+          </>
+        ) : ( <span className="-my-2"> {value}</span>    
+        )}
+      </div>
+    );
+  
+  }
+
   return (
     <div
       onClick={() => {

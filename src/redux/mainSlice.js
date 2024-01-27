@@ -29,18 +29,18 @@ const mainSlice = createSlice({
     },
     // [fetchMain.rejected]: (state, action) => {},
     [fetchMain.fulfilled]: (state, action) => {
-      console.log(action);
+      // console.log(action);
       if (action.payload.error) {
-        console.log(action.payload.error);
+        // console.log(action.payload.error);
         state.loading = false;
         state.mainData = null;
         state.errorMessage = action.payload.text;
-        console.log("rejected");
+        // console.log("rejected");
       } else {
         state.loading = false;
         state.mainData = action.payload;
         state.errorMessage = null;
-        console.log("completed");
+        // console.log("completed");
       }
     },
   },

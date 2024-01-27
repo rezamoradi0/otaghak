@@ -6,9 +6,9 @@ import { fetchRoom } from "../../features/userRoomExtraSlice";
 import MainInformation from "./components/body/Information/MainInformation";
 import ReserveTable from "./components/body/ReserveTable";
 import DefaultSlider from "../../components/swiperSlider/sliders/DefaultSlider";
-import { SLIDER_COMPONENT_TEXT } from "../../constant/text";
+import { ROOM_PAGE_TEXT, SLIDER_COMPONENT_TEXT } from "../../constant/text";
 import OtherResidenceLinks from "./components/body/Information/components/OtherResidenceLinks";
-import { setNullObjForScroll } from "../../features/domPublicSlice";
+import domPublicSlice, { setNullObjForScroll } from "../../features/domPublicSlice";
 import { selectTab } from "../../features/userRoomSlice";
 import { breakPoints } from "../../constant/breakPoints";
 import { createPortal } from "react-dom";
@@ -62,6 +62,13 @@ function Room() {
     function onScrollHandler() {
       //  console.log(window.scrollY);
       theDispatch_Room(setNullObjForScroll());
+      if(window.scrollY<300){
+        console.log(theDomPublicState);
+        theDispatch_Room(
+          selectTab(ROOM_PAGE_TEXT.header.images.key)
+        );
+        return;
+      }
       let sortedListOfDom = [];
       // console.log(theDomPublicState);
       for (const domObj of Object.entries(theDomPublicState)) {
@@ -79,7 +86,7 @@ function Room() {
         if (
           sortedListOfDom.length > 1 &&
           sortedListOfDom[sortedListOfDom.length - 1][1] < window.scrollY
-        ) {
+        ) { 
           theDispatch_Room(
             selectTab(sortedListOfDom[sortedListOfDom.length - 1][0])
           );

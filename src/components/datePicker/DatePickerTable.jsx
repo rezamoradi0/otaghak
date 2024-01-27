@@ -16,6 +16,7 @@ const DatePickerTable = forwardRef(function DatePickerTable(
     showTagsInfo = true,
     children,
     thisIsSecond = false,
+    
   },
   ref
 ) {
@@ -23,6 +24,7 @@ const DatePickerTable = forwardRef(function DatePickerTable(
   const theUserDatePickerDispatch = useDispatch();
 
   useEffect(() => {
+    console.log(DatePickerData);
     theUserDatePickerDispatch(DateWorks(DatePickerData));
   }, []);
   // useEffect(()=>{
@@ -35,7 +37,7 @@ const DatePickerTable = forwardRef(function DatePickerTable(
   if (datePickerState.monthTables.length > 0) {
     if (datePickerState.monthTables.length > 1&&datePickerState.tablesNumber>1) {
       return (
-        <div className={className} ref={ref}>
+        <div className={className||""} ref={ref}>
           <div dir="rtl" className="flex bg-white">
             <DatePickerOneMonth
               thisIsSecond={thisIsSecond}
@@ -74,12 +76,13 @@ const DatePickerTable = forwardRef(function DatePickerTable(
     } else {
      
       return (
-        <div className="flex md:justify-center">
+        <div className="flex md:justify-center md:flex-col">
           <DatePickerOneMonth
             thisIsSecond={thisIsSecond}
             monthData={datePickerState.monthTables[datePickerState.tableIndex]}
             clickDirection={0}
           />
+               {children}
         </div>
       );
     }

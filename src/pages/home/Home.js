@@ -12,7 +12,11 @@ import StaticSlider from "../../components/slider/StaticSlider";
 import BannerSlide from "../../components/slider/BannerSlide";
 import CustomSlider from "../../components/slider/CustomSlider";
 import TextAccordion from "../../components/TextAccordion";
+import useDeviceScreenSize from "../../utils/customHooks/useDeviceScreenSize";
+import { breakPoints } from "../../constant/breakPoints";
+import { setTablesNumber } from "../../features/userDatePickerSlice";
 const HomePage = () => {
+  const deviceScreenSize=useDeviceScreenSize();
   const mainState = useSelector((state) => {
     return state.main;
   });
@@ -20,6 +24,13 @@ const HomePage = () => {
   useEffect(() => {
     mainDispatch(fetchMain());
   }, []);
+  useEffect(()=>{
+    if(deviceScreenSize==breakPoints.md){
+      mainDispatch(setTablesNumber(1));
+    }
+
+
+  },[deviceScreenSize])
   if (mainState.loading) {
     return <MainLoading />;
   } else if (mainState.errorMessage !== null) {

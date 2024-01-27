@@ -883,7 +883,30 @@
         ]
       }
     },
-    "time": "2024-01-17T00:00:00"
+    "time": "2024-01-17T00:00:00",
+    "months": [
+      {
+        "id": 0,
+        "days": [{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true}]
+      },
+      {
+        "id": 1,
+        "days": [{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true}]
+
+      },
+      {
+        "id": 2,
+        "days": [{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true}]
+      },
+      {
+        "id": 3,
+        "days": [{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true}]
+      },
+      {
+        "id": 4,
+        "days": [{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true},{"available": true}]
+      }
+    ]
   },
 
   "residenceTypes": [
@@ -1119,9 +1142,13 @@
       "tags": [1, 2],
       "shutter": true,
       "metres": 70,
-      "capacity":4,
+      "capacity": 4,
       "maxGuests": 6,
-      "availablePrice":{"price":2100000,"discount":10,"discountedPrice":1990000},
+      "availablePrice": {
+        "price": 2100000,
+        "discount": 10,
+        "discountedPrice": 1990000
+      },
       "bedRooms": 2,
       "roomRate": "4.9",
       "images": [
@@ -2341,8 +2368,8 @@
           ]
         }
       },
-      "otherResidences":{
-        "text":"سایز اقامتگاه‌های مشابه در منطقه",
+      "otherResidences": {
+        "text": "سایز اقامتگاه‌های مشابه در منطقه",
         "items": [
           {
             "id": "2399131",
@@ -2427,7 +2454,7 @@
             "type": "room",
             "text": "عمارت استخردار آبگرم مدرن گلستان",
             "img": "/images/rooms/3.webp",
-            "tags": [ 2],
+            "tags": [2],
             "position": "سهیلیه",
             "maxCapacity": 12,
             "bedRooms": 3,
@@ -2541,12 +2568,12 @@
           }
         ]
       },
-      "otherResidenceLinks":[
-        {"text":"اجاره ویلا و سوئیت در انزلی","path":"/city/anzali"},
-        {"text":"اجاره ویلا استخردار","path":"/landing/villapool"},
-        {"text":"اجاره ویلا لب دریا و ساحلی","path":"/landing/beach"},
-        {"text":"اجاره ویلا شمال","path":"/landing/villa-north-iran"},
-        {"text":"اجاره ویلا شبانه","path":"/landing/nighty"}
+      "otherResidenceLinks": [
+        { "text": "اجاره ویلا و سوئیت در انزلی", "path": "/city/anzali" },
+        { "text": "اجاره ویلا استخردار", "path": "/landing/villapool" },
+        { "text": "اجاره ویلا لب دریا و ساحلی", "path": "/landing/beach" },
+        { "text": "اجاره ویلا شمال", "path": "/landing/villa-north-iran" },
+        { "text": "اجاره ویلا شبانه", "path": "/landing/nighty" }
       ]
     },
     {

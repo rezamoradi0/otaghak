@@ -10,6 +10,7 @@ import ImagesGalleryHeader from "./ImagesGalleryHeader";
 import useDeviceScreenSize from "../../../../utils/customHooks/useDeviceScreenSize";
 import { breakPoints } from "../../../../constant/breakPoints";
 import ImagesGallerySwiperMd from "./ImagesGallery/ImageGalllerySwiperMd";
+import { getOffsetTop } from "../../../../utils/functions/DomFunc";
 export default function ImagesGallery({ isExpand, imageLinks,children }) {
   const [showSwiper, setShowSwiper] = useState(false);
   const [swiperRealIndex,setSwiperRealIndex]=useState(0);
@@ -20,9 +21,8 @@ export default function ImagesGallery({ isExpand, imageLinks,children }) {
     if (!isExpand) setShowSwiper(false);
   }, [isExpand]);
   useEffect(()=>{
-    theDispatch(addObject({key:ROOM_PAGE_TEXT.header.images.key,value:imagesGalleryRef.current?.offsetTop,height:imagesGalleryRef.current?.offsetHeight}))
-  
-  },[isExpand])
+    theDispatch(addObject({key:ROOM_PAGE_TEXT.header.images.key,value:getOffsetTop (imagesGalleryRef.current),height:imagesGalleryRef.current?.offsetHeight}))
+  },[])
   function calcGrid(index) {
     const newIndex = index > 6 ? index % 7 : index;
 
