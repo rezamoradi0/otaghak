@@ -86,7 +86,7 @@ export default function ImagesGallery({ isExpand, imageLinks,children }) {
   
     );
   }
-if(deviceScreenSize==breakPoints.md){
+if(deviceScreenSize==breakPoints.md||deviceScreenSize==breakPoints.sm){
   return  <div className="w-full"  ref={imagesGalleryRef}>
 
     <ImagesGallerySwiperMd imageLinks={imageLinks} onClick={()=>{

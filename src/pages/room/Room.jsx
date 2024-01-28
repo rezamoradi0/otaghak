@@ -35,7 +35,7 @@ function Room() {
     return state.domPublic.publicSelectedObjForScroll;
   });
   useEffect(()=>{
-    if(deviceScreenSize==breakPoints.md){
+    if(deviceScreenSize==breakPoints.md||deviceScreenSize==breakPoints.sm){
       theDispatch_Room(setTablesNumber(1));
     }
 
@@ -155,7 +155,7 @@ function Room() {
       >
         <MainInformation className="md:w-full" data={theRoomExtraState.data} />
      
-        {deviceScreenSize == breakPoints.md ? (
+        {deviceScreenSize == breakPoints.md ||deviceScreenSize == breakPoints.sm? (
           createPortal(
             // <ReserveTable
             //   className="md:fixed md:left-0 md:bottom-0 md:bg-white md:w-full "

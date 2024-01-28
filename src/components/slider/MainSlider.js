@@ -2,6 +2,8 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import SliderItem from "./SliderItem";
 import UseSliderMovement from "./UseSliderMovement";
 import {Swiper,SwiperSlide} from "swiper/react"
+import useDeviceScreenSize from "../../utils/customHooks/useDeviceScreenSize";
+import { breakPoints } from "../../constant/breakPoints";
 
 /**
  *
@@ -9,12 +11,20 @@ import {Swiper,SwiperSlide} from "swiper/react"
  * @returns
  */
 const MainSlider = ({ text, description, url, dataArray, bg_color }) => {
-  // const [, setState] = useState(false);
-  const usedWidth = 315; //px
-  const sliderBodyRef = useRef();
-  const sliderScrollDivRef = useRef();
-  const [scrollValue, setMouseIsDown, setMousePosition, mouseIsDown] =
-    UseSliderMovement(usedWidth);
+  const deviceSizeScreen=useDeviceScreenSize();
+  const [slidesPerViewState,setSlidesPerViewState]=useState(dataArray?.length||4);
+
+  useEffect(()=>{
+    if(deviceSizeScreen<=breakPoints.sm){
+      setSlidesPerViewState(1);
+    }
+   else if(deviceSizeScreen<=breakPoints.md){
+      setSlidesPerViewState(2);
+    }else {
+      setSlidesPerViewState(4);
+    }
+
+  },[deviceSizeScreen])
   return (
     <div
       className="text-right my-4 relative"
@@ -49,11 +59,11 @@ const MainSlider = ({ text, description, url, dataArray, bg_color }) => {
       {/*slider body h-[327px]*/}
       <Swiper
         spaceBetween={10}
-        slidesPerView={"auto"}
+        slidesPerView={slidesPerViewState}
         dir="rtl"
         >
               {dataArray.map((itemData,i) => {
-            return <SwiperSlide key={i} style={{width:"fit-content"}}>
+            return <SwiperSlide key={i} >
               <SliderItem data={itemData} />
             </SwiperSlide>;
           }).reverse()}
@@ -62,14 +72,14 @@ const MainSlider = ({ text, description, url, dataArray, bg_color }) => {
 
       <span
         
-        className="flex items-center p-2 h-4/5 w-8 absolute px-8 left-0 -translate-x-full bottom-0 cursor-pointer "
+        className="md:-right-6 flex items-center p-2 h-4/5 w-8 absolute px-8 left-0 -translate-x-full bottom-0 cursor-pointer "
       >
         {" "}
         <i className=" fa-solid fa-angle-left text-3xl"></i>
       </span>
       <span
     
-        className="flex items-center p-2 h-4/5 w-8 absolute px-8 right-0 translate-x-full bottom-0 cursor-pointer   "
+        className="md:-left-6 flex items-center p-2 h-4/5 w-8 absolute px-8 right-0 translate-x-full bottom-0 cursor-pointer   "
       >
         {" "}
         <i className=" fa-solid fa-angle-right text-3xl"></i>

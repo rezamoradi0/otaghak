@@ -740,7 +740,9 @@
       {
         "type": "banner",
         "url": "host",
-        "img": "images/banner/Host-banner-wide.webp"
+        "img": "images/banner/Host-banner-wide.webp",
+        "imgMd": "images/banner/Host-banner-small.webp"
+
       },
       {
         "type": "customSlider",

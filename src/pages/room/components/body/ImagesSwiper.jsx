@@ -22,7 +22,7 @@ export default function ImagesSwiper({images,setSwiperRealIndex}) {
   const [bottomSwiperSliderPerView,setBottomSwiperSliderPerView]=useState(bottomSwiperSliderPerViewDefault)
     useEffect(()=>{
       setSwiperRealIndex(0);
-      if(deviceScreenSize==breakPoints.md){
+      if(deviceScreenSize==breakPoints.md||deviceScreenSize==breakPoints.sm){
     
       setBottomSwiperSliderPerView(bottomSwiperSliderPerViewMd);
       }

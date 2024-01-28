@@ -10,7 +10,7 @@ const SliderItem = ({ widthIndex, imgHeightIndex, data }) => {
   return (
     <>
     <Link  to={linkPath} dir="ltr"
-     draggable={false} className={`w-[300px] block  p-1 relative snap-end rounded-xl overflow-hidden  border-blue-500`}
+     draggable={false} className={` block  p-1 relative snap-end rounded-xl overflow-hidden  border-blue-500`}
     >
 
       <span className="absolute right-2 top-2 text-white text-xs p-2 flex gap-x-2">

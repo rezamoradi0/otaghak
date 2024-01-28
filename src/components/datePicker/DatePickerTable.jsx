@@ -76,7 +76,7 @@ const DatePickerTable = forwardRef(function DatePickerTable(
     } else {
      
       return (
-        <div className="flex md:justify-center md:flex-col">
+        <div className="flex md:justify-center md:flex-col md:items-center">
           <DatePickerOneMonth
             thisIsSecond={thisIsSecond}
             monthData={datePickerState.monthTables[datePickerState.tableIndex]}

@@ -29,8 +29,8 @@ const Banners = ({ data }) => {
   const defaultAlt = "تصویر";
   
  
-  if(deviceScreenSize==breakPoints.md){
-  return  <div className="w-full h-[90vh] grid grid-cols-2 grid-rows-5 grid-flow-row gap-4">
+  if(deviceScreenSize==breakPoints.md||deviceScreenSize==breakPoints.sm){
+  return  <div className="w-full h-[90vh] grid grid-cols-2 grid-rows-5 grid-flow-row gap-4 my-4">
      {data.slice(0,3).map((banner ,i ) => {
         let divCols = 1;
         let divRows = 3;

@@ -25,7 +25,7 @@ const HomePage = () => {
     mainDispatch(fetchMain());
   }, []);
   useEffect(()=>{
-    if(deviceScreenSize==breakPoints.md){
+    if(deviceScreenSize==breakPoints.md||deviceScreenSize==breakPoints.sm){
       mainDispatch(setTablesNumber(1));
     }
 

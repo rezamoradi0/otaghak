@@ -23,13 +23,14 @@ const PopularCities = ({ data }) => {
         }
       }>
       <p className="w-full text-right my-6 text-xl font-semibold">{data.text}</p>
-      <div className="w-full grid grid-cols-10 grid-rows-2 gap-3   rounded-lg ">
+    <div dir="rtl" className="w-full overflow-x-scroll">
+    <div dir="ltr" className="w-full md:w-[900px]  grid grid-cols-10 grid-rows-2 gap-3   rounded-lg ">
         {data.items.map((cityData, i) => {
           return (
             <a
               key={i}
               className={
-                gridTemp[i + 1] + "  relative h-60 overflow-hidden rounded-lg"
+                gridTemp[i + 1] + "  relative md:h-40 h-60 overflow-hidden rounded-lg"
               }
               href={cityData.url}
             >
@@ -55,6 +56,7 @@ const PopularCities = ({ data }) => {
           );
         })}
       </div>
+    </div>
     </div>
   );
 };
