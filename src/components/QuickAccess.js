@@ -2,7 +2,7 @@ const QuickAccess = ({data}) => {
     const isFarsi=true;
     const items=data.items;
     function ItemComp({text,url,svgPath}) {
-        return <a href={url} className="w-40 h-32 md:w-1/5 border border-zinc-200 md:h-auto md:aspect-square bg-white rounded-md  flex flex-col items-center justify-evenly">
+        return <a href={url} className="w-[10%] lg:w-1/5 h-32   border border-zinc-200 md:h-auto md:aspect-square bg-white rounded-md  flex flex-col items-center justify-evenly">
            <img className="w-16 md:w-10" src={svgPath} alt={text}/>
            <div dir="rtl" className="font-semibold text-gray-500 text-sm md:text-xs line-clamp-1 ">
            {text}

@@ -25,7 +25,7 @@ const CustomSlider = ({  data }) => {
      const dateInfoFa=GetDate(item.date);
         return  <SwiperSlide key={i} >
             <div className=" rounded-xl border hover:cursor-pointer text-right overflow-hidden border-gray-300 flex flex-col">
-             <a className="block" href={item.url} > <img className="h-44 w-full object-cover object-center" src={item.img} alt={item.header} /></a>
+             <a className="block" href={item.url} > <img className="h-44 w-full object-cover rounded-xl object-center" src={item.img} alt={item.header} /></a>
              <div dir="rtl" className="px-3 text-justify">
              <a href={item.url}  className="block font-semibold text-base text-gray-800 my-2">{item.header}</a> 
                <p className="font-thin   leading-5  line-clamp-3	 text-gray-500 text-xs my-2">{item.text}</p>

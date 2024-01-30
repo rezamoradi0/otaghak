@@ -48,7 +48,7 @@ export default function DatePickerOneMonth({
   }
   if (clickDirection === 0) {
     return (
-      <div className="py-4 px-2 my-2 w-[450px]  min-h-[400px] flex flex-col">
+      <div className="py-4 px-2 my-2 w-[450px] md:w-[95vw]  min-h-[400px] flex flex-col">
         <DatePickerMonthHeader
           monthName={monthData.monthName}
           yearNumber={monthData.year}
@@ -69,7 +69,7 @@ export default function DatePickerOneMonth({
     );
   }
   return (
-    <div className="py-4 px-2 my-2 w-[450px]  min-h-[400px] flex flex-col">
+    <div className="py-4 px-2 my-2 w-[450px] md:w-[95vw]  min-h-[400px] flex flex-col">
       <DatePickerMonthHeader
         monthName={monthData.monthName}
         yearNumber={monthData.year}

@@ -40,7 +40,7 @@ const HomePage = () => {
       <div className="bg-gray-50">
         <div className="py relative">
           <section style={{backgroundImage:`url(${mainState.mainData.header.bgImage})`||{}}} className={`w-full pt-36 flex flex-col items-center bg-blend-difference justify-center h-[100vb] bg-center bg-no-repeat bg-cover ]`}>
-            <h1 className="w-full text-center mb-12 text-3xl font-bold text-gray-50">
+            <h1 className="w-fit md:mx-4 md:px-1 text-center mb-12 text-3xl font-bold text-gray-50 bg-zinc-900 bg-opacity-50 px-8 py-4 rounded-lg">
               اجاره ویلا و سوییت در سراسر ایران
             </h1>
             <SearchBoxMain />

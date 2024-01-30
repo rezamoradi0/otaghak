@@ -150,7 +150,7 @@ useEffect(()=>{
         </label>
         {showDate && mainState.mainData && (
           <div
-            className=" [&>div:first-of-type]:bg-white [&>div:first-of-type]:z-50  h-fit [&>div:first-of-type]:absolute [&>div:first-of-type]:w-fit [&>div:first-of-type]:right-0 [&>div:first-of-type]:top-28 [&>div:first-of-type]:translate-x-1/4 md:[&>div:first-of-type>div:first-of-type]:flex-col"
+            className="mx-auto [&>div:first-of-type]:bg-white [&>div:first-of-type]:z-50  h-fit [&>div:first-of-type]:absolute [&>div:first-of-type]:w-fit [&>div:first-of-type]:right-0 [&>div:first-of-type]:top-28 md:[&>div:first-of-type]:translate-x-[20%] md:[&>div:first-of-type>div:first-of-type]:flex-col"
             ref={popoverRef}
           >
             {/* <DatePicker time={mainState.mainData.time} /> */}
