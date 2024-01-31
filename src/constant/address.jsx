@@ -1,5 +1,5 @@
-// export const API_ADDRESS = "http://localhost:3001";
-export const API_ADDRESS = "https://api-v1.liara.run";
+export const API_ADDRESS = "http://localhost:3001";
+// export const API_ADDRESS = "https://api-v1.liara.run";
 export const GetPath=(typeOfPost)=>{
     switch (typeOfPost) {
         case ROOM_PATH:

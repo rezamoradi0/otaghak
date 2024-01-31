@@ -84,7 +84,8 @@ export default function PriceInfo({
       </p>
       {priceTable && (
         <div className="flex flex-col gap-y-2">
-          {priceTable.priceArray.map((priceList,i) => {
+          {priceTable.priceArray?.map((priceList,i) => {
+            if(!priceList?.price)return;
             return (
               <p key={i} className="flex justify-between items-center">
                 <span className="text-gray-500">

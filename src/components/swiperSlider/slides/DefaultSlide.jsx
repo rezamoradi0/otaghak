@@ -38,17 +38,23 @@ export default function DefaultSlide({ SlideData, hasSlider }) {
           
               >
                 {SlideData.images.map((imageLink, i) => {
+               //Chrome not support Lazy 
+               //Caution: Images that are highly likely to be in-viewport, and in particular LCP images, should not be lazy-loaded.
                   return (
                     <SwiperSlide
                       className="h-"
                       key={i}
                       style={{ width: "fit-content" }}
-                    >
-                      <img loading="lazy"
-                        className="h-full w-full object-cover object-center"
-                        src={imageLink}
-                        alt=""
-                      />
+                    > {i===0?   <img 
+                    className="h-full w-full object-cover object-center"
+                    src={imageLink}
+                    alt=""
+                  />:   <img  
+                    className="h-full w-full object-cover object-center"
+                    src={imageLink}
+                    alt=""
+                  />}
+                   
                     </SwiperSlide>
                   );
                 })}

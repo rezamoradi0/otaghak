@@ -12,7 +12,7 @@ import domPublicSlice, { setNullObjForScroll } from "../../features/domPublicSli
 import { selectTab } from "../../features/userRoomSlice";
 import { breakPoints } from "../../constant/breakPoints";
 import { createPortal } from "react-dom";
-import { setTablesNumber } from "../../features/userDatePickerSlice";
+import { clearData, setTablesNumber } from "../../features/userDatePickerSlice";
 import useDeviceScreenSize from "../../utils/customHooks/useDeviceScreenSize";
 import StickyReserveTable from "./components/body/ReserveTable/StickyReserveTable";
 
@@ -54,6 +54,7 @@ function Room() {
     });
   }, [theSelectedObjectToScroll, theRoomState.selectedTab, theDomPublicState]);
   useEffect(() => {
+    theDispatch_Room(clearData(RoomId));
     theDispatch_Room(fetchRoom(RoomId));
   
   }, []);

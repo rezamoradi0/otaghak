@@ -2579,6 +2579,2906 @@
       ]
     },
     {
+      "id": 2410287,
+      "text": "ویلا استخردار آبگرم چهارباغ،",
+      "residenceId": 2,
+      "residenceName": "البرز",
+      "residence": "alborz",
+      "cityId": 2,
+      "cityName": "سهلیه",
+      "city": "soheyliye",
+      "residenceType": 1,
+      "residenceTypesName": "ویلا",
+      "tags": [
+        1
+      
+      ],
+      "shutter": true,
+      "metres": 130,
+      "capacity": 6,
+      "maxGuests": 6,
+      "availablePrice": {
+        "price": 2020000,
+        "discount": 15,
+        "discountedPrice": 1171700
+      },
+      "bedRooms": 2,
+      "roomRate": "4.9",
+      "images": [
+        "/images/rooms/2410287-1.webp",
+        "/images/rooms/2410287-2.webp",
+        "/images/rooms/2410287-3.webp",
+        "/images/rooms/2410287-4.webp",
+        "/images/rooms/2410287-5.webp",
+        "/images/rooms/2410287-6.webp",
+        "/images/rooms/2410287-7.webp",
+        "/images/rooms/2410287-8.webp",
+        "/images/rooms/2410287-9.webp",
+        "/images/rooms/2410287-10.webp",
+        "/images/rooms/2410287-11.webp",
+        "/images/rooms/2410287-12.webp",
+        "/images/rooms/2410287-13.webp",
+        "/images/rooms/2410287-14.webp",
+        "/images/rooms/2410287-15.webp",
+        "/images/rooms/2410287-16.webp",
+        "/images/rooms/2410287-17.webp",
+        "/images/rooms/2410287-18.webp",
+        "/images/rooms/2410287-19.webp",
+        "/images/rooms/2410287-20.webp"
+      ],
+      "mainImage": "/images/rooms/2410287-1.webp",
+      "managerInfo": {
+           "managerId": 2,
+          "firstName": "مهدی ",
+          "lastName": "رسولی",
+          "rooms": [],
+          "experience": "بیش از 1 سال میزبان اتاقک",
+          "successRent": 56,
+          "image": "/images/users/manager-02.webp",
+        "responseTime": "کمتر از 15 دقیقه",
+        "acceptRate": 100
+      },
+      "aboutResidence": {
+        "shutter": true,
+        "mainInfo": "130 متر, 2 اتاق, همکف, فلت (یک طبقه)",
+        "capacity": "6 نفر, 6 نفر اضافه",
+        "bedRoom":"4 پتو, 4 سرویس خواب کامل, 2 تخت دو نفره",
+        "bathRoom": "1 دوش در سرویس, 1 سرویس ایرانی, 1 سرویس فرنگی",
+        "view": "روستایی, شهری"
+      },
+      "descriptionResidence": {
+        "header": "اجاره روزانه و ماهانه باغ لوکس امیرحسین نزدیک به دریا، 120  روزانه و ماهانه استخردار آبگرم چهارباغ، 130 متر برای 6 نفر به همراه 6 نفر اضافی در شهر سهیلیه با تضمین بهترین کیفیت و قیمت در اتاقک",
+        "text": "ویلا باغ امیرحسین انزلی با استخر آبگرم برای آرامش و تفریح شماست.ویلا بوستان سهیلیه با استخر آبگرم از واحدهای منتخب و پرایم اتاقک برای آرامش و تفریح شماست. این ویلا در زمینی به مساحت 450 متر مربع با زیر بنای 130 متر مربع در منطقه چهارباغ سهیلیه واقع شده است. ویلا یک طبقه بوده و دارای دو اتاق خواب، حمام و سرویس بهداشتی ایرانی و فرنگی است. حیاط ویلا برای پارک ۵ خودرو مناسب است. ویلا مناسب سالمند، کودک و افراد دارای معلولیت است. پذیرش حیوان خانگی در این ویلا مجاز نیست.",
+        "propertyList": [
+          " استخر آبگرم با سیستم تصفیه اتوماتیک به ابعاد 9.80 در 4.8 متر با عمق 1.65 متر",
+          " سالن بازی دارای فوتبال دستی و ایرهاکی",
+          " آشپزخانه با امکانات رفاهی شامل اجاق گاز ، ماشین لباسشویی، یخچال، فریزر و لوازم کامل آشپزی",
+          "اتاق پذیرایی دارای مبلمان ، تلویزیون، سیستم صوتی، تاب ریلکسی",
+          "سیستم سرمایشی کولر گازی و گرمایشی شوفاژ",
+          "آب آشامیدنی مجهز به سیستم تصفیه اتوماتیک",
+          "منقل کباب در حیاط",
+          "تراس ویلا شامل میز و صندلی"
+        ],
+        "accessList": [
+          " فاصله تا سوپر مارکت 1 کیلومتر",
+          " فاصله تا نانوایی 2 کیلومتر",
+          "فاصله تا ساحل 30 دقیقه با ماشین ",
+          "فاصله تا پمپ بنزین 4 کیلومتر"
+        ]
+      },
+      "propertyResidence": {
+        "games": {
+          "billiards": true,
+          "footballTable": true
+        },
+        "amenities": {
+          "barbecue": true,
+          "grill": true
+        },
+        "homeAppliances": {
+          "digitalReceiver": true,
+          "soundSystem": true,
+          "furniture": true,
+          "tv": true
+        },
+        "kitchenAppliances": {
+          "kettle": true,
+          "centralKitchen": true,
+          "microwave": true,
+          "oven": true,
+          "cookingAccessories": true,
+          "dishWashingAppliances": true,
+          "refrigerator": true,
+          "washingMachine": true
+        },
+        "heatingService": {
+          "shoofaje": true
+        },
+        "coolingService": {
+          "fan": true,
+          "airConditioner": true
+        },
+        "securityFacilities": {
+          "CCTV": true,
+          "securityDoor": true
+        },
+        "buildingFacilities": {
+          "gazebo": true
+        },
+        "parking": {
+          "openParking": true
+        },
+        "pool": {
+          "indoorPool": true
+        }
+      },
+      "residenceTimeRegulations": {
+        "enterTime": "18:00",
+        "exitTime": "14:00",
+        "animals": true,
+        "party": true,
+        "withShoes": true,
+        "smoke": true,
+        "yard": false,
+        "coupleIds": false,
+        "hostRoles": "همراه داشتن مدارک شناسایی معتبر مانند کارت ملی هوشمند یا شناسنامه جدید به جمع های مجردی اقایان اجاره داده نمی شود",
+        "cancelType": 1
+      },
+      "rating": {
+        "completeRate": 4,
+        "rate": 5,
+        "safe": 4,
+        "accepting": 4.6,
+        "clean": 5,
+        "communication": 4.9,
+        "value": 5,
+        "information": 4.9
+      },
+      "position": {
+        "latitude": 35.7,
+        "longitude": 51.2,
+        "z": 16
+      },
+      "reservation": {
+        "childrenRole": "کودک زیر سه سال در صورتحساب لحاظ نمی گردد.",
+        "additionalPrice": 200000,
+        "maxGuests": 6,
+        "dates": {
+          "date": "2024-01-17T00:00:00",
+          "months": [
+            {
+              "id": 0,
+              "days": [
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+                 "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "days": [
+                {
+                  "isPrime": true,
+                  "price": 2400000,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 2500000,
+                  "discount": 10,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 2200000,
+                  "discount": 10,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "days": [
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "days": [
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "days": [
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                 "price": 2020000,
+              "discountedPrice": 1171700,
+                  "discount": 15,
+                  "available": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "otherResidences": {
+        "text": "سایز اقامتگاه‌های مشابه در منطقه",
+        "items": [
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخرداراستخرداراستخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/1.webp",
+            "tags": [
+              1,
+              2
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.2,
+            "userVotes": 4,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2429555-1.webp",
+              "/images/rooms/2429555-2.webp",
+              "/images/rooms/2429555-3.webp",
+              "/images/rooms/2429555-4.webp",
+              "/images/rooms/2429555-5.webp",
+              "/images/rooms/2429555-6.webp",
+              "/images/rooms/2429555-7.webp",
+              "/images/rooms/2429555-8.webp",
+              "/images/rooms/2429555-9.webp",
+              "/images/rooms/2429555-10.webp",
+              "/images/rooms/2429555-11.webp",
+              "/images/rooms/2429555-12.webp",
+              "/images/rooms/2429555-13.webp",
+              "/images/rooms/2429555-14.webp",
+              "/images/rooms/2429555-15.webp",
+              "/images/rooms/2429555-16.webp",
+              "/images/rooms/2429555-17.webp",
+              "/images/rooms/2429555-18.webp",
+              "/images/rooms/2429555-19.webp",
+              "/images/rooms/2429555-20.webp"
+            ]
+          },
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/2.webp",
+            "tags": [
+              3
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.9,
+            "userVotes": 4,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2429555-1.webp",
+              "/images/rooms/2429555-2.webp",
+              "/images/rooms/2429555-3.webp",
+              "/images/rooms/2429555-4.webp",
+              "/images/rooms/2429555-5.webp",
+              "/images/rooms/2429555-6.webp",
+              "/images/rooms/2429555-7.webp",
+              "/images/rooms/2429555-8.webp",
+              "/images/rooms/2429555-9.webp",
+              "/images/rooms/2429555-10.webp",
+              "/images/rooms/2429555-11.webp",
+              "/images/rooms/2429555-12.webp",
+              "/images/rooms/2429555-13.webp",
+              "/images/rooms/2429555-14.webp",
+              "/images/rooms/2429555-15.webp",
+              "/images/rooms/2429555-16.webp",
+              "/images/rooms/2429555-17.webp",
+              "/images/rooms/2429555-18.webp",
+              "/images/rooms/2429555-19.webp",
+              "/images/rooms/2429555-20.webp"
+            ]
+          },
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/3.webp",
+            "tags": [
+              2
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.2,
+            "userVotes": 4.1,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2410287-1.webp",
+              "/images/rooms/2410287-2.webp",
+              "/images/rooms/2410287-3.webp",
+              "/images/rooms/2410287-4.webp",
+              "/images/rooms/2410287-5.webp",
+              "/images/rooms/2410287-6.webp",
+              "/images/rooms/2410287-7.webp",
+              "/images/rooms/2410287-8.webp",
+              "/images/rooms/2410287-9.webp",
+              "/images/rooms/2410287-10.webp",
+              "/images/rooms/2410287-11.webp",
+              "/images/rooms/2410287-12.webp",
+              "/images/rooms/2410287-13.webp",
+              "/images/rooms/2410287-14.webp",
+              "/images/rooms/2410287-15.webp",
+              "/images/rooms/2410287-16.webp",
+              "/images/rooms/2410287-17.webp",
+              "/images/rooms/2410287-18.webp",
+              "/images/rooms/2410287-19.webp",
+              "/images/rooms/2410287-20.webp"
+            ]
+          },
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/4.webp",
+            "tags": [
+              2
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.5,
+            "userVotes": 4,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2429555-1.webp",
+              "/images/rooms/2429555-2.webp",
+              "/images/rooms/2429555-3.webp",
+              "/images/rooms/2429555-4.webp",
+              "/images/rooms/2429555-5.webp",
+              "/images/rooms/2429555-6.webp",
+              "/images/rooms/2429555-7.webp",
+              "/images/rooms/2429555-8.webp",
+              "/images/rooms/2429555-9.webp",
+              "/images/rooms/2429555-10.webp",
+              "/images/rooms/2429555-11.webp",
+              "/images/rooms/2429555-12.webp",
+              "/images/rooms/2429555-13.webp",
+              "/images/rooms/2429555-14.webp",
+              "/images/rooms/2429555-15.webp",
+              "/images/rooms/2429555-16.webp",
+              "/images/rooms/2429555-17.webp",
+              "/images/rooms/2429555-18.webp",
+              "/images/rooms/2429555-19.webp",
+              "/images/rooms/2429555-20.webp"
+            ]
+          },
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/4.webp",
+            "tags": [
+              1
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.3,
+            "userVotes": 4,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2429555-1.webp",
+              "/images/rooms/2429555-2.webp",
+              "/images/rooms/2429555-3.webp",
+              "/images/rooms/2429555-4.webp",
+              "/images/rooms/2429555-5.webp",
+              "/images/rooms/2429555-6.webp",
+              "/images/rooms/2429555-7.webp",
+              "/images/rooms/2429555-8.webp",
+              "/images/rooms/2429555-9.webp",
+              "/images/rooms/2429555-10.webp",
+              "/images/rooms/2429555-11.webp",
+              "/images/rooms/2429555-12.webp",
+              "/images/rooms/2429555-13.webp",
+              "/images/rooms/2429555-14.webp",
+              "/images/rooms/2429555-15.webp",
+              "/images/rooms/2429555-16.webp",
+              "/images/rooms/2429555-17.webp",
+              "/images/rooms/2429555-18.webp",
+              "/images/rooms/2429555-19.webp",
+              "/images/rooms/2429555-20.webp"
+            ]
+          }
+        ]
+      },
+      "otherResidenceLinks": [
+        {
+          "text": "اجاره ویلا و سوئیت در انزلی",
+          "path": "/city/anzali"
+        },
+        {
+          "text": "اجاره ویلا استخردار",
+          "path": "/landing/villapool"
+        },
+        {
+          "text": "اجاره ویلا لب دریا و ساحلی",
+          "path": "/landing/beach"
+        },
+        {
+          "text": "اجاره ویلا شمال",
+          "path": "/landing/villa-north-iran"
+        },
+        {
+          "text": "اجاره ویلا شبانه",
+          "path": "/landing/nighty"
+        }
+      ]
+    },
+    {
+      "id": 2045594,
+      "text": "ویلا استخردار آبگرم چهارباغ،",
+      "residenceId": 2,
+      "residenceName": "البرز",
+      "residence": "alborz",
+      "cityId": 2,
+      "cityName": "سهلیه",
+      "city": "soheyliye",
+      "residenceType": 1,
+      "residenceTypesName": "ویلا",
+      "tags": [
+        1
+      ],
+      "shutter": true,
+      "metres": 130,
+      "capacity": 2,
+      "maxGuests": 2,
+      "availablePrice": {
+        "price": 1212000,
+        "discount": 15,
+        "discountedPrice": 1171700
+      },
+      "bedRooms": 2,
+      "roomRate": "4.9",
+      "images": [
+        "/images/rooms/2045594-1.webp",
+        "/images/rooms/2045594-2.webp",
+        "/images/rooms/2045594-3.webp",
+        "/images/rooms/2045594-4.webp",
+        "/images/rooms/2045594-5.webp",
+        "/images/rooms/2045594-6.webp",
+        "/images/rooms/2045594-7.webp",
+        "/images/rooms/2045594-8.webp",
+        "/images/rooms/2045594-9.webp",
+        "/images/rooms/2045594-10.webp",
+        "/images/rooms/2045594-11.webp",
+        "/images/rooms/2045594-12.webp"
+      ],
+      "mainImage": "/images/rooms/2045594-1.webp",
+      "managerInfo": {
+          "managerId": 3,
+          "firstName": "علی ",
+          "lastName": "حسینی",
+          "rooms": [],
+          "experience": "بیش از 6 سال میزبان اتاقک",
+          "successRent": 87,
+          "image": "/images/users/manager-03.webp",
+        "responseTime": "کمتر از 5 دقیقه",
+        "acceptRate": 78
+      },
+      "aboutResidence": {
+        "shutter":false,
+        "mainInfo": "70 متر, 1 اتاق, آسانسور, طبقه اول, فلت (یک طبقه)",
+        "capacity": "2 نفر, 2 نفر اضافه",
+        "bedRoom": "3 پتو, 2 سرویس خواب کامل, 1 تخت دو نفره, 1 تخت یک نفره",
+        "bathRoom": "1 دوش در سرویس, 1 سرویس ایرانی",
+        "view":"دریا, ساحلی/ نزدیک به دریا, شهری"
+      },
+      "descriptionResidence": {
+        "header": "اجاره روزانه و ماهانه باغ لوکس امیرحسین نزدیک به دریا، 120 ‫‫اجاره روزانه و ماهانه مبله نزدیک دریا، 70 متر برای 2 نفر به همراه 2 نفر اضافی در شهر نور با تضمین بهترین کیفیت و قیمت در اتاقک",
+        "text": "تراس با چشم انداز دریا دارد. کمتر از ۵ دقیقه با مرکز شهر فاصله دارد و روبروی پارک جنگلی نور واقع شده است. ساحل ماسه ای و دارای امکانات تفریحی میباشد که بجز ایام زمستان در بقیه فصل ها دایر است. قایق، جت اسکی، آلاچیق و سفره خانه سنتی",
+        "propertyList": [
+          " استخر آبگرم با سیستم تصفیه اتوماتیک به ابعاد 9.80 در 4.8 متر با عمق 1.65 متر",
+          " سالن بازی دارای فوتبال دستی و ایرهاکی",
+          " آشپزخانه با امکانات رفاهی شامل اجاق گاز ، ماشین لباسشویی، یخچال، فریزر و لوازم کامل آشپزی",
+          "اتاق پذیرایی دارای مبلمان ، تلویزیون، سیستم صوتی، تاب ریلکسی",
+          "سیستم سرمایشی کولر گازی و گرمایشی شوفاژ",
+          "آب آشامیدنی مجهز به سیستم تصفیه اتوماتیک",
+          "منقل کباب در حیاط",
+          "تراس ویلا شامل میز و صندلی"
+        ],
+        "accessList": [
+          " فاصله تا سوپر مارکت 200 متر",
+          " فاصله تا نانوایی 200 متر",
+          "فاصله تا ساحل 1 دقیقه با ماشین ",
+          "فاصله تا پمپ بنزین 200 متر"
+        ]
+      },
+      "propertyResidence": {
+        "games": {
+          "billiards": true,
+          "footballTable": true
+        },
+        "amenities": {
+          "barbecue": true,
+          "grill": true
+        },
+        "homeAppliances": {
+          "digitalReceiver": true,
+          "soundSystem": true,
+          "furniture": true,
+          "tv": true
+        },
+        "kitchenAppliances": {
+          "kettle": true,
+          "centralKitchen": true,
+          "microwave": true,
+          "oven": true,
+          "cookingAccessories": true,
+          "dishWashingAppliances": true,
+          "refrigerator": true,
+          "washingMachine": true
+        },
+        "heatingService": {
+          "shoofaje": true
+        },
+        "coolingService": {
+          "fan": true,
+          "airConditioner": true
+        },
+        "securityFacilities": {
+          "CCTV": true,
+          "securityDoor": true
+        },
+        "buildingFacilities": {
+          "gazebo": true
+        },
+        "parking": {
+          "openParking": true
+        },
+        "pool": {
+          "indoorPool": true
+        }
+      },
+      "residenceTimeRegulations": {
+        "enterTime": "13:00",
+        "exitTime": "12:00",
+        "animals": false,
+        "party": true,
+        "withShoes": true,
+        "smoke": true,
+        "yard": false,
+        "coupleIds": false,
+        "hostRoles": "همراه داشتن مدارک شناسایی معتبر مانند کارت ملی هوشمند یا شناسنامه جدید به جمع های مجردی اقایان اجاره داده نمی شود",
+        "cancelType": 1
+      },
+      "rating": {
+        "completeRate": 4.5,
+        "rate": 5,
+        "safe": 4.5,
+        "accepting": 4.6,
+        "clean": 5,
+        "communication": 4.9,
+        "value": 5,
+        "information": 4.9
+      },
+      "position": {
+        "latitude": 35.7,
+        "longitude": 51.2,
+        "z": 16
+      },
+      "reservation": {
+        "childrenRole": "کودک زیر سه سال در صورتحساب لحاظ نمی گردد.",
+        "additionalPrice": 150000,
+        "maxGuests": 2,
+        "dates": {
+          "date": "2024-01-17T00:00:00",
+          "months": [
+            {
+              "id": 0,
+              "days": [
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "days": [
+                {
+                  "isPrime": true,
+                  "price": 2400000,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 2500000,
+                  "discount": 10,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 2200000,
+                  "discount": 10,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "days": [
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": false
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "days": [
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "days": [
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": false,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                },
+                {
+                  "isPrime": true,
+                  "price": 1212000,
+                  "discountedPrice": 667000,
+                  "discount": 45,
+                  "available": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "otherResidences": {
+        "text": "سایز اقامتگاه‌های مشابه در منطقه",
+        "items": [
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخرداراستخرداراستخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/1.webp",
+            "tags": [
+              1,
+              2
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.2,
+            "userVotes": 4,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2429555-1.webp",
+              "/images/rooms/2429555-2.webp",
+              "/images/rooms/2429555-3.webp",
+              "/images/rooms/2429555-4.webp",
+              "/images/rooms/2429555-5.webp",
+              "/images/rooms/2429555-6.webp",
+              "/images/rooms/2429555-7.webp",
+              "/images/rooms/2429555-8.webp"
+       
+            ]
+          },
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/2.webp",
+            "tags": [
+              3
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.9,
+            "userVotes": 4,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2429555-1.webp",
+              "/images/rooms/2429555-2.webp",
+              "/images/rooms/2429555-3.webp",
+              "/images/rooms/2429555-4.webp",
+              "/images/rooms/2429555-5.webp",
+              "/images/rooms/2429555-6.webp",
+              "/images/rooms/2429555-7.webp"
+      
+            ]
+          },
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/3.webp",
+            "tags": [
+              2
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.2,
+            "userVotes": 4.1,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2410287-1.webp",
+              "/images/rooms/2410287-2.webp",
+              "/images/rooms/2410287-3.webp",
+              "/images/rooms/2410287-4.webp",
+              "/images/rooms/2410287-5.webp",
+              "/images/rooms/2410287-6.webp",
+              "/images/rooms/2410287-7.webp",
+              "/images/rooms/2410287-8.webp",
+              "/images/rooms/2410287-9.webp",
+              "/images/rooms/2410287-10.webp",
+              "/images/rooms/2410287-11.webp",
+              "/images/rooms/2410287-12.webp",
+              "/images/rooms/2410287-13.webp",
+              "/images/rooms/2410287-14.webp",
+              "/images/rooms/2410287-15.webp",
+              "/images/rooms/2410287-16.webp",
+              "/images/rooms/2410287-17.webp",
+              "/images/rooms/2410287-18.webp",
+              "/images/rooms/2410287-19.webp",
+              "/images/rooms/2410287-20.webp"
+            ]
+          },
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/4.webp",
+            "tags": [
+              2
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.5,
+            "userVotes": 4,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2429555-1.webp",
+              "/images/rooms/2429555-2.webp",
+              "/images/rooms/2429555-3.webp",
+              "/images/rooms/2429555-4.webp",
+              "/images/rooms/2429555-5.webp",
+              "/images/rooms/2429555-6.webp",
+              "/images/rooms/2429555-7.webp",
+              "/images/rooms/2429555-8.webp",
+              "/images/rooms/2429555-9.webp",
+              "/images/rooms/2429555-10.webp",
+              "/images/rooms/2429555-11.webp",
+              "/images/rooms/2429555-12.webp",
+              "/images/rooms/2429555-13.webp",
+              "/images/rooms/2429555-14.webp",
+              "/images/rooms/2429555-15.webp",
+              "/images/rooms/2429555-16.webp",
+              "/images/rooms/2429555-17.webp",
+              "/images/rooms/2429555-18.webp",
+              "/images/rooms/2429555-19.webp",
+              "/images/rooms/2429555-20.webp"
+            ]
+          },
+          {
+            "id": "2399131",
+            "type": "room",
+            "text": "عمارت استخردار آبگرم مدرن گلستان",
+            "img": "/images/rooms/4.webp",
+            "tags": [
+              1
+            ],
+            "position": "سهیلیه",
+            "maxCapacity": 12,
+            "bedRooms": 3,
+            "price": 15135000,
+            "discounted": true,
+            "discountedPrice": 13650000,
+            "discountPercent": 10,
+            "stars": 4.3,
+            "userVotes": 4,
+            "favorite": true,
+            "images": [
+              "/images/rooms/2429555-1.webp",
+              "/images/rooms/2429555-2.webp",
+              "/images/rooms/2429555-3.webp",
+              "/images/rooms/2429555-4.webp",
+              "/images/rooms/2429555-5.webp",
+              "/images/rooms/2429555-6.webp",
+              "/images/rooms/2429555-7.webp",
+              "/images/rooms/2429555-8.webp",
+              "/images/rooms/2429555-9.webp",
+              "/images/rooms/2429555-10.webp",
+              "/images/rooms/2429555-11.webp",
+              "/images/rooms/2429555-12.webp",
+              "/images/rooms/2429555-13.webp",
+              "/images/rooms/2429555-14.webp",
+              "/images/rooms/2429555-15.webp",
+              "/images/rooms/2429555-16.webp",
+              "/images/rooms/2429555-17.webp",
+              "/images/rooms/2429555-18.webp",
+              "/images/rooms/2429555-19.webp",
+              "/images/rooms/2429555-20.webp"
+            ]
+          }
+        ]
+      },
+      "otherResidenceLinks": [
+        {
+          "text": "اجاره ویلا و سوئیت در انزلی",
+          "path": "/city/anzali"
+        },
+        {
+          "text": "اجاره ویلا استخردار",
+          "path": "/landing/villapool"
+        },
+        {
+          "text": "اجاره ویلا لب دریا و ساحلی",
+          "path": "/landing/beach"
+        },
+        {
+          "text": "اجاره ویلا شمال",
+          "path": "/landing/villa-north-iran"
+        },
+        {
+          "text": "اجاره ویلا شبانه",
+          "path": "/landing/nighty"
+        }
+      ]
+    },
+    {
       "id": 2399132,
       "type": "room",
       "text": "عمارت استخردار آبگرم مدرن گلستان",
@@ -2599,6 +5499,16 @@
   ],
   "comments": [
     {
+      "roomId": 2045594,
+      "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
+      "userId": 1,
+      "userName": "مینا ایمری",
+      "time": "مرداد ۱۴۰۲",
+      "rate": 4,
+      "adminReply": true,
+      "adminText": "سپاس از شما"
+    },
+    {
       "roomId": 2399131,
       "text": "خیلی ویلای تمیزی بود.کل امکانات لازم رو داشت و انواع مختلف بازی ها رو اعم از شطرنج و فوتبال دستی و پینگ پونگ و بیلیارد و ایرهاکی رو داشت.واقعا خوش گذشت.",
       "userId": 1,
@@ -2712,7 +5622,7 @@
       "adminReply": false
     },
     {
-      "roomId": 2399131,
+      "roomId": 2410287,
       "text": "خیلی ویلای تمیزی بود.کر و ایرهاکی رو داشت.واقعا خوش گذشت.",
       "userId": 1,
       "userName": "مینا ایمری",
@@ -2725,12 +5635,30 @@
   "managers": [
     {
       "managerId": 1,
-      "firstNama": "فرشاد",
+      "firstName": "فرشاد",
       "lastName": "عبدی",
       "rooms": [],
       "experience": "بیش از 2 سال میزبان اتاقک",
       "successRent": 56,
       "image": "/images/users/manager-01.webp"
+    },
+    {
+      "managerId": 2,
+      "firstNama": "مهدی ",
+      "lastName": "رسولی",
+      "rooms": [],
+      "experience": "بیش از 1 سال میزبان اتاقک",
+      "successRent": 69,
+      "image": "/images/users/manager-02.webp"
+    },
+    {
+      "managerId": 3,
+      "firstNama": "علی ",
+      "lastName": "حسینی",
+      "rooms": [],
+      "experience": "بیش از 6 سال میزبان اتاقک",
+      "successRent": 87,
+      "image": "/images/users/manager-03.webp"
     }
   ]
 }
